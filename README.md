@@ -8,20 +8,20 @@ QQ 群<br>
 编程之美① 365234583  [立即加入](http://jq.qq.com/?_wv=1027&k=Sx4s4U "编程之美") <br>
 编程之美② 290714704  [立即加入](http://jq.qq.com/?_wv=1027&k=Sx4s4U "编程之美")
 
-## 项目结构
-##### 基础
+## 一、项目结构
+##### a. 基础
 springboot 版本 1.5.1.RELEASE
 - springboot-helloworld<br>
 入门 HelloWorld 案例，Quick Start - [Spring Boot 之 HelloWorld 详解](http://www.bysocket.com/?p=1124 "Spring Boot 之 HelloWorld详解")<br>
 
-##### Web 开发相关
+##### b. Web 开发相关
 - springboot-mybatis<br>
 Springboot 整合 Mybatis 的完整 Web 案例
 - springboot-restful-json<br>
 Springboot 实现 Restful 服务，基于 HTTP / JSON 传输
 
-## 项目 Quick Start 快速开发指南
-#### 基本环境配置
+## 二、项目 Quick Start 快速开发指南
+#### a. 基本环境配置
 在 MySQL 中，创建数据库 springbootdb：
 ````
 CREATE DATABASE springbootdb;
@@ -41,19 +41,19 @@ CREATE TABLE `city` (
 ````
 INSERT city VALUES (1 ,1,'温岭市','BYSocket 的家在温岭。');
 ````
-### 运行 springboot-mybatis 工程
+### 《运行 springboot-mybatis 工程》
 首先 check 基本环境配置完成，创建好数据库和表。
 
-#### 修改数据库配置
+#### 1. 修改数据库配置
 配置文件地址：springboot-mybatis/src/main/resources/application.properties
 修改相应的数据源配置，比如账号、密码等
 
-#### 编译工程
+#### 2. 编译工程
 在项目根目录 `springboot-learning-example`，运行 maven 指令：
 ````
 mvn clean install
 ````
-#### 运行工程
+#### 3. 运行工程
 右键运行工程包中 `org.spring.springboot.Application` Spring Boot 应用启动类的 main 函数，然后在浏览器访问：
 `````
 http://localhost:8080/api/city?cityName=温岭市
