@@ -12,11 +12,11 @@ QQ 群<br>
 ##### a. 基础
 springboot 版本 1.5.1.RELEASE
 - springboot-helloworld<br>
-入门 HelloWorld 案例，Quick Start - [Spring Boot 之 HelloWorld 详解](http://www.bysocket.com/?p=1124 "Spring Boot 之 HelloWorld详解")<br>
+入门 HelloWorld 案例，Quick Start - [《Spring Boot 之 HelloWorld 详解》](http://www.bysocket.com/?p=1124 "Spring Boot 之 HelloWorld详解")<br>
 
 ##### b. Web 开发相关
 - springboot-mybatis<br>
-Springboot 整合 Mybatis 的完整 Web 案例
+ [《Springboot 整合 Mybatis 的完整 Web 案例》](http://www.bysocket.com/?p=1610 "Springboot 整合 Mybatis 的完整 Web 案例")<br>
 - springboot-restful-json<br>
 Springboot 实现 Restful 服务，基于 HTTP / JSON 传输
 
@@ -41,7 +41,7 @@ CREATE TABLE `city` (
 ````
 INSERT city VALUES (1 ,1,'温岭市','BYSocket 的家在温岭。');
 ````
-### 《运行 springboot-mybatis 工程》
+### 《 springboot-mybatis 工程 Quick Start 》
 首先 check 基本环境配置完成，创建好数据库和表。
 
 #### 1. 修改数据库配置

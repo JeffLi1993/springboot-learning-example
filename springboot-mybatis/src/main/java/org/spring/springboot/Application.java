@@ -14,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 // Spring Boot 应用的标识
 @SpringBootApplication
+// mapper 接口类扫描包配置
 @MapperScan("org.spring.springboot.dao")
 public class Application {
 
