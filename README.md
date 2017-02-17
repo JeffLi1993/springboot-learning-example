@@ -17,8 +17,8 @@ springboot 版本 1.5.1.RELEASE
 ##### b. Web 开发相关
 - springboot-mybatis<br>
  [《Springboot 整合 Mybatis 的完整 Web 案例》](http://www.bysocket.com/?p=1610 "Springboot 整合 Mybatis 的完整 Web 案例")<br>
-- springboot-restful-json<br>
-Springboot 实现 Restful 服务，基于 HTTP / JSON 传输
+- springboot-restful<br>
+Spsringboot 实现 Restful 服务，基于 HTTP / JSON 传输
 
 ## 二、项目 Quick Start 快速开发指南
 #### a. 基本环境配置
