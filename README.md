@@ -19,8 +19,9 @@ springboot 版本 1.5.1.RELEASE
  [《Springboot 整合 Mybatis 的完整 Web 案例》](http://www.bysocket.com/?p=1610 "Springboot 整合 Mybatis 的完整 Web 案例")<br>
 - springboot-restful<br>
  [《Springboot 实现 Restful 服务，基于 HTTP / JSON 传输》](http://www.bysocket.com/?p=1627 "Springboot 实现 Restful 服务，基于 HTTP / JSON 传输")<br>
-- Spring Boot 集成 FreeMarker 
+- Spring Boot 集成 FreeMarker<br>
 Spring Boot 集成 FreeMarker 及使用 taglib
+
 ## 二、项目 Quick Start 快速开发指南
 #### a. 基本环境配置
 在 MySQL 中，创建数据库 springbootdb：
