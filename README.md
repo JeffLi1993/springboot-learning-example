@@ -21,6 +21,7 @@ springboot 版本 1.5.1.RELEASE
  [《Springboot 实现 Restful 服务，基于 HTTP / JSON 传输》](http://www.bysocket.com/?p=1627 "Springboot 实现 Restful 服务，基于 HTTP / JSON 传输")<br>
 - Spring Boot 集成 FreeMarker<br>
 Spring Boot 集成 FreeMarker 及使用 taglib
+- Spring Boot 集成 Dubbo<br>
 
 ## 二、项目 Quick Start 快速开发指南
 #### a. 基本环境配置

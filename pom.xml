@@ -12,6 +12,7 @@
 		<module>springboot-helloworld</module>
 		<module>springboot-mybatis</module>
 		<module>springboot-restful</module>
+		<module>springboot-freemarker</module>
 	</modules>
 
 </project>
