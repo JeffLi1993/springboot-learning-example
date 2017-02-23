@@ -6,7 +6,10 @@ spring boot 实践学习案例，是 spring boot 初学者及核心技术巩固�
 作者：[泥瓦匠BYSocket](http://www.bysocket.com/ "泥瓦匠BYSocket")<br>
 QQ 群<br>
 编程之美① 365234583  [立即加入](http://jq.qq.com/?_wv=1027&k=Sx4s4U "编程之美") <br>
-编程之美② 290714704  [立即加入](http://jq.qq.com/?_wv=1027&k=Sx4s4U "编程之美")
+编程之美② 290714704  [立即加入](http://jq.qq.com/?_wv=1027&k=Sx4s4U "编程之美") <br>
+关注微信公众号【泥瓦匠BYSokcet】，及时得到技术文章推送<br>
+![公众号](https://github.com/JeffLi1993/springboot-learning-example/blob/master/doc/qrcode.jpg)
+
 
 ## 一、项目结构
 ##### a. 基础
