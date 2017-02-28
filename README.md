@@ -18,13 +18,16 @@ springboot 版本 1.5.1.RELEASE
 入门 HelloWorld 案例，Quick Start - [《Spring Boot 之 HelloWorld 详解》](http://www.bysocket.com/?p=1124 "Spring Boot 之 HelloWorld详解")<br>
 
 ##### b. Web 开发相关
-- springboot-mybatis<br>
+- springboot-mybatis <br>
  [《Springboot 整合 Mybatis 的完整 Web 案例》](http://www.bysocket.com/?p=1610 "Springboot 整合 Mybatis 的完整 Web 案例")<br>
-- springboot-restful<br>
+- springboot-restful <br>
  [《Springboot 实现 Restful 服务，基于 HTTP / JSON 传输》](http://www.bysocket.com/?p=1627 "Springboot 实现 Restful 服务，基于 HTTP / JSON 传输")<br>
-- Spring Boot 集成 FreeMarker<br>
-Spring Boot 集成 FreeMarker 及使用 taglib
-- Spring Boot 集成 Dubbo<br>
+- springboot-restful <br>
+ [《Spring Boot 集成 FreeMarker 详解案例》](http://www.bysocket.com/?p=1666 "Spring Boot 集成 FreeMarker 详解案例")<br>
+- springboot-dubbo-server 和 springboot-dubbo-client
+Dubbo 服务提供者工程和 Dubbo 服务消费者工程
+Springboot 整合 Dubbo/ZooKeeper 详解 SOA 案例 <br>
+
 
 ## 二、项目 Quick Start 快速开发指南
 #### a. 基本环境配置
