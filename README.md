@@ -24,7 +24,8 @@ springboot 版本 1.5.1.RELEASE
  [《Springboot 实现 Restful 服务，基于 HTTP / JSON 传输》](http://www.bysocket.com/?p=1627 "Springboot 实现 Restful 服务，基于 HTTP / JSON 传输")<br>
 - springboot-restful <br>
  [《Spring Boot 集成 FreeMarker 详解案例》](http://www.bysocket.com/?p=1666 "Spring Boot 集成 FreeMarker 详解案例")<br>
-- springboot-dubbo-server 和 springboot-dubbo-client
+- springboot-dubbo-server <br>
+- springboot-dubbo-client <br>
 Dubbo 服务提供者工程和 Dubbo 服务消费者工程
 Springboot 整合 Dubbo/ZooKeeper 详解 SOA 案例 <br>
 
