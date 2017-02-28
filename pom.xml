@@ -13,6 +13,8 @@
 		<module>springboot-mybatis</module>
 		<module>springboot-restful</module>
 		<module>springboot-freemarker</module>
+		<module>springboot-dubbo-server</module>
+		<module>springboot-dubbo-client</module>
 	</modules>
 
 </project>
