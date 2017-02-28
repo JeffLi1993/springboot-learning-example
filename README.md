@@ -15,7 +15,8 @@ QQ 群<br>
 ##### a. 基础
 springboot 版本 1.5.1.RELEASE
 - springboot-helloworld<br>
-入门 HelloWorld 案例，Quick Start - [《Spring Boot 之 HelloWorld 详解》](http://www.bysocket.com/?p=1124 "Spring Boot 之 HelloWorld详解")<br>
+入门 HelloWorld 案例，Quick Start <br>
+ [《Spring Boot 之 HelloWorld 详解》](http://www.bysocket.com/?p=1124 "Spring Boot 之 HelloWorld详解")<br>
 
 ##### b. Web 开发相关
 - springboot-mybatis <br>
@@ -51,6 +52,7 @@ CREATE TABLE `city` (
 ````
 INSERT city VALUES (1 ,1,'温岭市','BYSocket 的家在温岭。');
 ````
+ <br>
 ### 《 springboot-mybatis 工程 Quick Start 》
 首先 check 基本环境配置完成，创建好数据库和表。
 
