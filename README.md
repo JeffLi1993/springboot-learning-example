@@ -28,7 +28,7 @@ springboot 版本 1.5.1.RELEASE
 - springboot-dubbo-server <br>
 - springboot-dubbo-client <br>
 Dubbo 服务提供者工程和 Dubbo 服务消费者工程 <br>
-Springboot 整合 Dubbo/ZooKeeper 详解 SOA 案例 <br>
+ [《Springboot 整合 Dubbo/ZooKeeper 详解 SOA 案例》](http://www.bysocket.com/?p=1681 "Springboot 整合 Dubbo/ZooKeeper 详解 SOA 案例")<br>
 
 
 ## 二、项目 Quick Start 快速开发指南
