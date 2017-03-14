@@ -1,8 +1,8 @@
 package org.spring.springboot.result;
 
-import org.spring.springboot.result.base.ErrorInfoInterface;
-
 /**
+ * 返回体
+ *
  * Created by bysocket on 14/03/2017.
  */
 public class ResultBody<T> {

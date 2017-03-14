@@ -1,4 +1,4 @@
-package org.spring.springboot.result.base;
+package org.spring.springboot.result;
 
 /**
  * 错误码接口
