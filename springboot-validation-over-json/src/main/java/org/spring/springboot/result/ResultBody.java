@@ -1,0 +1,52 @@
+package org.spring.springboot.result;
+
+import org.spring.springboot.result.base.ErrorInfoInterface;
+
+/**
+ * Created by bysocket on 14/03/2017.
+ */
+public class ResultBody<T> {
+    /**
+     * 响应代码
+     */
+    private String code;
+
+    /**
+     * 响应消息
+     */
+    private String message;
+
+    /**
+     * 响应结果
+     */
+    private T result;
+
+    public ResultBody(ErrorInfoInterface errorInfo) {
+        this.code = errorInfo.getCode();
+        this.message = errorInfo.getMessage();
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public T getResult() {
+        return result;
+    }
+
+    public void setResult(T result) {
+        this.result = result;
+    }
+}
