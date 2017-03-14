@@ -5,7 +5,7 @@ package org.spring.springboot.result;
  *
  * Created by bysocket on 14/03/2017.
  */
-public class ResultBody<T> {
+public class ResultBody {
     /**
      * 响应代码
      */
@@ -19,11 +19,17 @@ public class ResultBody<T> {
     /**
      * 响应结果
      */
-    private T result;
+    private Object result;
 
     public ResultBody(ErrorInfoInterface errorInfo) {
         this.code = errorInfo.getCode();
         this.message = errorInfo.getMessage();
+    }
+
+    public ResultBody(Object result) {
+        this.code = GlobalErrorInfoEnum.SUCCESS.getCode();
+        this.message = GlobalErrorInfoEnum.SUCCESS.getMessage();
+        this.result = result;
     }
 
     public String getCode() {
@@ -42,11 +48,11 @@ public class ResultBody<T> {
         this.message = message;
     }
 
-    public T getResult() {
+    public Object getResult() {
         return result;
     }
 
-    public void setResult(T result) {
+    public void setResult(Object result) {
         this.result = result;
     }
 }
