@@ -12,6 +12,8 @@ QQ 群<br>
 
 
 ## 一、项目结构
+「Spring Boot 那些事」：[传送门](http://www.bysocket.com/?page_id=1639 "Spring Boot 那些事")<br>
+
 ##### a. 基础
 springboot 版本 1.5.1.RELEASE
 - springboot-helloworld<br>
@@ -29,6 +31,8 @@ springboot 版本 1.5.1.RELEASE
 - springboot-dubbo-client <br>
 Dubbo 服务提供者工程和 Dubbo 服务消费者工程 <br>
  [《Springboot 整合 Dubbo/ZooKeeper 详解 SOA 案例》](http://www.bysocket.com/?p=1681 "Springboot 整合 Dubbo/ZooKeeper 详解 SOA 案例")<br>
+- springboot-validation-over-json <br>
+ [《Spring Boot HTTP over JSON 的错误码异常处理》](http://www.bysocket.com/?p=1692 "Spring Boot HTTP over JSON 的错误码异常处理")<br>
 
 
 ## 二、项目 Quick Start 快速开发指南
