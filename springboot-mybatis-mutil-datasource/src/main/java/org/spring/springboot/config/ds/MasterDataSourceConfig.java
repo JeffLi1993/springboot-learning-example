@@ -33,7 +33,7 @@ public class MasterDataSourceConfig {
     @Value("${master.datasource.password}")
     private String password;
 
-    @Value("${master.datasource.driverClassName")
+    @Value("${master.datasource.driverClassName}")
     private String driverClass;
 
     @Bean(name = "masterDataSource")
