@@ -17,6 +17,7 @@
 		<module>springboot-dubbo-client</module>
 		<module>springboot-redis</module>
 		<module>springboot-validation-over-json</module>
+		<module>springboot-mybatis-mutil-datasource</module>
 	</modules>
 
 </project>
