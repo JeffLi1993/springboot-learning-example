@@ -23,6 +23,8 @@ springboot 版本 1.5.1.RELEASE
 ##### b. Web 开发相关
 - springboot-mybatis <br>
  [《Springboot 整合 Mybatis 的完整 Web 案例》](http://www.bysocket.com/?p=1610 "Springboot 整合 Mybatis 的完整 Web 案例")<br>
+- springboot-mybatis-mutil-datasource <br>
+ [《Spring Boot 整合 Mybatis 实现 Druid 多数据源详解》](http://www.bysocket.com/?p=1712 "Spring Boot 整合 Mybatis 实现 Druid 多数据源详解")<br>
 - springboot-restful <br>
  [《Springboot 实现 Restful 服务，基于 HTTP / JSON 传输》](http://www.bysocket.com/?p=1627 "Springboot 实现 Restful 服务，基于 HTTP / JSON 传输")<br>
 - springboot-restful <br>
