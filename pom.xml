@@ -11,13 +11,14 @@
 	<modules>
 		<module>springboot-helloworld</module>
 		<module>springboot-mybatis</module>
+		<module>springboot-mybatis-redis</module>
+		<module>springboot-mybatis-mutil-datasource</module>
 		<module>springboot-restful</module>
 		<module>springboot-freemarker</module>
 		<module>springboot-dubbo-server</module>
 		<module>springboot-dubbo-client</module>
-		<module>springboot-redis</module>
 		<module>springboot-validation-over-json</module>
-		<module>springboot-mybatis-mutil-datasource</module>
+		<module>springboot-elasticsearch</module>
 	</modules>
 
 </project>
