@@ -35,6 +35,8 @@ Dubbo 服务提供者工程和 Dubbo 服务消费者工程 <br>
  [《Springboot 整合 Dubbo/ZooKeeper 详解 SOA 案例》](http://www.bysocket.com/?p=1681 "Springboot 整合 Dubbo/ZooKeeper 详解 SOA 案例")<br>
 - springboot-validation-over-json <br>
  [《Spring Boot HTTP over JSON 的错误码异常处理》](http://www.bysocket.com/?p=1692 "Spring Boot HTTP over JSON 的错误码异常处理")<br>
+- springboot-mybatis-redis <br>
+ [《Spring Boot 整合 Redis 实现缓存操作》](http://www.bysocket.com/?p=1712 "Spring Boot 整合 Mybatis 实现 Druid 多数据源详解")<br>
 
 
 ## 二、项目 Quick Start 快速开发指南
