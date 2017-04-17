@@ -1,0 +1,5 @@
+## 家乡属性
+home:
+  province: 浙江省
+  city: 温岭松门
+  desc: 我家住在${home.province}的${home.city}
