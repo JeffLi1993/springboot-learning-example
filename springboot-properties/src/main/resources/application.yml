@@ -3,3 +3,10 @@ home:
   province: 浙江省
   city: 温岭松门
   desc: 我家住在${home.province}的${home.city}
+
+## 随机属性
+user:
+  id: ${random.long}
+  age: ${random.int[1,200]}
+  desc: 泥瓦匠叫做${random.value}
+  uuid: ${random.uuid}

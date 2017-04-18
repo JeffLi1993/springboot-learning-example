@@ -1,6 +1,7 @@
 package org.spring.springboot.property;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,24 +10,22 @@ import org.springframework.stereotype.Component;
  * Created by bysocket on 17/04/2017.
  */
 @Component
-public class HomeProperties {
+@ConfigurationProperties(prefix = "home")
+public class HomeProperties2 {
 
     /**
      * 省份
      */
-    @Value("${home.province}")
     private String province;
 
     /**
      * 城市
      */
-    @Value("${home.city}")
     private String city;
 
     /**
      * 描述
      */
-    @Value("${home.desc}")
     private String desc;
 
     public String getProvince() {
