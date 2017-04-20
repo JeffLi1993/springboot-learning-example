@@ -28,12 +28,12 @@ public class PropertiesTest {
 
     @Test
     public void getHomeProperties() {
-        LOGGER.info(homeProperties.toString());
+        LOGGER.info("\n\n" + homeProperties.toString() + "\n");
     }
 
     @Test
     public void randomTestUser() {
-        LOGGER.info(userProperties.toString());
+        LOGGER.info("\n\n" + userProperties.toString() + "\n");
     }
 
 }
