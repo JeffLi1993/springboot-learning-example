@@ -1,17 +1,14 @@
-package org.spring.springboot.domain;
+package org.spring.springboot.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
- * 用户
- *
- * Created by bysocket on 18/04/2017.
+ * Created by bysocket on 20/04/2017.
  */
 @Component
 @ConfigurationProperties(prefix = "user")
-public class User {
-
+public class UserProperties {
     /**
      * 用户 ID
      */
@@ -64,12 +61,13 @@ public class User {
         this.uuid = uuid;
     }
 
+
     @Override
     public String toString() {
-        return "User{" +
+        return "UserProperties{" +
                 "id=" + id +
                 ", age=" + age +
-                ", desc=" + desc +
+                ", desc='" + desc + '\'' +
                 ", uuid='" + uuid + '\'' +
                 '}';
     }
