@@ -14,40 +14,31 @@ QQ 群<br>
 ## 一、项目结构
 「Spring Boot 那些事」：[传送门](http://www.bysocket.com/?page_id=1639 "Spring Boot 那些事")<br>
 
-##### a. 基础
-springboot 版本 1.5.1.RELEASE
-- springboot-helloworld<br>
-入门 HelloWorld 案例，Quick Start <br>
- [《Spring Boot 之 HelloWorld 详解》](http://www.bysocket.com/?p=1124 "Spring Boot 之 HelloWorld详解")<br>
-
-##### b. Web 开发相关- springboot-restful  
-
-
-##### a. 『 基础 - 入门篇 』
+#### a. 『 基础 - 入门篇 』
 - springboot-helloworld<br>
  [《Spring Boot 之 HelloWorld 详解》](http://www.bysocket.com/?p=1124 "Spring Boot 之 HelloWorld详解")<br>
 - springboot-properties <br>
 《 Spring Boot 之配置文件详解》<br>
 
-##### b. 『 基础 - Web 业务开发篇 』
+#### b. 『 基础 - Web 业务开发篇 』
 - springboot-restful <br>
  [《Springboot 实现 Restful 服务，基于 HTTP / JSON 传输》](http://www.bysocket.com/?p=1627 "Springboot 实现 Restful 服务，基于 HTTP / JSON 传输")<br>
  [《Spring Boot 之 RESRful API 权限控制》](http://www.bysocket.com/?p=1080 "Spring Boot 之 RESRful API 权限控制")<br>
 - springboot-freemarker <br>
 [《Spring Boot 集成 FreeMarker 详解案例》](http://www.bysocket.com/?p=1666 "Spring Boot 集成 FreeMarker 详解案例")<br>
 
-##### c. 『 基础 – 数据存储篇 』
+#### c. 『 基础 – 数据存储篇 』
 - springboot-mybatis <br>
  [《Springboot 整合 Mybatis 的完整 Web 案例》](http://www.bysocket.com/?p=1610 "Springboot 整合 Mybatis 的完整 Web 案例")<br>
 - springboot-mybatis-mutil-datasource <br>
  [《Spring Boot 整合 Mybatis 实现 Druid 多数据源详解》](http://www.bysocket.com/?p=1712 "Spring Boot 整合 Mybatis 实现 Druid 多数据源详解")<br>
 
 
-##### d. 『 基础 – 数据缓存篇 』
+#### d. 『 基础 – 数据缓存篇 』
 - springboot-mybatis-redis <br>
  [《Spring Boot 整合 Redis 实现缓存操作》](http://www.bysocket.com/?p=1712 "Spring Boot 整合 Mybatis 实现 Druid 多数据源详解")<br>
 
-##### e. 『 其他篇 』
+#### e. 『 其他篇 』
 - springboot-dubbo-server <br>
 - springboot-dubbo-client <br>
 Dubbo 服务提供者工程和 Dubbo 服务消费者工程 <br>
