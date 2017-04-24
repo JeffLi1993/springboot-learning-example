@@ -18,7 +18,7 @@ QQ 群<br>
 - springboot-helloworld<br>
  [《Spring Boot 之 HelloWorld 详解》](http://www.bysocket.com/?p=1124 "Spring Boot 之 HelloWorld详解")<br>
 - springboot-properties <br>
-《 Spring Boot 之配置文件详解》<br>
+ [《Spring Boot 之配置文件详解》](http://www.bysocket.com/?p=1786 "Spring Boot 之配置文件详解")<br>
 
 #### b. 『 基础 - Web 业务开发篇 』
 - springboot-restful <br>
@@ -43,6 +43,7 @@ QQ 群<br>
 - springboot-dubbo-client <br>
 Dubbo 服务提供者工程和 Dubbo 服务消费者工程 <br>
  [《Springboot 整合 Dubbo/ZooKeeper 详解 SOA 案例》](http://www.bysocket.com/?p=1681 "Springboot 整合 Dubbo/ZooKeeper 详解 SOA 案例")<br>
+ [《Spring Boot 中如何使用 Dubbo Activate 扩展点》](http://www.bysocket.com/?p=1782 "Spring Boot 中如何使用 Dubbo Activate 扩展点")<br>
 - springboot-validation-over-json <br>
  [《Spring Boot HTTP over JSON 的错误码异常处理》](http://www.bysocket.com/?p=1692 "Spring Boot HTTP over JSON 的错误码异常处理")<br>
 
