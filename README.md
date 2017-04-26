@@ -26,6 +26,9 @@ QQ 群<br>
  [《Spring Boot 之 RESRful API 权限控制》](http://www.bysocket.com/?p=1080 "Spring Boot 之 RESRful API 权限控制")<br>
 - springboot-freemarker <br>
 [《Spring Boot 集成 FreeMarker 详解案例》](http://www.bysocket.com/?p=1666 "Spring Boot 集成 FreeMarker 详解案例")<br>
+- springboot-validation-over-json
+[《Spring Boot HTTP over JSON 的错误码异常处理》](http://www.bysocket.com/?p=1692 "Spring Boot HTTP over JSON 的错误码异常处理")<br>
+
 
 #### c. 『 基础 – 数据存储篇 』
 - springboot-mybatis <br>
