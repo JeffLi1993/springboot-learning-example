@@ -6,7 +6,7 @@
     <groupId>springboot</groupId>
     <artifactId>springboot-mybatis-redis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-mybatis :: 整合 Mybatis 并使用 Redis 作为缓存</name>
+    <name>springboot-mybatis-redis :: 整合 Mybatis 并使用 Redis 作为缓存</name>
 
     <!-- Spring Boot 启动父依赖 -->
     <parent>
@@ -23,7 +23,7 @@
 
     <dependencies>
 
-        <!-- Spring Boot Reids 依赖 -->
+        <!-- Spring Boot Redis 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-redis</artifactId>
