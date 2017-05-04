@@ -99,3 +99,7 @@ http://localhost:8080/api/city?cityName=温岭市
     "description": "我的家在温岭。"
 }
 ````
+最后，<br/>
+
+推荐
+ [《Spring Boot教程与Spring Cloud教程》](https://git.oschina.net/didispace/SpringBoot-Learning "Spring Boot教程与Spring Cloud教程")<br>
