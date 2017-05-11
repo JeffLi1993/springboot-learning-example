@@ -33,6 +33,8 @@ QQ 群<br>
 #### c. 『 基础 – 数据存储篇 』
 - springboot-mybatis <br>
  [《Springboot 整合 Mybatis 的完整 Web 案例》](http://www.bysocket.com/?p=1610 "Springboot 整合 Mybatis 的完整 Web 案例")<br>
+- springboot-mybatis-annotation <br>
+ [《Spring Boot 整合 Mybatis Annotation 注解的完整 Web 案例》](http://www.bysocket.com/?p=1610 "Springboot 整合 Mybatis 的完整 Web 案例")<br>
 - springboot-mybatis-mutil-datasource <br>
  [《Spring Boot 整合 Mybatis 实现 Druid 多数据源详解》](http://www.bysocket.com/?p=1712 "Spring Boot 整合 Mybatis 实现 Druid 多数据源详解")<br>
 
