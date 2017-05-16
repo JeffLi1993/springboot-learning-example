@@ -9,16 +9,6 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>springboot-mybatis</module>
-		<module>springboot-mybatis-redis</module>
-		<module>springboot-mybatis-mutil-datasource</module>
-		<module>springboot-restful</module>
-		<module>springboot-freemarker</module>
-		<module>springboot-dubbo-server</module>
-		<module>springboot-dubbo-client</module>
-		<module>springboot-validation-over-json</module>
-		<module>springboot-elasticsearch</module>
-
 		<!-- 基础 – 入门篇 -->
 		<!-- Spring Boot 之 HelloWorld 详解 -->
 		<module>springboot-helloworld</module>
@@ -26,6 +16,29 @@
 		<module>springboot-properties</module>
 
 		<!-- 基础 - Web 业务开发篇 -->
+		<!-- Spring Boot 实现 Restful 服务，基于 HTTP / JSON 传输 -->
+		<module>springboot-restful</module>
+		<!-- Spring Boot 集成 FreeMarker -->
+		<module>springboot-freemarker</module>
+		<!-- Spring Boot HTTP over JSON 的错误码异常处理 -->
+		<module>springboot-validation-over-json</module>
+
+		<!-- 基础 – 数据存储篇 -->
+		<!-- Spring Boot 整合 Mybatis 的完整 Web 案例 -->
+		<module>springboot-mybatis</module>
+		<!-- Spring Boot 整合 Mybatis Annotation 注解案例 -->
+		<module>springboot-mybatis-annotation</module>
+		<!-- Spring Boot 整合 Mybatis 实现 Druid 多数据源配置 -->
+		<module>springboot-mybatis-mutil-datasource</module>
+
+		<!-- 基础 – 数据缓存篇 -->
+		<!-- Spring Boot 整合 Redis 实现缓存 -->
+		<module>springboot-mybatis-redis</module>
+
+		<!-- 其他篇 -->
+		<!-- Spring Boot 整合 Dubbo/ZooKeeper 详解 SOA 案例 -->
+		<module>springboot-dubbo-server</module>
+		<module>springboot-dubbo-client</module>
 
 	</modules>
 
