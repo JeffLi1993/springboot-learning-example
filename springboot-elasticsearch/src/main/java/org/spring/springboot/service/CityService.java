@@ -2,7 +2,7 @@
 package org.spring.springboot.service;
 
 import org.spring.springboot.domain.City;
-import org.springframework.data.domain.Page;
+import java.util.List;
 
 public interface CityService {
 
@@ -22,5 +22,5 @@ public interface CityService {
      * @param searchContent
      * @return
      */
-    Page<City> searchCity(Integer pageNumber, Integer pageSize, String searchContent);
+    List<City> searchCity(Integer pageNumber, Integer pageSize, String searchContent);
 }

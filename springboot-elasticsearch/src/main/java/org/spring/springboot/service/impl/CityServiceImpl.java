@@ -34,17 +34,17 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public Long saveCity(City city) {
+
         City cityResult = cityRepository.save(city);
         return cityResult.getId();
     }
 
     @Override
-    public Page<City> searchCity(Integer pageNumber,
+    public List<City> searchCity(Integer pageNumber,
                                  Integer pageSize,
                                  String searchContent) {
         // 分页参数
-        // 按城市编号倒序
-        Pageable pageable = new PageRequest(pageNumber, pageSize, Sort.Direction.DESC, "id");
+        Pageable pageable = new PageRequest(pageNumber, pageSize);
 
         // Function Score Query
         FunctionScoreQueryBuilder functionScoreQueryBuilder = QueryBuilders.functionScoreQuery()
@@ -60,7 +60,8 @@ public class CityServiceImpl implements CityService {
 
         LOGGER.info("\n searchCity(): searchContent [" + searchContent + "] \n DSL  = \n " + searchQuery.getQuery().toString());
 
-        return cityRepository.search(searchQuery);
+        Page<City> searchPageResults = cityRepository.search(searchQuery);
+        return searchPageResults.getContent();
     }
 
 }

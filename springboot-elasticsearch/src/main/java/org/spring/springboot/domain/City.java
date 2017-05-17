@@ -9,11 +9,10 @@ import java.io.Serializable;
  *
  * Created by bysocket on 03/05/2017.
  */
-@Document(indexName = "cityIndex", type = "city")
-public class City {
+@Document(indexName = "cityindex", type = "city")
+public class City implements Serializable{
 
-//    implements Serializable
-//    private static final long serialVersionUID = -1L;
+    private static final long serialVersionUID = -1L;
 
     /**
      * 城市编号
