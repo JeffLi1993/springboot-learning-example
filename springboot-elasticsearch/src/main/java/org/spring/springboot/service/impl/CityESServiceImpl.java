@@ -25,9 +25,9 @@ import java.util.List;
  * Created by bysocket on 07/02/2017.
  */
 @Service
-public class CityServiceImpl implements CityService {
+public class CityESServiceImpl implements CityService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(CityServiceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CityESServiceImpl.class);
 
     @Autowired
     CityRepository cityRepository;
