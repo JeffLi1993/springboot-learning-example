@@ -39,6 +39,8 @@
 		<!-- Spring Boot 整合 Dubbo/ZooKeeper 详解 SOA 案例 -->
 		<module>springboot-dubbo-server</module>
 		<module>springboot-dubbo-client</module>
+		<!-- Spring Boot 整合 Elasticsearch -->
+		<module>springboot-elasticsearch</module>
 
 	</modules>
 
