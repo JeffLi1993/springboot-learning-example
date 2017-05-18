@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Chat Room | Any-Chat</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <style>
+        .friend{
+            border: none;
+            background-color: #FFFFFF;
+            padding: 5px;
+        }
+
+        .friend:hover{
+            border: solid 1px #337AB7;
+            border-radius: 3px;
+        }
+
+        .f-nickname{
+            font-family: "微软雅黑";
+        }
+
+        .f-image{
+            width: 43px;
+            height: 43px;
+        }
+
+        .message-box-left{
+            background-color: #FA8072;
+            color: #FFFFFF;
+            border-radius: 3px;
+            display: inline-block;
+            padding: 5px 10px;
+        }
+
+        .user-nickname{
+            margin-bottom: 2px;
+            display: inline-block;
+        }
+
+        .user-time{
+            margin-bottom: 2px;
+            display: inline-block;
+            color: #ADADAD;
+        }
+
+        .message-div{
+            float: left;
+            margin-left: 5px;
+            width: 100%;
+            margin-bottom: 5px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<body style="background-color: #f1f1f1; padding-bottom: 0">
+
+<div th:insert="~{header :: nav}"></div>
+
+<!-- Start Content -->
+<div style="margin-top: 60px">
+
+	<div class="row" style="margin: 0 0 10px 20px">
+		<form class="form-inline" onSubmit="return false;">
+  			<div class="form-group">
+   	 			<input type="text" class="form-control" id="friendInput" placeholder="好友帐号">
+  			</div>
+  			<button class="btn btn-default" id="addBtn">添加好友</button>
+  			<button class="btn btn-default disabled" id="groupBtn">群聊模式</button>
+		</form>
+	</div>
+
+    <div class="row center-block">
+
+        <div style="margin: 0 10px; width: 350px; display: inline-block">
+
+            <div class="panel panel-danger" >
+                <div class="panel-heading">
+                    <div style="display: inline-block; float: left">
+                        <img th:src="${user.avatar}" alt="" class="img-circle img-responsive" height="64px" width="64px" style="margin: 0 10px;">
+                    </div>
+                    <div style="display:inline-block; width: 200px; height: 64px;">
+                        <p style="margin: 0; padding: 6px 0; font-size: 20px" th:text="${user.nickname}"></p>
+                        <p style="margin-bottom: 0; overflow: hidden; height: 16px">Online</p>
+                    </div>
+                </div>
+                <div class="panel-body" style="height: 390px; overflow-y: scroll; overflow: auto">
+
+                    <button class="friend" th:each="friend : ${friends}">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object f-image img-circle" th:src="${friend.avatar}" alt="">
+                            </a>
+                        </div>
+                        <div class="media-body" style="text-align: left">
+                            <h4 class="media-heading f-nickname" th:text="${friend.nickname}"></h4>
+                            <p class="text-danger f-signature" th:text="${#dates.format(friend.joinTime, 'MM-dd HH:mm')}">offline</p>
+                            <p class="hidden f-username" th:text="${friend.username}">anoy</p>
+                        </div>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-console"></span> [当前] - [<span id="target">所有人</span>]</h3>
+                </div>
+                <div class="panel-body" style="height: 380px; overflow-y: scroll; overflow: auto" id="messageWindow">
+
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-9 col-md-10">
+                    <input type="text" class="form-control" placeholder="Message" id="message">
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <button class="btn btn-primary btn-block" id="send"><span class="glyphicon glyphicon-send"></span> 发送</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    var target = "TO_ALL";
+
+    var stompClient = null;
+
+    function connect() {
+        var socket = new SockJS('/any-socket');
+        stompClient = Stomp.over(socket);
+        stompClient.connect({}, function (frame) {
+            console.log('Connected: ' + frame);
+            stompClient.subscribe('/topic/notice', function (message) {
+                showMessage(JSON.parse(message.body));
+            });
+            stompClient.subscribe('/user/topic/chat', function (message) {
+                showMessage(JSON.parse(message.body));
+            });
+        });
+    }
+
+    function showMessage(message) {
+        $("#messageWindow").append("<div class='message-div row'>"+
+                                   "<div style='display: inline-block; margin-right: 5px;' >"+
+                                   "<img class='media-object f-image img-circle' style='position: absolute' src=" + message.avatar + ">"+
+                                   "</div>"+
+                                   " <div style='margin-left: 55px'>"+
+                                   "<p class='user-nickname'>" + message.nickname + "</p> <p class='user-time'>"+message.sendTime+"</p><br>"+
+                                   "<div class='message-box-left'>" + message.content + "</div></div></div><br>"
+        );
+    }
+
+    $(function () {
+        connect();
+
+        $("#send").click(function () {
+            if (target == "TO_ALL"){
+                stompClient.send("/app/all", {}, $("#message").val());
+            }else{
+                var content = "{'type':'text','content':'" + $("#message").val() + "','toType':'USER','receiver':'"+target+"'}";
+                stompClient.send("/app/chat", {}, content);
+            }
+            $("#message").val("");
+        });
+
+        $(".friend").click(function () {
+            target = $(this).find("p.f-username").text();
+            var nickname = $(this).find("h4.f-nickname").text();
+            $("#target").text(nickname);
+            $("#groupBtn").attr("class","btn btn-default");
+        });
+        
+        $("#groupBtn").click(function(){
+        	$(this).attr("class","btn btn-default disabled");
+        	target = "TO_ALL";
+        	$("#target").text("所有人");
+        });
+        
+        
+        $("#addBtn").click(function(){
+        	var friend = $("#friendInput").val();
+        	if(friend.length == 0){
+        		return;
+        	}
+        	$.post("/api/common/add",
+        			{"friend" : friend},
+        			function(data){
+        				if(data){
+        					window.location.reload(); 		
+        				}else{
+        					alert("用户不存在，添加失败！");
+        				}
+        			}
+        	);
+        });
+    });
+
+</script>
+<!-- End Content -->
+</body>
+</html>
