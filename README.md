@@ -44,7 +44,7 @@ QQ 群<br>
  [《Spring Boot 整合 Redis 实现缓存操作》](http://www.bysocket.com/?p=1712 "Spring Boot 整合 Mybatis 实现 Druid 多数据源详解")<br>
 
 #### e. 『 其他篇 』
-- springboot-elasticsearch
+- springboot-elasticsearch <br>
  [《Spring Boot 整合 Elasticsearch，实现 function score query 权重分查询》](http://www.bysocket.com/?p=1829 "Spring Boot 整合 Elasticsearch，实现 function score query 权重分查询")<br>
 - springboot-dubbo-server <br>
 - springboot-dubbo-client <br>
