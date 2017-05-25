@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.1.RELEASE</version>
+        <version>1.5.3.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -23,10 +23,10 @@
         </dependency>
 
         <!-- Junit -->
-        <dependency>
+        <!--<dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 </project>
