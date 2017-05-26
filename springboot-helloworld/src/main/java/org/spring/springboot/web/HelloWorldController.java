@@ -1,6 +1,7 @@
 package org.spring.springboot.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -14,5 +15,11 @@ public class HelloWorldController {
     @RequestMapping("/")
     public String sayHello() {
         return "Hello,World!";
+    }
+
+    @RequestMapping("whyang")
+    @ResponseBody
+    public String sayFrankie(){
+        return "Frankie, Spring Boot run ..";
     }
 }

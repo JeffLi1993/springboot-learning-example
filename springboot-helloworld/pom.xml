@@ -23,10 +23,10 @@
 
     <dependencies>
         <!-- Spring Boot web依赖 -->
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>-->
+        </dependency>
 
         <!-- Junit -->
         <dependency>
