@@ -42,4 +42,10 @@ public class CityController {
         return "myCity List";
     }
 
+    @RequestMapping(value = "/")
+    @ResponseBody
+    public String defaultPage(){
+        return "(springboot-freemarker CityController) Default Page";
+    }
+
 }

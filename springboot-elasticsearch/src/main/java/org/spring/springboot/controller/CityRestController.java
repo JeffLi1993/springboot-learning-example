@@ -29,4 +29,10 @@ public class CityRestController {
                                  @RequestParam(value = "searchContent") String searchContent) {
         return cityService.searchCity(pageNumber,pageSize,searchContent);
     }
+
+    @RequestMapping(value = "/")
+    @ResponseBody
+    public String defaultPage(){
+        return "(springboot-elasticsearch CityRestController) Default Page";
+    }
 }

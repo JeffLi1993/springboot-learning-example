@@ -3,7 +3,6 @@ package org.spring.springboot.controller;
 import org.spring.springboot.domain.City;
 import org.spring.springboot.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -42,5 +41,11 @@ public class CityRestController {
     @RequestMapping(value = "/api/city/{id}", method = RequestMethod.DELETE)
     public void modifyCity(@PathVariable("id") Long id) {
         cityService.deleteCity(id);
+    }
+
+    @RequestMapping(value = "/")
+    @ResponseBody
+    public String defaultPage(){
+        return "(springboot-restful CityRestController) Default Page";
     }
 }
