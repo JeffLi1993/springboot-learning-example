@@ -1,12 +1,28 @@
 # springboot-learning-example
 spring boot 实践学习案例，是 spring boot 初学者及核心技术巩固的最佳实践。
 
+## Spring For All 社区
+Spring For All 社区是新组建的关于 Spring 的纯技术交流社区（涵盖 Spring Boot、Spring Cloud 等内容），集诸多开源爱好者和技术大牛贡献内容和交流问题。我们不夸大、不装逼、做最纯粹的技术分享！！！
+
+看看我们超强的群众基础，欢迎有兴趣的朋友加入QQ群分享与交流：
+
+①群： 365234583（满）、
+②群： 123013854（满）、
+③群： 290714704、
+④群： 112133511、
+⑤群： 157525002（满）
+
+⑥群： 564840207、
+⑦群： 470962790（满）、
+⑧群： 613456104（满）、
+⑨群： 534583667、
+⑩群： 210742970（满）
+
+博主微信：139-5868-6678
+
 ## 作者与学习乐园
 源码地址：我的[GitHub地址](https://github.com/JeffLi1993 "GitHub")、[OSCGit地址](https://git.oschina.net/jeff1993/springboot-learning-example "OSCGit")<br>
 作者：[泥瓦匠BYSocket](http://www.bysocket.com/ "泥瓦匠BYSocket")<br>
-QQ 群<br>
-编程之美① 365234583  <br>
-编程之美② 290714704  <br><br>
 关注微信公众号【泥瓦匠BYSokcet】，及时得到技术文章推送<br>
 ![公众号](http://www.bysocket.com/wp-content/uploads/2017/01/qrcode_for_gh_cd421e7eb7d6_430.jpg)
 
