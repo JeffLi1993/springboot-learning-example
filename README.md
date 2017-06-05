@@ -57,6 +57,8 @@ Spring For All 社区是新组建的关于 Spring 的纯技术交流社区（涵
 #### d. 『 基础 – 数据缓存篇 』
 - springboot-mybatis-redis <br>
  [《Spring Boot 整合 Redis 实现缓存操作》](http://www.bysocket.com/?p=1712 "Spring Boot 整合 Mybatis 实现 Druid 多数据源详解")<br>
+- springboot-mybatis-redis-annotation <br>
+ [《Spring Boot 注解实现整合 Redis 作为缓存》](http://www.bysocket.com/?p=1712 "Spring Boot 整合 Mybatis 实现 Druid 多数据源详解")<br>
 
 #### e. 『 其他篇 』
 - springboot-elasticsearch <br>
