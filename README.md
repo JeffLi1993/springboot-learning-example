@@ -70,6 +70,10 @@ Dubbo 服务提供者工程和 Dubbo 服务消费者工程 <br>
  [《Spring Boot 中如何使用 Dubbo Activate 扩展点》](http://www.bysocket.com/?p=1782 "Spring Boot 中如何使用 Dubbo Activate 扩展点")<br>
 
 
+###『 Spring Data ES 篇 』
+- spring-data-elasticsearch-crud <br>
+Spring Data Elasticsearch - 基本案例
+
 ## 二、项目 Quick Start 快速开发指南
 #### a. 基本环境配置
 在 MySQL 中，创建数据库 springbootdb：
@@ -92,6 +96,7 @@ CREATE TABLE `city` (
 INSERT city VALUES (1 ,1,'温岭市','BYSocket 的家在温岭。');
 ````
  <br>
+ 
 ### 《 springboot-mybatis 工程 Quick Start 》
 首先 check 基本环境配置完成，创建好数据库和表。
 

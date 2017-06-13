@@ -48,6 +48,9 @@
 		<!-- Spring Boot 整合 Elasticsearch -->
 		<module>springboot-elasticsearch</module>
 
+		<!-- Spring Data ES 篇 -->
+		<module>spring-data-elasticsearch-crud</module>
+
 	</modules>
 
 </project>
