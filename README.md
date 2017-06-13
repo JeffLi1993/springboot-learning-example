@@ -70,7 +70,7 @@ Dubbo 服务提供者工程和 Dubbo 服务消费者工程 <br>
  [《Spring Boot 中如何使用 Dubbo Activate 扩展点》](http://www.bysocket.com/?p=1782 "Spring Boot 中如何使用 Dubbo Activate 扩展点")<br>
 
 
-###『 Spring Data ES 篇 』
+#### 『 Spring Data ES 篇 』
 - spring-data-elasticsearch-crud <br>
 Spring Data Elasticsearch - 基本案例
 
