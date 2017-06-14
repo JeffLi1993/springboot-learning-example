@@ -48,4 +48,9 @@ public class CityRestController {
     public String defaultPage(){
         return "(springboot-restful CityRestController) Default Page";
     }
+
+    @RequestMapping(value = "/frankie")
+    public String frankiePage(){
+        return "(springboot-restful CityRestController) Frankie Page";
+    }
 }

@@ -5,6 +5,8 @@ import org.spring.springboot.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import static java.lang.System.out;
+
 /**
  * Created by xchunzhao on 02/05/2017.
  */
@@ -16,6 +18,8 @@ public class CityRestController {
 
     @RequestMapping(value = "/api/city", method = RequestMethod.GET)
     public City findOneCity(@RequestParam(value = "cityName", required = true) String cityName) {
+        out.println("\n\n\t\t[3]cityName Parameter from url:\t" + cityName + "\n\n");
+
         return cityService.findCityByName(cityName);
     }
 
