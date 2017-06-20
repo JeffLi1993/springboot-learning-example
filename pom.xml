@@ -50,6 +50,7 @@
 
 		<!-- Spring Data ES 篇 -->
 		<module>spring-data-elasticsearch-crud</module>
+		<module>spring-data-elasticsearch-query</module>
 
 	</modules>
 

@@ -72,7 +72,9 @@ Dubbo 服务提供者工程和 Dubbo 服务消费者工程 <br>
 
 #### 『 Spring Data ES 篇 』
 - spring-data-elasticsearch-crud <br>
-Spring Data Elasticsearch - 基本案例
+ [《Spring Data Elasticsearch - 基本案例》](http://spring4all.com/article/70 "Spring Data Elasticsearch - 基本案例")<br>
+- spring-data-elasticsearch-query <br>
+spring-data-elasticsearch - 实战案例详解
 
 ## 二、项目 Quick Start 快速开发指南
 #### a. 基本环境配置
