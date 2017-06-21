@@ -14,53 +14,5 @@ import java.util.List;
  * Created by bysocket on 20/06/2017.
  */
 public interface CityRepository extends ElasticsearchRepository<City, Long> {
-    /**
-     * AND 语句查询
-     *
-     * @param description
-     * @param score
-     * @return
-     */
-    List<City> findByDescriptionAndScore(String description, Integer score);
-
-    /**
-     * OR 语句查询
-     *
-     * @param description
-     * @param score
-     * @return
-     */
-    List<City> findByDescriptionOrScore(String description, Integer score);
-
-    /**
-     * 查询城市描述
-     *
-     * 等同于下面代码
-     * @Query("{\"bool\" : {\"must\" : {\"term\" : {\"description\" : \"?0\"}}}}")
-     * Page<City> findByDescription(String description, Pageable pageable);
-     *
-     * @param description
-     * @param page
-     * @return
-     */
-    Page<City> findByDescription(String description, Pageable page);
-
-    /**
-     * NOT 语句查询
-     *
-     * @param description
-     * @param page
-     * @return
-     */
-    Page<City> findByDescriptionNot(String description, Pageable page);
-
-    /**
-     * LIKE 语句查询
-     *
-     * @param description
-     * @param page
-     * @return
-     */
-    Page<City> findByDescriptionLike(String description, Pageable page);
 
 }

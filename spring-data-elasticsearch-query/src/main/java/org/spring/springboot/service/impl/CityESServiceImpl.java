@@ -29,15 +29,15 @@ public class CityESServiceImpl implements CityService {
     private static final Logger LOGGER = LoggerFactory.getLogger(CityESServiceImpl.class);
 
     /* 分页参数 */
-    Integer PAGE_SIZE = 12; // 每页数量
+    Integer PAGE_SIZE = 12;          // 每页数量
     Integer DEFAULT_PAGE_NUMBER = 0; // 默认当前页码
 
     /* 搜索模式 */
     String SCORE_MODE_SUM = "sum"; // 权重分求和模式
-    Float  MIN_SCORE = 10.0F; // 由于无相关性的分值默认为 1 ，设置权重分最小值为 10
+    Float  MIN_SCORE = 10.0F;      // 由于无相关性的分值默认为 1 ，设置权重分最小值为 10
 
     @Autowired
-    CityRepository cityRepository;// ES 操作类
+    CityRepository cityRepository; // ES 操作类
 
     public Long saveCity(City city) {
         City cityResult = cityRepository.save(city);
