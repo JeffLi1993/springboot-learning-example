@@ -38,8 +38,8 @@
 		<module>springboot-mybatis-redis-annotation</module>
 
 		<!-- 基础 – 应用篇 -->
-		<!-- Spring Boot Actuator 监控 -->
-		<module>springboot-actuator</module>
+		<!-- Spring Boot Actuator 监控
+		<module>springboot-actuator</module>-->
 
 		<!-- 其他篇 -->
 		<!-- Spring Boot 整合 Dubbo/ZooKeeper 详解 SOA 案例 -->
