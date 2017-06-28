@@ -1,7 +1,7 @@
 # springboot-learning-example
 spring boot 实践学习案例，是 spring boot 初学者及核心技术巩固的最佳实践。
 
-# 推荐推荐 spring cloud 实践学习案例
+# 推荐 springcloud-learning-example
 [spring cloud 实践学习案例](https://github.com/JeffLi1993/springcloud-learning-example)<br>
 https://github.com/JeffLi1993/springcloud-learning-example
 
@@ -62,9 +62,9 @@ Spring For All 社区 ⑫ 498098401 <br>
 
 #### d. 『 基础 – 数据缓存篇 』
 - springboot-mybatis-redis <br>
- [《Spring Boot 整合 Redis 实现缓存操作》](http://www.bysocket.com/?p=1712 "Spring Boot 整合 Mybatis 实现 Druid 多数据源详解")<br>
+ [《Spring Boot 整合 Redis 实现缓存操作》](http://www.bysocket.com/?p=1756 "Spring Boot 整合 Mybatis 实现 Druid 多数据源详解")<br>
 - springboot-mybatis-redis-annotation <br>
- [《Spring Boot 注解实现整合 Redis 作为缓存》](http://www.bysocket.com/?p=1712 "Spring Boot 整合 Mybatis 实现 Druid 多数据源详解")<br>
+ [《Spring Boot 注解实现整合 Redis 作为缓存》](http://www.bysocket.com/?p=1756 "Spring Boot 整合 Mybatis 实现 Druid 多数据源详解")<br>
 
 #### e. 『 其他篇 』
 - springboot-elasticsearch <br>
