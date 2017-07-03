@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static java.lang.System.out;
+
 /**
  * 城市 Controller 实现 Restful HTTP 服务
  *
@@ -25,6 +27,7 @@ public class CityRestController {
 
     @RequestMapping(value = "/api/city", method = RequestMethod.GET)
     public List<City> findAllCity() {
+        out.println("\n\nCityRestController\n\n");
         return cityService.findAllCity();
     }
 

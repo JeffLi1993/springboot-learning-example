@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import static java.lang.System.out;
+
 /**
  * 城市业务逻辑实现类
  *
@@ -20,6 +22,7 @@ public class CityServiceImpl implements CityService {
     private CityDao cityDao;
 
     public List<City> findAllCity(){
+        out.println("\n\nCityRestController ServiceImple\n\n");
         return cityDao.findAllCity();
     }
 

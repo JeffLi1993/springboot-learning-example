@@ -17,7 +17,7 @@ public class HelloWorldController {
         return "Hello,World!";
     }
 
-    @RequestMapping("whyang")
+    @RequestMapping("/whyang")
     @ResponseBody
     public String sayFrankie(){
         return "Frankie, Spring Boot run ..";
