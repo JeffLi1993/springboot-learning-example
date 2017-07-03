@@ -21,6 +21,7 @@ public class City implements Serializable {
      */
     private Long provinceId;
 
+    private String province;
     /**
      * 城市名称
      */
@@ -45,6 +46,13 @@ public class City implements Serializable {
 
     public void setProvinceId(Long provinceId) {
         this.provinceId = provinceId;
+    }
+
+    public void setProvince(String province){
+        this.province = province;
+    }
+    public String getProvince(){
+        return this.province;
     }
 
     public String getCityName() {
