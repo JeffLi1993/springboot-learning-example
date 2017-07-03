@@ -16,16 +16,19 @@ public class HomeProperties {
     /**
      * 省份
      */
+    @Value("province")
     private String province;
 
     /**
      * 城市
      */
+    @Value("city")
     private String city;
 
     /**
      * 描述
      */
+    @Value("desc")
     private String desc;
 
     public String getProvince() {

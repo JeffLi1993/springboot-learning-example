@@ -4,6 +4,7 @@
 	<resultMap id="BaseResultMap" type="org.spring.springboot.domain.City">
 		<result column="id" property="id" />
 		<result column="province_id" property="provinceId" />
+		<result column="province" property="province" />
 		<result column="city_name" property="cityName" />
 		<result column="description" property="description" />
 	</resultMap>
@@ -29,9 +30,9 @@
 
 	<insert id="saveCity" parameterMap="City" useGeneratedKeys="true" keyProperty="id">
 		insert into
-			city(id,province_id,city_name,description)
+			city(id,province_id,province,city_name,description)
 		values
-			(#{id},#{provinceId},#{cityName},#{description})
+			(#{id},#{provinceId},#{province},#{cityName},#{description})
 	</insert>
 
 	<update id="updateCity" parameterMap="City">
@@ -40,6 +41,9 @@
 		set
 		<if test="provinceId!=null">
 			province_id = #{provinceId},
+		</if>
+		<if test="province!=null">
+			province = #{province},
 		</if>
 		<if test="cityName!=null">
 			city_name = #{cityName},

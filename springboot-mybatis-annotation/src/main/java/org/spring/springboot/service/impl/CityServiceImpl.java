@@ -20,8 +20,13 @@ public class CityServiceImpl implements CityService {
     private CityDao cityDao;
 
     public City findCityByName(String cityName) {
-        out.println("\n\n\t\t[4]CityServiceImpl parameter cityName:\t" + cityName +"\n\n");
+        out.println("\n\n\t\t[4]CityServiceImpl parameter cityName 4 whyang:\t" + cityName +"\n\n");
         return cityDao.findByName(cityName);
+    }
+
+    public City[] findAllCity() {
+        out.println("\n\n\t\t[4]CityServiceImpl parameter cityName 4 whyang All City:\t" +"\n\n");
+        return cityDao.findAllCity();
     }
 
 }

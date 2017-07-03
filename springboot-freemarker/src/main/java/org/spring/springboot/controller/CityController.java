@@ -18,6 +18,7 @@ import java.util.List;
  * Created by bysocket on 07/02/2017.
  */
 @Controller
+@RequestMapping("/frmkr")
 public class CityController {
 
     @Autowired

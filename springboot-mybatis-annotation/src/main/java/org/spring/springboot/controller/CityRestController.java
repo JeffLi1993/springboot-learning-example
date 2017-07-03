@@ -18,7 +18,7 @@ public class CityRestController {
 
     @RequestMapping(value = "/api/city", method = RequestMethod.GET)
     public City findOneCity(@RequestParam(value = "cityName", required = true) String cityName) {
-        out.println("\n\n\t\t[3]cityName Parameter from url:\t" + cityName + "\n\n");
+        out.println("\n\n\t\t[3]cityName 4 whyang Parameter from url:\t" + cityName + "\n\n");
 
         return cityService.findCityByName(cityName);
     }
@@ -27,6 +27,13 @@ public class CityRestController {
     @ResponseBody
     public String defaultPage(){
         return "(springboot-mybatis-annotation CityRestController) Default Page";
+    }
+
+    @RequestMapping(value = "/api/city/all", method = RequestMethod.GET)
+    public String findAllCity() {
+        out.println("\n\n\t\t[3]cityName 4 whyang Parameter from url: All City\t" + "\n\n");
+
+        return cityService.findAllCity().toString();
     }
 
 }

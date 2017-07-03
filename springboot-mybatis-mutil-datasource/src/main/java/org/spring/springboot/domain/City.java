@@ -1,7 +1,5 @@
 package org.spring.springboot.domain;
 
-import java.io.Serializable;
-
 /**
  * 城市实体类
  *
@@ -18,6 +16,8 @@ public class City {
      * 省份编号
      */
     private Long provinceId;
+
+    private String province;
 
     /**
      * 城市名称
@@ -43,6 +43,13 @@ public class City {
 
     public void setProvinceId(Long provinceId) {
         this.provinceId = provinceId;
+    }
+
+    public void setProvince(String province){
+        this.province = province;
+    }
+    public String getProvince(){
+        return this.province;
     }
 
     public String getCityName() {

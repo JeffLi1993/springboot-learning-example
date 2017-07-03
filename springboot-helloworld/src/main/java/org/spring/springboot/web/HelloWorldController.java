@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import static java.lang.System.out;
+
 /**
  * Spring Boot HelloWorld 案例
  *
@@ -20,6 +22,7 @@ public class HelloWorldController {
     @RequestMapping("/whyang")
     @ResponseBody
     public String sayFrankie(){
+        out.println("\n\nHelloWorldController\n\n");
         return "Frankie, Spring Boot run ..";
     }
 }

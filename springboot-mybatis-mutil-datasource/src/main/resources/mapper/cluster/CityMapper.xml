@@ -4,6 +4,7 @@
 	<resultMap id="BaseResultMap" type="org.spring.springboot.domain.City">
 		<result column="id" property="id" />
 		<result column="province_id" property="provinceId" />
+		<result column="province" property="province" />
 		<result column="city_name" property="cityName" />
 		<result column="description" property="description" />
 	</resultMap>

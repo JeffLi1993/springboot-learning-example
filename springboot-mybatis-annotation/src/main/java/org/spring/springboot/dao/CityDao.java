@@ -17,12 +17,27 @@ public interface CityDao {
      * @param cityName 城市名
      */
     @Select("SELECT * FROM city")
+//    @Select("SELECT id, provinceId, province, cityName, description FROM city")
     // 返回 Map 结果集
     @Results({
             @Result(property = "id", column = "id"),
             @Result(property = "provinceId", column = "province_id"),
+            @Result(property = "province", column = "province"),
             @Result(property = "cityName", column = "city_name"),
-            @Result(property = "description", column = "description"),
+            @Result(property = "description", column = "description")
     })
     City findByName(@Param("cityName") String cityName);
+
+//    @Select("SELECT * FROM city")
+    @Select("SELECT id, provinceId, province, cityName, description FROM city")
+    // 返回 Map 结果集
+    @Results({
+            @Result(property = "id", column = "id"),
+            @Result(property = "provinceId", column = "province_id"),
+            @Result(property = "province", column = "province"),
+            @Result(property = "cityName", column = "city_name"),
+            @Result(property = "description", column = "description")
+    })
+    City[] findAllCity();
+
 }

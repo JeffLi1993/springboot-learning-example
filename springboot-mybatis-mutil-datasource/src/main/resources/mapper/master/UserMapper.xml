@@ -3,7 +3,7 @@
 <mapper namespace="org.spring.springboot.dao.master.UserDao">
 	<resultMap id="BaseResultMap" type="org.spring.springboot.domain.User">
 		<result column="id" property="id" />
-		<result column="user_name" property="userName" />
+		<result column="username" property="userName" />
 		<result column="description" property="description" />
 	</resultMap>
 
