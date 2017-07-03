@@ -1,0 +1,27 @@
+MariaDB [springbootdb]> desc user;
++-------------+----------+------+-----+---------+----------------+
+| Field       | Type     | Null | Key | Default | Extra          |
++-------------+----------+------+-----+---------+----------------+
+| username    | char(32) | NO   |     |         |                |
+| description | char(32) | YES  |     | NULL    |                |
+| id          | int(11)  | NO   | PRI | NULL    | auto_increment |
++-------------+----------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+MariaDB [springbootdb]>
+MariaDB [springbootdb]>
+MariaDB [springbootdb]> desc city;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int(16)      | NO   | PRI | NULL    | auto_increment |
+| province_id | int(16)      | YES  |     | NULL    |                |
+| city_name   | varchar(32)  | YES  |     | NULL    |                |
+| description | varchar(128) | YES  |     | NULL    |                |
+| province    | char(32)     | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+MariaDB [springbootdb]>
+MariaDB [springbootdb]>
+MariaDB [springbootdb]>
