@@ -22,6 +22,7 @@ public class CityRestController {
 
     @RequestMapping(value = "/api/city/{id}", method = RequestMethod.GET)
     public City findOneCity(@PathVariable("id") Long id) {
+        out.println("\n\nCityRestController\n\n");
         return cityService.findCityById(id);
     }
 
