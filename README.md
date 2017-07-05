@@ -88,7 +88,7 @@ INSERT city VALUES (1 ,1,'温岭市','BYSocket 的家在温岭。');
 mvn clean install
 ````
 #### 3. 运行工程
-右键运行工程包中 `org.spring.springboot.Application` Spring Boot 应用启动类的 main 函数，然后在浏览器访问：
+右键运行工程包中 `Application` Spring Boot 应用启动类的 main 函数，然后在浏览器访问：
 `````
 http://localhost:8080/api/city?cityName=温岭市
 `````
