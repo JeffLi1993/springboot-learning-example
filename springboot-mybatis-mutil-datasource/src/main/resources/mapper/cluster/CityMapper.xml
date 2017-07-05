@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="org.spring.springboot.dao.cluster.CityDao">
-	<resultMap id="BaseResultMap" type="org.spring.springboot.domain.City">
+<mapper namespace="com.spring.springboot.dao.cluster.CityDao">
+	<resultMap id="BaseResultMap" type="City">
 		<result column="id" property="id" />
 		<result column="province_id" property="provinceId" />
 		<result column="province" property="province" />
@@ -9,7 +9,7 @@
 		<result column="description" property="description" />
 	</resultMap>
 
-	<parameterMap id="City" type="org.spring.springboot.domain.City"/>
+	<parameterMap id="City" type="City"/>
 
 	<sql id="Base_Column_List">
 		id, province_id, city_name, description
