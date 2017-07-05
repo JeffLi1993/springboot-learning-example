@@ -22,10 +22,16 @@
     <dependencies>
 
         <!-- Spring Boot Dubbo 依赖 -->
-        <dependency>
+        <!--<dependency>
             <groupId>io.dubbo.springboot</groupId>
             <artifactId>spring-boot-starter-dubbo</artifactId>
             <version>${dubbo-spring-boot}</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.5.3</version>
         </dependency>
 
         <!-- Spring Boot Web 依赖 -->
