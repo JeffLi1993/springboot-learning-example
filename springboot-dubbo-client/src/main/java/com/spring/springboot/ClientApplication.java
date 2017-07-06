@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * Spring Boot 应用启动类
@@ -14,6 +15,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  */
 // Spring Boot 应用的标识
 @SpringBootApplication
+@PropertySource("classpath:application.properties")
 public class ClientApplication implements EmbeddedServletContainerCustomizer {
 
     public static void main(String[] args) {
@@ -24,7 +26,7 @@ public class ClientApplication implements EmbeddedServletContainerCustomizer {
             ConfigurableApplicationContext run = SpringApplication.run(ClientApplication.class, args);
 
             CityDubboConsumerService cityService = run.getBean(CityDubboConsumerService.class);
-//            CityDubboConsumerService cityService = run.getBean("cityDubboService");
+//            CityDubboConsumerService cityService = run.getBean("CityDubboConsumerService");
 
             cityService.printCity();
 
