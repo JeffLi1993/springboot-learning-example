@@ -18,10 +18,8 @@ public class DefaultPage {
     public String defaultPage(){
 
         String value = null;
-        Watcher watcher = new Watcher() {
-            // 监控所有被触发的事件
+        /*Watcher watcher = new Watcher() {
             public void process(WatchedEvent event) {
-                //dosomething
             }
         };
 
@@ -32,7 +30,7 @@ public class DefaultPage {
             value = data.toString();
             zkpr.close();
 
-        } catch (Exception e){}
+        } catch (Exception e){}*/
 
         return "nodes from ZooKeeper:\t" + value;
     }

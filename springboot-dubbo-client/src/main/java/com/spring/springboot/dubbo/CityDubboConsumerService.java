@@ -2,7 +2,6 @@ package com.spring.springboot.dubbo;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.spring.springboot.domain.City;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
@@ -18,9 +17,10 @@ public class CityDubboConsumerService {
     @Reference(version = "1.0.0")
     CityDubboService cityDubboService;
 
-    public void printCity() {
+    public String printCity() {
         String cityName="温岭";
         City city = cityDubboService.findCityByName(cityName);
         System.out.println(city.toString());
+        return city.toString();
     }
 }

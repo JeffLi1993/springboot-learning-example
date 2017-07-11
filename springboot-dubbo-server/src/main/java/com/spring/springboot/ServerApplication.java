@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
 
@@ -16,7 +16,8 @@ import org.springframework.context.annotation.PropertySource;
  */
 // Spring Boot 应用的标识
 @SpringBootApplication
-//@ImportResource("classpath:application.properties")
+//@ComponentScan("com.spring.springboot.dubbo")
+//@ImportResource("classpath:provider.xml")
 @PropertySource("classpath:application.properties")
 //@ConfigurationProperties(prefix = "spring.dubbo")
 public class ServerApplication implements EmbeddedServletContainerCustomizer {
@@ -33,7 +34,7 @@ public class ServerApplication implements EmbeddedServletContainerCustomizer {
     }
 
     public void customize(ConfigurableEmbeddedServletContainer container) {
-        container.setPort(8080);
+        container.setPort(8081);
     }
 
 }
