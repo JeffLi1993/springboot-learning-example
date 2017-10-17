@@ -9,7 +9,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<!-- 基础 – 入门篇 -->
+		<!-- 基础 – 入门篇1 -->
 		<!-- Spring Boot 之 HelloWorld 详解 -->
 		<module>springboot-helloworld</module>
 		<!-- Spring Boot 之配置文件详解 -->
