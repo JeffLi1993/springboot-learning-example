@@ -4,6 +4,7 @@ import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEven
 import org.springframework.boot.context.event.ApplicationFailedEvent;
 import org.springframework.boot.context.event.ApplicationPreparedEvent;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
+import org.springframework.context.event.ContextStartedEvent;
 import org.springframework.web.context.support.RequestHandledEvent;
 
 /**
@@ -23,6 +24,7 @@ public class GoodEvents {
     //  org.springframework.boot.context.event
     ApplicationFailedEvent event6;
 
+    ContextStartedEvent event7;
 
 
 
