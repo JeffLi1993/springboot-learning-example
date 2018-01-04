@@ -7,6 +7,8 @@ import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.config.AnsiOutputApplicationListener;
+import org.springframework.boot.context.config.ConfigFileApplicationListener;
+import org.springframework.boot.context.config.DelegatingApplicationListener;
 import org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener;
 import org.springframework.boot.logging.ClasspathLoggingApplicationListener;
 import org.springframework.boot.logging.LoggingApplicationListener;
@@ -112,7 +114,7 @@ public class Application {
             AutoConfigurationReportLoggingInitializer vnbvg;
             ServerPortInfoApplicationContextInitializer fefwefewf;
         //  javax.servlet
-        ServletContainerInitializer svltContIniter;
+        ServletContainerInitializer svltContIniter2;
         //  org.springframework.web
         WebApplicationInitializer webAppIniter;
         //  org.springframework.boot.web.servlet
