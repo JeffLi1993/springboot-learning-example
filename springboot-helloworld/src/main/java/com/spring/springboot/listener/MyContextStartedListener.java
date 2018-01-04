@@ -9,6 +9,6 @@ import org.springframework.context.event.ContextStartedEvent;
 public class MyContextStartedListener implements ApplicationListener<ContextStartedEvent> {
     @Override
     public void onApplicationEvent(ContextStartedEvent event) {
-        System.out.println("Frankie Yang 的 Context started 啦！！！");
+        System.out.println("Frankie Yang 的 Context started ！！！");
     }
 }

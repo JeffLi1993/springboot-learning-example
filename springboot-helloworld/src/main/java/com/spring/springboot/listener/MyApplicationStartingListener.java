@@ -9,6 +9,6 @@ import org.springframework.context.ApplicationListener;
 public class MyApplicationStartingListener implements ApplicationListener<ApplicationStartingEvent> {
     @Override
     public void onApplicationEvent(ApplicationStartingEvent event) {
-        System.out.println("Frankie Yang 的 Application Starting 啦！！！");
+        System.out.println("Frankie Yang 的 Application Starting ！！！");
     }
 }

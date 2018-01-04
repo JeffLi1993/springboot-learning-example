@@ -10,6 +10,6 @@ import org.springframework.context.ApplicationListener;
 public class MyEnvReadyListener implements ApplicationListener<ApplicationEnvironmentPreparedEvent> {
     @Override
     public void onApplicationEvent(ApplicationEnvironmentPreparedEvent event) {
-        System.out.println("Frankie Yang 的 Environment ready 啦！！！");
+        System.out.println("Frankie Yang 的 Environment ready ！！！");
     }
 }

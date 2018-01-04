@@ -9,6 +9,6 @@ import org.springframework.context.ApplicationListener;
 public class MyApplicationFailListener implements ApplicationListener<ApplicationFailedEvent> {
     @Override
     public void onApplicationEvent(ApplicationFailedEvent event) {
-        System.out.println("Frankie Yang 的 Application fail 啦！！！");
+        System.out.println("Frankie Yang 的 Application fail ！！！");
     }
 }

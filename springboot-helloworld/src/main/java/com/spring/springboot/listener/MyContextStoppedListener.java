@@ -9,6 +9,6 @@ import org.springframework.context.event.ContextStoppedEvent;
 public class MyContextStoppedListener implements ApplicationListener<ContextStoppedEvent> {
     @Override
     public void onApplicationEvent(ContextStoppedEvent event) {
-        System.out.println("Frankie Yang 的 Context stopped 啦！！！");
+        System.out.println("Frankie Yang 的 Context stopped ！！！");
     }
 }
