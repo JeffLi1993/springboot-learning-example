@@ -13,17 +13,16 @@ import org.springframework.boot.context.config.AnsiOutputApplicationListener;
 import org.springframework.boot.context.config.ConfigFileApplicationListener;
 import org.springframework.boot.context.config.DelegatingApplicationListener;
 import org.springframework.boot.context.embedded.ServerPortInfoApplicationContextInitializer;
-import org.springframework.boot.context.event.EventPublishingRunListener;
+import org.springframework.boot.context.event.*;
 import org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener;
 import org.springframework.boot.logging.ClasspathLoggingApplicationListener;
 import org.springframework.boot.logging.LoggingApplicationListener;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContextInitializer;
+import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
-import org.springframework.context.event.AbstractApplicationEventMulticaster;
-import org.springframework.context.event.ApplicationEventMulticaster;
-import org.springframework.context.event.SimpleApplicationEventMulticaster;
+import org.springframework.context.event.*;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.WebApplicationInitializer;
@@ -45,7 +44,8 @@ public class Application {
 //        SpringApplication.run(Application.class, args);
         SpringApplication app = new SpringApplication(Application.class);
 
-        app.addListeners(new MyApplicationStartedListener(),
+        app.addListeners(
+                new MyApplicationStartingListener(),
                 new MyApplicationFailListener(),
                 new MyApplicationReadyListener(),
                 new MyApplicationPreparedListener(),
@@ -105,6 +105,19 @@ public class Application {
 //        SpringApplicationRunListeners springAppRunLsnrs;
         SpringApplicationRunListener springAppRunLsnr;
             EventPublishingRunListener ergergerg;
+        ApplicationEvent we135rwer;
+            SpringApplicationEvent erger34234;
+                ApplicationEnvironmentPreparedEvent ewrwer;
+                ApplicationPreparedEvent fwefw221ef;
+                ApplicationReadyEvent feefw2ef;
+                ApplicationFailedEvent efwefeeeeew;
+                ApplicationStartingEvent wefwefwef222333;
+                    ApplicationStartedEvent fewiioweirf;
+            ApplicationContextEvent erfer324;
+                ContextClosedEvent fwefwef234234;
+                ContextRefreshedEvent owefionwef;
+                ContextStoppedEvent voiwne;
+                ContextStartedEvent ovwieobwefe;
         ApplicationEventMulticaster gergerg;
             AbstractApplicationEventMulticaster ewwefwef;
                 SimpleApplicationEventMulticaster sdgweg;
