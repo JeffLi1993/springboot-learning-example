@@ -49,7 +49,12 @@ public class Application {
                 new MyApplicationFailListener(),
                 new MyApplicationReadyListener(),
                 new MyApplicationPreparedListener(),
-                new MyEnvReadyListener());
+                new MyEnvReadyListener(),
+                new MyContextClosedListener(),
+                new MyContextRefreshedListener(),
+                new MyContextStartedListener(),
+                new MyContextStoppedListener()
+        );
 
         app.run(args);
     }
