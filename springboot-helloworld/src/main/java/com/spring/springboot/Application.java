@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplicationRunListener;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
 import org.springframework.boot.context.FileEncodingApplicationListener;
@@ -22,6 +23,8 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
+import org.springframework.context.annotation.Condition;
+import org.springframework.context.annotation.Conditional;
 import org.springframework.context.event.*;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -89,6 +92,8 @@ public class Application {
 
 
 
+        //  1
+
         //  org.springframework.context
         ApplicationContextInitializer wefwefwwwef;
             AutoConfigurationReportLoggingInitializer vnbvg;
@@ -101,6 +106,7 @@ public class Application {
         ServletContextInitializer svltCntxIniter;
 
 
+        //  2
 
 //        SpringApplicationRunListeners springAppRunLsnrs;
         SpringApplicationRunListener springAppRunLsnr;
@@ -125,6 +131,12 @@ public class Application {
 //            rergerg ergerg;
 //                rergerg ergerg;
 
+
+        //  3
+
+        Condition ergerg;
+        Conditional fwefwdedwe;
+        ConditionalOnWebApplication fwhjfgjfgjefwef;
 
     }
 
