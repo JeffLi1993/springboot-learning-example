@@ -1,0 +1,4 @@
+# Auto Configure  
+
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration = \
+#com.ibigsea.spring_boot_starter_hello.HelloAutoConfiguration

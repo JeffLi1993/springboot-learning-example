@@ -1,7 +1,8 @@
 package com.spring.springboot.web;
 
+import com.spring.springboot.service.Hello;
+import com.spring.springboot.service.UserSetting;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,9 +25,17 @@ public class HelloWorldController {
     @Autowired
     private UserSetting user;
 
+    @Autowired
+    private Hello hello;
+
     @RequestMapping("/")
     public String sayHello() {
-        return "Hello,World!" + "\n" + user.getName() + "\t" + user.getAge();
+        return "Hello, World !\n" + user.getUserName() + "\t" + user.getAge();
+    }
+
+    @RequestMapping("/hello")
+    public String helloHandler(){
+        return hello.sayHello();
     }
 
     @RequestMapping("/whyang")
