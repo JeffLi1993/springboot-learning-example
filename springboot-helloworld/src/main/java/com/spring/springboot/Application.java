@@ -1,5 +1,7 @@
 package com.spring.springboot;
 
+import com.spring.springboot.initializer.MyApplicationContextInitializer1;
+import com.spring.springboot.initializer.MyApplicationContextInitializer2;
 import com.spring.springboot.listener.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
@@ -56,8 +58,11 @@ public class Application {
                 new MyContextClosedListener(),
                 new MyContextRefreshedListener(),
                 new MyContextStartedListener(),
-                new MyContextStoppedListener()
-        );
+                new MyContextStoppedListener());
+
+        app.addInitializers(
+                new MyApplicationContextInitializer1(),
+                new MyApplicationContextInitializer2());
 
         app.run(args);
     }
@@ -138,8 +143,15 @@ public class Application {
         Conditional fwefwdedwe;
         ConditionalOnWebApplication fwhjfgjfgjefwef;
 
-    }
 
+        //  657567
+
+        ApplicationContextInitializer gerg;
+        ApplicationListener fefweweg;
+
+
+
+    }
 
 }
 
