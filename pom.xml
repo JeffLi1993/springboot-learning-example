@@ -14,6 +14,8 @@
 		<module>springboot-helloworld</module>
 		<!-- Spring Boot 之配置文件详解 -->
 		<module>springboot-properties</module>
+		<!-- Spring Boot 之配置注解使用 -->
+		<module>springboot-configuration</module>
 
 		<!-- 基础 - Web 业务开发篇 -->
 		<!-- Spring Boot 实现 Restful 服务，基于 HTTP / JSON 传输 -->
@@ -51,6 +53,13 @@
 		<!-- Spring Data ES 篇 -->
 		<module>spring-data-elasticsearch-crud</module>
 		<module>spring-data-elasticsearch-query</module>
+
+		<!-- 第二章快速入门案例 -->
+		<module>chapter-2-spring-boot-quick-start</module>
+		<!-- 第四章表单校验案例 -->
+		<module>chapter-4-spring-boot-validating-form-input</module>
+		<!-- 第五章数据分页排序案例 -->
+		<module>chapter-5-spring-boot-paging-sorting</module>
 
 	</modules>
 
