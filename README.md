@@ -9,17 +9,6 @@ https://github.com/JeffLi1993/springcloud-learning-example
 [Spring For All 社区](http://www.spring4all.com/ "spring4all")是新组建的关于 Spring 的纯技术交流社区（涵盖 Spring Boot、Spring Cloud 等内容），集诸多开源爱好者和技术大牛贡献内容和交流问题。我们不夸大、不装逼、做最纯粹的技术分享！！！
 
 看看我们超强的群众基础，欢迎有兴趣的朋友加入QQ群分享与交流：
-
-Spring For All 社区 ① 365234583（满）<br>
-Spring For All 社区 ② 123013854（满）<br>
-Spring For All 社区 ③ 290714704（满）<br>
-Spring For All 社区 ④ 112133511（满）<br>
-Spring For All 社区 ⑤ 157525002（满）<br>
-Spring For All 社区 ⑥ 564840207<br>
-Spring For All 社区 ⑦ 470962790（满）<br>
-Spring For All 社区 ⑧ 613456104（满）<br>
-Spring For All 社区 ⑨ 534583667<br>
-Spring For All 社区 ⑩ 210742970 （满）<br>
 Spring For All 社区 ⑪ 517395240 <br>
 Spring For All 社区 ⑫ 498098401 <br>
 
