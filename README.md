@@ -2,7 +2,7 @@
 spring boot 实践学习案例，是 spring boot 初学者及核心技术巩固的最佳实践。
 
 # 推荐 
-- [高性能 TCP/UDP 通信框架 HP-Socket](https://github.com/ldcsaa/HP-Socket）
+- [高性能 TCP/UDP 通信框架 HP-Socket](https://github.com/ldcsaa/HP-Socket)
 - springcloud-learning-example
 [spring cloud 实践学习案例](https://github.com/JeffLi1993/springcloud-learning-example)<br>
 https://github.com/JeffLi1993/springcloud-learning-example
