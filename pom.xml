@@ -54,8 +54,6 @@
 		<module>spring-data-elasticsearch-crud</module>
 		<module>spring-data-elasticsearch-query</module>
 
-		<!-- 第二章快速入门案例 -->
-		<module>chapter-2-spring-boot-quick-start</module>
 		<!-- 第四章表单校验案例 -->
 		<module>chapter-4-spring-boot-validating-form-input</module>
 		<!-- 第五章数据分页排序案例 -->
