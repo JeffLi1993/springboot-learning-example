@@ -9,6 +9,7 @@ import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
 import org.springframework.boot.context.FileEncodingApplicationListener;
@@ -146,6 +147,7 @@ public class Application {
 
 
         DispatcherServlet dispSvlt;
+        SpringFactoriesLoader spFacldr;
 
         //  657567
 
@@ -153,6 +155,7 @@ public class Application {
         ApplicationListener fefweweg;
 
 
+        JmxAutoConfiguration gegerg;
 
     }
 
