@@ -9,8 +9,10 @@ import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
+import org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
 import org.springframework.boot.context.FileEncodingApplicationListener;
 import org.springframework.boot.context.config.AnsiOutputApplicationListener;
@@ -21,6 +23,7 @@ import org.springframework.boot.logging.ClasspathLoggingApplicationListener;
 import org.springframework.boot.logging.LoggingApplicationListener;
 import org.springframework.boot.context.embedded.ServerPortInfoApplicationContextInitializer;
 import org.springframework.boot.context.event.*;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ApplicationEvent;
@@ -33,6 +36,7 @@ import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.servlet.DispatcherServlet;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.servlet.ServletContainerInitializer;
 import java.util.ServiceLoader;
@@ -161,6 +165,55 @@ public class Application {
         ServiceLoader svcLdr;
         ClassLoader clsLdr;
         SpringFactoriesLoader spFacLdr;
+
+
+
+        //  4
+
+//        AutoConfigureWebMvc sfsdff;
+        WebMvcAutoConfiguration wefeeewefwef;
+
+        WebApplicationInitializer fwefw2123123e;
+        ApplicationContextInitializer vervwr324234;
+
+        MessageSourceAutoConfiguration fef92309020934234;
+
+        ApplicationListener gergergerg;
+        ParentContextCloserApplicationListener grgergergerg;
+
+
+        /*
+
+            # AutoConfigureWebMvc auto-configuration imports
+            org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureWebMvc=\
+            org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\
+            org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration,\
+            org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration,\
+            org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration,\
+            org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,\
+            org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration,\
+            org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration,\
+            org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
+
+
+            # Application Listeners
+            org.springframework.context.ApplicationListener=\
+            org.springframework.boot.ClearCachesApplicationListener,\
+            org.springframework.boot.builder.ParentContextCloserApplicationListener,\
+            org.springframework.boot.context.FileEncodingApplicationListener,\
+            org.springframework.boot.context.config.AnsiOutputApplicationListener,\
+            org.springframework.boot.context.config.ConfigFileApplicationListener,\
+            org.springframework.boot.context.config.DelegatingApplicationListener,\
+            org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener,\
+            org.springframework.boot.logging.ClasspathLoggingApplicationListener,\
+            org.springframework.boot.logging.LoggingApplicationListener
+
+        */
 
 
     }
