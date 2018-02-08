@@ -7,7 +7,6 @@ import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.SearchStrategy;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
 import org.springframework.boot.context.FileEncodingApplicationListener;
@@ -58,8 +57,11 @@ public class Application {
                 new MyContextClosedListener(),
                 new MyContextRefreshedListener(),
                 new MyContextStartedListener(),
-                new MyContextStoppedListener()
-        );
+                new MyContextStoppedListener());
+
+        app.addInitializers(
+                new MyApplicationContextInitializer1(),
+                new MyApplicationContextInitializer2());
 
         app.run(args);
     }
@@ -142,6 +144,14 @@ public class Application {
 
 
         DispatcherServlet dispSvlt;
+
+    }
+        //  657567
+
+        ApplicationContextInitializer gerg;
+        ApplicationListener fefweweg;
+
+
 
     }
 
