@@ -35,6 +35,7 @@ import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.ServletContainerInitializer;
+import java.util.ServiceLoader;
 
 /**
  * Spring Boot 应用启动类
@@ -156,6 +157,11 @@ public class Application {
 
 
         JmxAutoConfiguration gegerg;
+
+        ServiceLoader svcLdr;
+        ClassLoader clsLdr;
+        SpringFactoriesLoader spFacLdr;
+
 
     }
 
