@@ -1,5 +1,7 @@
 package com.spring.springboot;
 
+import com.spring.springboot.initializer.MyApplicationContextInitializer1;
+import com.spring.springboot.initializer.MyApplicationContextInitializer2;
 import com.spring.springboot.listener.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
@@ -145,7 +147,6 @@ public class Application {
 
         DispatcherServlet dispSvlt;
 
-    }
         //  657567
 
         ApplicationContextInitializer gerg;
