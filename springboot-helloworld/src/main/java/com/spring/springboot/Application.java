@@ -7,6 +7,7 @@ import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import org.springframework.boot.autoconfigure.condition.SearchStrategy;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
 import org.springframework.boot.context.FileEncodingApplicationListener;
@@ -29,6 +30,7 @@ import org.springframework.context.event.*;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.ServletContainerInitializer;
 
@@ -138,8 +140,10 @@ public class Application {
         Conditional fwefwdedwe;
         ConditionalOnWebApplication fwhjfgjfgjefwef;
 
-    }
 
+        DispatcherServlet dispSvlt;
+
+    }
 
 }
 
