@@ -13,16 +13,21 @@ import org.springframework.boot.autoconfigure.*;
 import org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
+import org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration;
+import org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration;
 import org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAutoConfiguration;
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider;
 import org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
+import org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer;
 import org.springframework.boot.context.FileEncodingApplicationListener;
 import org.springframework.boot.context.config.AnsiOutputApplicationListener;
 import org.springframework.boot.context.config.ConfigFileApplicationListener;
 import org.springframework.boot.context.config.DelegatingApplicationListener;
+import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer;
 import org.springframework.boot.diagnostics.FailureAnalyzer;
 import org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener;
 import org.springframework.boot.logging.ClasspathLoggingApplicationListener;
@@ -35,6 +40,8 @@ import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.event.*;
@@ -45,6 +52,9 @@ import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.servlet.ServletContainerInitializer;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.annotation.WebListener;
+import javax.servlet.annotation.WebServlet;
 import java.util.ServiceLoader;
 
 /**
@@ -85,7 +95,7 @@ public class Application {
 
         ServletContextInitializer ewfwef;
         WebApplicationInitializer wefwefwef;
-
+        ApplicationContextInitializer wefwefwefwef;
 
         SpringBootConfiguration wer;
         EnableAutoConfiguration wrwer23;
@@ -94,7 +104,6 @@ public class Application {
         EnableCaching werwer;
 
         SpringFactoriesLoader wer2323r23r;
-
 
         SpringApplicationRunListener wewerl;
         ApplicationListener fwefwef;
@@ -107,7 +116,6 @@ public class Application {
         LiquibaseServiceLocatorApplicationListener gwgwegweg;
         ClasspathLoggingApplicationListener fwefwewefwef;
         LoggingApplicationListener fwefweflwefl;
-
 
 
         //  1
@@ -156,15 +164,10 @@ public class Application {
         Conditional fwefwdedwe;
         ConditionalOnWebApplication fwhjfgjfgjefwef;
 
-
         DispatcherServlet dispSvlt;
         SpringFactoriesLoader spFacldr;
 
         //  657567
-
-        ApplicationContextInitializer gerg;
-        ApplicationListener fefweweg;
-
 
         JmxAutoConfiguration gegerg;
 
@@ -186,10 +189,8 @@ public class Application {
 
         ApplicationListener gergergerg;
         ParentContextCloserApplicationListener grgergergerg;
-
-        WebMvcAutoConfiguration fwefw5363546546ef;
-
-
+        FileEncodingApplicationListener wgwegweg;
+        DelegatingApplicationListener wefwe23423424fwef;
 
         /*
 
@@ -244,6 +245,31 @@ public class Application {
             org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration,\
             org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\
 
+            # AutoConfigureWebMvc auto-configuration imports
+            org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureWebMvc=\
+            org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\
+            org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration,\
+            org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration,\
+            org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration,\
+            org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,\
+            org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration,\
+            org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration,\
+            org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
+
+
+            # AutoConfigureWebClient auto-configuration imports
+            org.springframework.boot.test.autoconfigure.web.client.AutoConfigureWebClient=\
+            org.springframework.boot.test.autoconfigure.web.client.WebClientRestTemplateAutoConfiguration,\
+            org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration
+
         */
 
 
@@ -252,8 +278,78 @@ public class Application {
 
         BackgroundPreinitializer gwegwegweg;
 
+        SpringBootConfiguration fwefwe5367537357;
+
+        ServletComponentScan fwefwef2443634613;
+        ComponentScan fwefwefwe3214134f;
+        ComponentScans fwefwefwefw451345351e;
+
         EnableAutoConfiguration feef242342343ef;
+
         SpringApplicationAdminJmxAutoConfiguration fwe2323f;
+
+
+//        AutoConfigureWebMvc fwef575466wef;
+        MessageSourceAutoConfiguration gergerge456245645rg;
+
+        WebMvcAutoConfiguration fewfwefwef;
+        GroovyTemplateAutoConfiguration ggwegweg;
+
+        WebMvcAutoConfiguration wefwefwe1340941309143f;
+
+        ConfigurationWarningsApplicationContextInitializer wevwevwev;
+
+        /*
+
+            # Application Context Initializers
+            org.springframework.context.ApplicationContextInitializer=\
+            org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer,\
+            org.springframework.boot.context.ContextIdApplicationContextInitializer,\
+            org.springframework.boot.context.config.DelegatingApplicationContextInitializer,\
+            org.springframework.boot.context.embedded.ServerPortInfoApplicationContextInitializer
+
+            # AutoConfigureCache auto-configuration imports
+            org.springframework.boot.test.autoconfigure.core.AutoConfigureCache=\
+            org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration
+
+            # AutoConfigureDataJpa auto-configuration imports
+            org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureDataJpa=\
+            org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
+            org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration,\
+            org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration,\
+            org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
+
+            # AutoConfigureDataMongo auto-configuration imports
+            org.springframework.boot.test.autoconfigure.data.mongo.AutoConfigureDataMongo=\
+            org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,\
+            org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration
+
+            # AutoConfigureJdbc auto-configuration imports
+            org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureJdbc=\
+            org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
+            org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration,\
+            org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
+
+        */
+
+
+        MongoDataAutoConfiguration vczvzxvzxcv;
+        AutoConfigurationImportFilter gwefwef;
+        AutoConfigurationImportListener fwefwe3513451435;
+        ApplicationContextInitializer fwefwefwef;
+
+
+        WebMvcAutoConfiguration fwef234234324;
+        SpringApplicationAdminJmxAutoConfiguration ergqhqrhqrh;
 
 
 

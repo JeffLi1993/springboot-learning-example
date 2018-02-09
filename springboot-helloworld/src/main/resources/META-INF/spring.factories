@@ -2,3 +2,6 @@
 
 #org.springframework.boot.autoconfigure.EnableAutoConfiguration = \
 #com.ibigsea.spring_boot_starter_hello.HelloAutoConfiguration
+
+org.springframework.boot.SpringApplicationRunListener=\
+com.spring.springboot.runListener.MySprAppRunLsnr
