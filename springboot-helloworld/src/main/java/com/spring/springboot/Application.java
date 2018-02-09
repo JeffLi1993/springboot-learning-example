@@ -6,18 +6,24 @@ import com.spring.springboot.listener.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
 import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration;
+import org.springframework.boot.actuate.autoconfigure.EndpointWebMvcManagementContextConfiguration;
+import org.springframework.boot.actuate.autoconfigure.ManagementContextConfiguration;
+import org.springframework.boot.autoconfigure.*;
+import org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAutoConfiguration;
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
+import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider;
 import org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
 import org.springframework.boot.context.FileEncodingApplicationListener;
 import org.springframework.boot.context.config.AnsiOutputApplicationListener;
 import org.springframework.boot.context.config.ConfigFileApplicationListener;
 import org.springframework.boot.context.config.DelegatingApplicationListener;
+import org.springframework.boot.diagnostics.FailureAnalyzer;
 import org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener;
 import org.springframework.boot.logging.ClasspathLoggingApplicationListener;
 import org.springframework.boot.logging.LoggingApplicationListener;
@@ -181,6 +187,9 @@ public class Application {
         ApplicationListener gergergerg;
         ParentContextCloserApplicationListener grgergergerg;
 
+        WebMvcAutoConfiguration fwefw5363546546ef;
+
+
 
         /*
 
@@ -200,7 +209,6 @@ public class Application {
             org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration,\
             org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
 
-
             # Application Listeners
             org.springframework.context.ApplicationListener=\
             org.springframework.boot.ClearCachesApplicationListener,\
@@ -213,7 +221,40 @@ public class Application {
             org.springframework.boot.logging.ClasspathLoggingApplicationListener,\
             org.springframework.boot.logging.LoggingApplicationListener
 
+            # Auto Configure
+            org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+            org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
+            org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
+            org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\
+            org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,\
+            org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration,\
+            org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration,\
+            org.springframework.boot.autoconfigure.cloud.CloudAutoConfiguration,\
+            org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\
+            org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration,\
+            org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration,\
+            org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\
+
         */
+
+
+        ApplicationListener fw21111e;
+        AutoConfigurationImportFilter gwrgwegweg;
+
+        BackgroundPreinitializer gwegwegweg;
+
+        EnableAutoConfiguration feef242342343ef;
+        SpringApplicationAdminJmxAutoConfiguration fwe2323f;
+
 
 
     }
