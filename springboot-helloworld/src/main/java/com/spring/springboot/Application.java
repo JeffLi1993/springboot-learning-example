@@ -20,19 +20,28 @@ import org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAu
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider;
+import org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration;
+import org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
 import org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer;
+import org.springframework.boot.context.ContextIdApplicationContextInitializer;
 import org.springframework.boot.context.FileEncodingApplicationListener;
 import org.springframework.boot.context.config.AnsiOutputApplicationListener;
 import org.springframework.boot.context.config.ConfigFileApplicationListener;
+import org.springframework.boot.context.config.DelegatingApplicationContextInitializer;
 import org.springframework.boot.context.config.DelegatingApplicationListener;
+import org.springframework.boot.context.embedded.*;
+import org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainer;
+import org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory;
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer;
+import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
+import org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer;
+import org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainerFactory;
 import org.springframework.boot.diagnostics.FailureAnalyzer;
 import org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener;
 import org.springframework.boot.logging.ClasspathLoggingApplicationListener;
 import org.springframework.boot.logging.LoggingApplicationListener;
-import org.springframework.boot.context.embedded.ServerPortInfoApplicationContextInitializer;
 import org.springframework.boot.context.event.*;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
@@ -45,9 +54,12 @@ import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.event.*;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
@@ -222,29 +234,6 @@ public class Application {
             org.springframework.boot.logging.ClasspathLoggingApplicationListener,\
             org.springframework.boot.logging.LoggingApplicationListener
 
-            # Auto Configure
-            org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-            org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
-            org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
-            org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\
-            org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,\
-            org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration,\
-            org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration,\
-            org.springframework.boot.autoconfigure.cloud.CloudAutoConfiguration,\
-            org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\
-            org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration,\
-            org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration,\
-            org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\
-
             # AutoConfigureWebMvc auto-configuration imports
             org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureWebMvc=\
             org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\
@@ -260,7 +249,6 @@ public class Application {
             org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration,\
             org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration,\
             org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
-
 
             # AutoConfigureWebClient auto-configuration imports
             org.springframework.boot.test.autoconfigure.web.client.AutoConfigureWebClient=\
@@ -298,6 +286,10 @@ public class Application {
         WebMvcAutoConfiguration wefwefwe1340941309143f;
 
         ConfigurationWarningsApplicationContextInitializer wevwevwev;
+        ContextIdApplicationContextInitializer gwegweg;
+        DelegatingApplicationContextInitializer grgrgrg;
+        ServerPortInfoApplicationContextInitializer fwefepfpe;
+
 
         /*
 
@@ -339,6 +331,105 @@ public class Application {
             org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration,\
             org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
 
+            # Auto Configure
+            org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+            org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
+            org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
+            org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\
+            org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,\
+            org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration,\
+            org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration,\
+            org.springframework.boot.autoconfigure.cloud.CloudAutoConfiguration,\
+            org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\
+            org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration,\
+            org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration,\
+            org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.ldap.LdapDataAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.solr.SolrRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration,\
+            org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration,\
+            org.springframework.boot.autoconfigure.elasticsearch.jest.JestAutoConfiguration,\
+            org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration,\
+            org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration,\
+            org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration,\
+            org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration,\
+            org.springframework.boot.autoconfigure.hazelcast.HazelcastAutoConfiguration,\
+            org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAutoConfiguration,\
+            org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration,\
+            org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jdbc.JndiDataSourceAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jdbc.XADataSourceAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jms.JmsAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jms.JndiConnectionFactoryAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jms.activemq.ActiveMQAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jms.artemis.ArtemisAutoConfiguration,\
+            org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration,\
+            org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration,\
+            org.springframework.boot.autoconfigure.jooq.JooqAutoConfiguration,\
+            org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration,\
+            org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration,\
+            org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration,\
+            org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration,\
+            org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration,\
+            org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration,\
+            org.springframework.boot.autoconfigure.mobile.DeviceResolverAutoConfiguration,\
+            org.springframework.boot.autoconfigure.mobile.DeviceDelegatingViewResolverAutoConfiguration,\
+            org.springframework.boot.autoconfigure.mobile.SitePreferenceAutoConfiguration,\
+            org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration,\
+            org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,\
+            org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration,\
+            org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration,\
+            org.springframework.boot.autoconfigure.reactor.ReactorAutoConfiguration,\
+            org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration,\
+            org.springframework.boot.autoconfigure.security.SecurityFilterAutoConfiguration,\
+            org.springframework.boot.autoconfigure.security.FallbackWebSecurityAutoConfiguration,\
+            org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration,\
+            org.springframework.boot.autoconfigure.sendgrid.SendGridAutoConfiguration,\
+            org.springframework.boot.autoconfigure.session.SessionAutoConfiguration,\
+            org.springframework.boot.autoconfigure.social.SocialWebAutoConfiguration,\
+            org.springframework.boot.autoconfigure.social.FacebookAutoConfiguration,\
+            org.springframework.boot.autoconfigure.social.LinkedInAutoConfiguration,\
+            org.springframework.boot.autoconfigure.social.TwitterAutoConfiguration,\
+            org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration,\
+            org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration,\
+            org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration,\
+            org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration,\
+            org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration,\
+            org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration,\
+            org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration,\
+            org.springframework.boot.autoconfigure.websocket.WebSocketMessagingAutoConfiguration,\
+            org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration
+
         */
 
 
@@ -350,6 +441,37 @@ public class Application {
 
         WebMvcAutoConfiguration fwef234234324;
         SpringApplicationAdminJmxAutoConfiguration ergqhqrhqrh;
+
+
+        //  6
+
+        EmbeddedServletContainer fwef123123wef;
+            JettyEmbeddedServletContainer r23r23r23r;
+            TomcatEmbeddedServletContainer gqgerg43g34g;
+            UndertowEmbeddedServletContainer gergergo090qergqrg;
+
+
+        EmbeddedServletContainerFactory r23r23r2333452345r;
+            AbstractEmbeddedServletContainerFactory fwefwef0203f;
+                TomcatEmbeddedServletContainerFactory gwg4343t134twegweg;
+                UndertowEmbeddedServletContainerFactory ggergeqrge314t143tqrg;
+                JettyEmbeddedServletContainerFactory fwefqg34g341g;
+
+
+        AbstractApplicationContext fwe090we0fw0ef;
+            GenericApplicationContext fwfwefwef;
+                GenericWebApplicationContext fwef092f023f;
+                    EmbeddedWebApplicationContext fwefwef234234234;
+                        AnnotationConfigEmbeddedWebApplicationContext wef0090wefwef;
+                        XmlEmbeddedWebApplicationContext ergergpeorpogperg0909erg;
+
+
+
+        EmbeddedServletContainerAutoConfiguration fwefoiwef989we89f;
+        DispatcherServletAutoConfiguration fwefwef9090209f23f;
+
+
+        ServletContextInitializer fwefwefwef23452435345;
 
 
 
