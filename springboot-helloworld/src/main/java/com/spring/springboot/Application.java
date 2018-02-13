@@ -115,6 +115,8 @@ public class Application {
         EnableScheduling we3r;
         EnableCaching werwer;
 
+        EnableWebMvc fwefwefwef;
+
         SpringFactoriesLoader wer2323r23r;
 
         SpringApplicationRunListener wewerl;
@@ -273,6 +275,7 @@ public class Application {
         ComponentScans fwefwefwefw451345351e;
 
         EnableAutoConfiguration feef242342343ef;
+        EnableWebMvc fwefwefwef133123123123;
 
         SpringApplicationAdminJmxAutoConfiguration fwe2323f;
 
@@ -282,8 +285,6 @@ public class Application {
 
         WebMvcAutoConfiguration fewfwefwef;
         GroovyTemplateAutoConfiguration ggwegweg;
-
-        WebMvcAutoConfiguration wefwefwe1340941309143f;
 
         ConfigurationWarningsApplicationContextInitializer wevwevwev;
         ContextIdApplicationContextInitializer gwegweg;
@@ -436,7 +437,7 @@ public class Application {
         MongoDataAutoConfiguration vczvzxvzxcv;
         AutoConfigurationImportFilter gwefwef;
         AutoConfigurationImportListener fwefwe3513451435;
-        ApplicationContextInitializer fwefwefwef;
+        ApplicationContextInitializer fwefwefwef234234;
 
 
         WebMvcAutoConfiguration fwef234234324;
@@ -445,18 +446,23 @@ public class Application {
 
         //  6
 
+        EmbeddedServletContainerAutoConfiguration fwefoiwef989we89f;
+        DispatcherServletAutoConfiguration fwefwef9090209f23f;
+
+        ConfigurableEmbeddedServletContainer gerg345354345;
+            AbstractConfigurableEmbeddedServletContainer reer4545;
+        EmbeddedServletContainerFactory r23r23r2333452345r;
+                AbstractEmbeddedServletContainerFactory fwefwef0203f;
+                    TomcatEmbeddedServletContainerFactory gwg4343t134twegweg;
+                    UndertowEmbeddedServletContainerFactory ggergeqrge314t143tqrg;
+                    JettyEmbeddedServletContainerFactory fwefqg34g341g;
+
         EmbeddedServletContainer fwef123123wef;
             JettyEmbeddedServletContainer r23r23r23r;
             TomcatEmbeddedServletContainer gqgerg43g34g;
             UndertowEmbeddedServletContainer gergergo090qergqrg;
 
-
-        EmbeddedServletContainerFactory r23r23r2333452345r;
-            AbstractEmbeddedServletContainerFactory fwefwef0203f;
-                TomcatEmbeddedServletContainerFactory gwg4343t134twegweg;
-                UndertowEmbeddedServletContainerFactory ggergeqrge314t143tqrg;
-                JettyEmbeddedServletContainerFactory fwefqg34g341g;
-
+            DispatcherServlet ds;
 
         AbstractApplicationContext fwe090we0fw0ef;
             GenericApplicationContext fwfwefwef;
@@ -467,13 +473,7 @@ public class Application {
 
 
 
-        EmbeddedServletContainerAutoConfiguration fwefoiwef989we89f;
-        DispatcherServletAutoConfiguration fwefwef9090209f23f;
-
-
         ServletContextInitializer fwefwefwef23452435345;
-
-
 
     }
 
