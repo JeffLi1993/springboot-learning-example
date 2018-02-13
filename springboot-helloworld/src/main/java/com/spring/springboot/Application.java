@@ -62,6 +62,9 @@ import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import javax.servlet.ServletContainerInitializer;
 import javax.servlet.annotation.WebFilter;
@@ -439,8 +442,6 @@ public class Application {
         AutoConfigurationImportListener fwefwe3513451435;
         ApplicationContextInitializer fwefwefwef234234;
 
-
-        WebMvcAutoConfiguration fwef234234324;
         SpringApplicationAdminJmxAutoConfiguration ergqhqrhqrh;
 
 
@@ -472,8 +473,15 @@ public class Application {
                         XmlEmbeddedWebApplicationContext ergergpeorpogperg0909erg;
 
 
+        WebMvcConfigurationSupport vv2390923confi;
+        WebMvcConfigurer vfdvf122323;
+            WebMvcConfigurerAdapter erobeqribnoiqerbqerb;
+        EnableWebMvc wefwefwef430143901490;
+
 
         ServletContextInitializer fwefwefwef23452435345;
+
+
 
     }
 
