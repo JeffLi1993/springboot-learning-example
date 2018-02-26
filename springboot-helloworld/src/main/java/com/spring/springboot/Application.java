@@ -11,12 +11,16 @@ import org.springframework.boot.actuate.autoconfigure.EndpointWebMvcManagementCo
 import org.springframework.boot.actuate.autoconfigure.ManagementContextConfiguration;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration;
+import org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import org.springframework.boot.autoconfigure.condition.SpringBootCondition;
 import org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
+import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
 import org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration;
 import org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration;
 import org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider;
@@ -210,6 +214,8 @@ public class Application {
         FileEncodingApplicationListener wgwegweg;
         DelegatingApplicationListener wefwe23423424fwef;
 
+        MessageSourceAutoConfiguration ge23454325rgergerg;
+
         /*
 
             # AutoConfigureWebMvc auto-configuration imports
@@ -240,22 +246,6 @@ public class Application {
             org.springframework.boot.logging.ClasspathLoggingApplicationListener,\
             org.springframework.boot.logging.LoggingApplicationListener
 
-            # AutoConfigureWebMvc auto-configuration imports
-            org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureWebMvc=\
-            org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\
-            org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration,\
-            org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration,\
-            org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration,\
-            org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,\
-            org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration,\
-            org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration,\
-            org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
-
             # AutoConfigureWebClient auto-configuration imports
             org.springframework.boot.test.autoconfigure.web.client.AutoConfigureWebClient=\
             org.springframework.boot.test.autoconfigure.web.client.WebClientRestTemplateAutoConfiguration,\
@@ -265,7 +255,6 @@ public class Application {
             org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration
 
         */
-
 
         ApplicationListener fw21111e;
         AutoConfigurationImportFilter gwrgwegweg;
@@ -295,6 +284,8 @@ public class Application {
         DelegatingApplicationContextInitializer grgrgrg;
         ServerPortInfoApplicationContextInitializer fwefepfpe;
 
+        CacheAutoConfiguration gerger56u356u356u;
+        ApplicationContextInitializer gergerg34g34g34;
 
         /*
 
@@ -437,6 +428,7 @@ public class Application {
 
         */
 
+        FlywayAutoConfiguration gergergergerg;
 
         MongoDataAutoConfiguration vczvzxvzxcv;
         AutoConfigurationImportFilter gwefwef;
@@ -483,6 +475,7 @@ public class Application {
         ServletContextInitializer fwefwefwef23452435345;
 
 
+        SpringBootCondition erververv;
 
     }
 
