@@ -12,11 +12,13 @@ import org.springframework.boot.actuate.autoconfigure.ManagementContextConfigura
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.autoconfigure.condition.SpringBootCondition;
 import org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
+import org.springframework.boot.autoconfigure.freemarker.FreeMarkerTemplateAvailabilityProvider;
 import org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration;
 import org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration;
 import org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAutoConfiguration;
@@ -212,6 +214,8 @@ public class Application {
         DelegatingApplicationListener wefwe23423424fwef;
 
         MessageSourceAutoConfiguration ge23454325rgergerg;
+
+        WebMvcAutoConfiguration grgweg;
 
         /*
 
@@ -475,6 +479,16 @@ public class Application {
 
 
         SpringBootCondition erververv;
+
+        EndpointWebMvcManagementContextConfiguration erf2309230f923f;
+
+        SpringApplicationAdminJmxAutoConfiguration grgergwg0909g23g;
+
+        FreeMarkerTemplateAvailabilityProvider gergergerg93148951485915;
+        ConditionalOnClass ergerg0314901943014;
+
+
+
 
     }
 
