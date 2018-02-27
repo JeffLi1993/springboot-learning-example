@@ -1,0 +1,1 @@
+org.springframework.data.web.config.SpringDataJacksonModules=org.springframework.data.web.config.SpringDataJacksonConfiguration

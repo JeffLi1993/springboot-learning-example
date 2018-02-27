@@ -53,10 +53,7 @@ import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScans;
-import org.springframework.context.annotation.Condition;
-import org.springframework.context.annotation.Conditional;
+import org.springframework.context.annotation.*;
 import org.springframework.context.event.*;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
@@ -268,6 +265,8 @@ public class Application {
         ComponentScans fwefwefwefw451345351e;
 
         EnableAutoConfiguration feef242342343ef;
+        EnableMBeanExport egwegwegweg;
+        EnableScheduling gewrgwegweg;
         EnableWebMvc fwefwefwef133123123123;
 
         SpringApplicationAdminJmxAutoConfiguration fwe2323f;
