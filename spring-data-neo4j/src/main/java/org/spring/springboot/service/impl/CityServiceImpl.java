@@ -26,7 +26,7 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public Collection<City> searchCity(String name) {
-        return cityRepository.findByNameLike(".*" + name + ".*");
+        return cityRepository.findByNameLike(name);
     }
 
 	@Override

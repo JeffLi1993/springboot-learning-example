@@ -17,6 +17,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 public interface CityRepository extends PagingAndSortingRepository<City, Long> {
 	City findByName(@Param("name") String name);
 
-	@Query("MATCH (n:`City`) WHERE n.`name` =~ { `name_0` } RETURN n")
+	@Query("MATCH (n:`City`) WHERE n.`name` CONTAINS { name_0 } RETURN n")
 	Collection<City> findByNameLike(@Param("name_0") String name);
 }
