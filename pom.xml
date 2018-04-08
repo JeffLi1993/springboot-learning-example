@@ -9,6 +9,14 @@
 	<packaging>pom</packaging>
 
 	<modules>
+    <!-- Spring Boot 2.0 WebFlux-->
+
+    <!-- Spring Boot WebFlux 快速入门 -->
+    <module>springboot-webflux-1-quickstart</module>
+
+    <!-- Spring Boot WebFlux 实现 Restful 服务，基于 HTTP / JSON 传输 -->
+    <module>springboot-webflux-2-restful</module>
+
 		<!-- 基础 – 入门篇 -->
 		<!-- Spring Boot 之 HelloWorld 详解 -->
 		<module>springboot-helloworld</module>
@@ -53,6 +61,19 @@
 		<!-- Spring Data ES 篇 -->
 		<module>spring-data-elasticsearch-crud</module>
 		<module>spring-data-elasticsearch-query</module>
+
+    <!-- 第 1 章《Spring Boot 入门》 -->
+    <module>chapter-1-spring-boot-quickstart</module>
+    <!-- 第 2 章《配置》 -->
+    <module>chapter-2-spring-boot-config</module>
+    <!-- 第 3 章《Web 开发》 -->
+    <module>chapter-3-spring-boot-web</module>
+    <!-- 第 4 章《模板引擎》 -->
+    <module>chapter-4-spring-boot-web-thymeleaf</module>
+    <!-- 第 5 章《数据存储》 -->
+    <module>chapter-5-spring-boot-data-jpa</module>
+    <!-- 第 6 章《数据缓存》 -->
+    <module>chapter-6-spring-boot-cache-redis</module>
 
 		<!-- 第四章表单校验案例 -->
 		<module>chapter-4-spring-boot-validating-form-input</module>
