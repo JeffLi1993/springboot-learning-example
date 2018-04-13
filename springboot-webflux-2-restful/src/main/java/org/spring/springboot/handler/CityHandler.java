@@ -22,14 +22,11 @@ public class CityHandler {
     }
 
     public Mono<City> findCityById(Long id) {
-        return Mono.create(cityMonoSink -> cityMonoSink.success(cityRepository.findCityById(id)));
+        return Mono.justOrEmpty(cityRepository.findCityById(id));
     }
 
     public Flux<City> findAllCity() {
-        return Flux.create(cityFluxSink -> {
-            cityRepository.findAll().forEach(city -> cityFluxSink.next(city));
-            cityFluxSink.complete();
-        });
+        return Flux.fromIterable(cityRepository.findAll());
     }
 
     public Mono<Long> modifyCity(City city) {
