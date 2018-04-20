@@ -46,6 +46,15 @@ public class CityWebFluxController {
         return cityHandler.deleteCity(id);
     }
 
+    @GetMapping("/hello")
+    public Mono<String> hello(final Model model) {
+        model.addAttribute("name", "泥瓦匠");
+        model.addAttribute("city", "浙江温岭");
+
+        String path = "hello";
+        return Mono.create(monoSink -> monoSink.success(path));
+    }
+
     private static final String CITY_LIST_PATH_NAME = "cityList";
 
     @GetMapping("/page/list")
