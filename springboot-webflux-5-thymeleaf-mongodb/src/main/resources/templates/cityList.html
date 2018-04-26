@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"/>
+    <title>城市列表</title>
+</head>
+
+<body>
+
+<div>
+
+
+    <table>
+        <legend>
+            <strong>城市列表</strong>
+        </legend>
+        <thead>
+        <tr>
+            <th>城市编号</th>
+            <th>省份编号</th>
+            <th>名称</th>
+            <th>描述</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="city : ${cityList}">
+            <td th:text="${city.id}"></td>
+            <td th:text="${city.provinceId}"></td>
+            <td th:text="${city.cityName}"></td>
+            <td th:text="${city.description}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
