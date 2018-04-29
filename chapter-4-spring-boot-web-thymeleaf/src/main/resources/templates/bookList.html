@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script type="text/javascript" th:src="@{https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js}"></script>
+    <link th:href="@{https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/default.css}" rel="stylesheet"/>
+    <link rel="icon" th:href="@{/images/favicon.ico}" type="image/x-icon"/>
+    <meta charset="UTF-8"/>
+    <title>书籍列表</title>
+</head>
+
+<body>
+
+<div class="contentDiv">
+
+    <h5> 《Spring Boot 2.x 核心技术实战 - 上 基础篇》第 4 章《模板引擎》Demo </h5>
+
+    <table class="table table-hover table-condensed">
+        <legend>
+            <strong>书籍列表</strong>
+        </legend>
+        <thead>
+        <tr>
+            <th>书籍编号</th>
+            <th>书名</th>
+            <th>作者</th>
+            <th>简介</th>
+            <th>管理</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="book : ${bookList}">
+            <th scope="row" th:text="${book.id}"></th>
+            <td><a th:href="@{/book/update/{bookId}(bookId=${book.id})}" th:text="${book.name}"></a></td>
+            <td th:text="${book.writer}"></td>
+            <td th:text="${book.introduction}"></td>
+            <td><a class="btn btn-danger" th:href="@{/book/delete/{bookId}(bookId=${book.id})}">删除</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div><a class="btn btn-primary" href="/book/create" role="button">新增书籍</a></div>
+</div>
+
+</body>
+</html>
