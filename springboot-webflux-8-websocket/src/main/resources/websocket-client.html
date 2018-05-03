@@ -6,22 +6,24 @@
 </head>
 <body>
 
-<div class="events"></div>
+<div class="chat"></div>
+
 <script>
   var clientWebSocket = new WebSocket("ws://localhost:8080/echo");
+
   clientWebSocket.onopen = function () {
     console.log("clientWebSocket.onopen", clientWebSocket);
     console.log("clientWebSocket.readyState", "websocketstatus");
-    clientWebSocket.send("你好");
+    clientWebSocket.send("你好！");
   }
 
   clientWebSocket.onclose = function (error) {
     console.log("clientWebSocket.onclose", clientWebSocket, error);
-    events("再见");
+    events("聊天会话关闭！");
   }
 
   function events(responseEvent) {
-    document.querySelector(".events").innerHTML += responseEvent + "<br>";
+    document.querySelector(".chat").innerHTML += responseEvent + "<br>";
   }
 </script>
 </body>

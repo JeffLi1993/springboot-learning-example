@@ -12,6 +12,7 @@ public class EchoHandler implements WebSocketHandler {
     public Mono<Void> handle(final WebSocketSession session) {
         return session.send(
                 session.receive()
-                        .map(msg -> session.textMessage("服务端返回：小明， -> " + msg.getPayloadAsText())));
+                        .map(msg -> session.textMessage(
+                                "服务端返回：小明， " + msg.getPayloadAsText())));
     }
 }
