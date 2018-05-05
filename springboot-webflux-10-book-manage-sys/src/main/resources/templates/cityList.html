@@ -6,7 +6,7 @@
     <link th:href="@{/css/default.css}" rel="stylesheet"/>
     <link rel="icon" th:href="@{/images/favicon.ico}" type="image/x-icon"/>
     <meta charset="UTF-8"/>
-    <title>书籍列表</title>
+    <title>城市列表</title>
 </head>
 
 <body>
@@ -15,29 +15,30 @@
 
     <table class="table table-hover table-condensed">
         <legend>
-            <strong>书籍列表</strong>
+            <strong>城市列表</strong>
         </legend>
         <thead>
         <tr>
-            <th>书籍编号</th>
-            <th>书名</th>
-            <th>作者</th>
-            <th>简介</th>
+            <th>城市编号</th>
+            <th>城市名称</th>
+            <th>描述</th>
+            <th>省份编号</th>
             <th>管理</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="book : ${bookList}">
-            <th scope="row" th:text="${book.id}"></th>
-            <td><a th:href="@{/book/update/{bookId}(bookId=${book.id})}" th:text="${book.name}"></a></td>
-            <td th:text="${book.writer}"></td>
-            <td th:text="${book.introduction}"></td>
-            <td><a class="btn btn-danger" th:href="@{/book/delete/{bookId}(bookId=${book.id})}">删除</a></td>
+        <tr th:each="city : ${cityList}">
+            <th scope="row" th:text="${city.id}"></th>
+            <td><a th:href="@{/city/update/{cityId}(cityId=${city.id})}" th:text="${city.cityName}"></a></td>
+            <td th:text="${city.description}"></td>
+            <td th:text="${city.provinceId}"></td>
+            <td><a class="btn btn-danger" th:href="@{/city/delete/{cityId}(cityId=${city.id})}">删除</a></td>
         </tr>
+
         </tbody>
     </table>
 
-    <div><a class="btn btn-primary" href="/book/create" role="button">新增书籍</a></div>
+    <div><a class="btn btn-primary" href="/city/create" role="button">新增城市</a></div>
 </div>
 
 </body>
