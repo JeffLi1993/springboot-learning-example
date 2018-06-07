@@ -16,7 +16,7 @@ public interface CityDao {
      *
      * @param cityName 城市名
      */
-    @Select("SELECT * FROM city")
+    @Select("SELECT * FROM city where city_name = #{cityName} ")
     // 返回 Map 结果集
     @Results({
             @Result(property = "id", column = "id"),
