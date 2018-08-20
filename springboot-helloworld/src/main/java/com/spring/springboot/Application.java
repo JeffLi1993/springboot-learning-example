@@ -3,6 +3,8 @@ package com.spring.springboot;
 import com.spring.springboot.initializer.MyApplicationContextInitializer1;
 import com.spring.springboot.initializer.MyApplicationContextInitializer2;
 import com.spring.springboot.listener.*;
+import com.spring.springboot.service.HelloAutoConfiguration;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
 import org.springframework.boot.SpringBootConfiguration;
@@ -12,23 +14,25 @@ import org.springframework.boot.actuate.autoconfigure.ManagementContextConfigura
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
-import org.springframework.boot.autoconfigure.condition.SpringBootCondition;
+import org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration;
+import org.springframework.boot.autoconfigure.condition.*;
 import org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
+import org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration;
+import org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
 import org.springframework.boot.autoconfigure.freemarker.FreeMarkerTemplateAvailabilityProvider;
 import org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration;
 import org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration;
 import org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider;
-import org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration;
-import org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration;
-import org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration;
+import org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers;
+import org.springframework.boot.autoconfigure.web.*;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
 import org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer;
 import org.springframework.boot.context.ContextIdApplicationContextInitializer;
@@ -44,6 +48,8 @@ import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletCon
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainerFactory;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.diagnostics.FailureAnalyzer;
 import org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener;
 import org.springframework.boot.logging.ClasspathLoggingApplicationListener;
@@ -51,30 +57,41 @@ import org.springframework.boot.logging.LoggingApplicationListener;
 import org.springframework.boot.context.event.*;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
-import org.springframework.context.ApplicationContextInitializer;
-import org.springframework.context.ApplicationEvent;
-import org.springframework.context.ApplicationListener;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.context.*;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.*;
 import org.springframework.context.event.*;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.core.env.Environment;
 import org.springframework.core.io.support.SpringFactoriesLoader;
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.context.AbstractContextLoaderInitializer;
 import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.handler.DispatcherServletWebRequest;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
 
 import javax.servlet.ServletContainerInitializer;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebListener;
 import javax.servlet.annotation.WebServlet;
+import javax.sql.DataSource;
+import javax.websocket.server.ServerEndpoint;
 import java.util.ServiceLoader;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
+
+import static com.sun.org.apache.xml.internal.serialize.LineSeparator.Web;
 
 /**
  * Spring Boot 应用启动类
@@ -181,7 +198,6 @@ public class Application {
 
         //  3
 
-        Condition ergerg;
         Conditional fwefwdedwe;
         ConditionalOnWebApplication fwhjfgjfgjefwef;
 
@@ -468,15 +484,19 @@ public class Application {
                         AnnotationConfigEmbeddedWebApplicationContext wef0090wefwef;
                         XmlEmbeddedWebApplicationContext ergergpeorpogperg0909erg;
 
-
-        WebMvcConfigurationSupport vv2390923confi;
+        EnableWebMvc wefwefwef430143901490;
         WebMvcConfigurer vfdvf122323;
             WebMvcConfigurerAdapter erobeqribnoiqerbqerb;
-        EnableWebMvc wefwefwef430143901490;
+        WebMvcConfigurationSupport vv2390923confi;
+            DelegatingWebMvcConfiguration greogioeirg;
+                WebMvcAutoConfiguration.EnableWebMvcConfiguration rogioerigerg;
+        WebServlet df;
+        WebListener egerg;
+        WebFilter fwef23;
+        WebInitParam eropowe;
 
 
         ServletContextInitializer fwefwefwef23452435345;
-
 
         SpringBootCondition erververv;
 
@@ -486,8 +506,91 @@ public class Application {
 
         FreeMarkerTemplateAvailabilityProvider gergergerg93148951485915;
         ConditionalOnClass ergerg0314901943014;
+        ConditionalOnBean gregergerg2039023;
 
 
+        EnableScheduling fwef01092;
+        ApplicationContextInitializer fwefwefwef1203910293;
+
+        BeanPostProcessor gregeg013409014;
+
+        ConfigurationProperties tohijioqehr;
+        EnableConfigurationProperties eroignoinerng;
+
+        ApplicationContext ac;
+        RequestMapping reqMap;
+
+        EnableAutoConfiguration foweio23;
+        DataSourceAutoConfiguration ewoi2o3io2i3of;
+
+        WebMvcConfigurerAdapter weadpt;
+
+        HttpMessageConverter wewwe;
+        ServletRegistrationBean wqqwq232323;
+
+        //  start
+        EmbeddedServletContainerCustomizer fwefwe2323;
+
+        EmbeddedServletContainerFactory wewewe23232;
+        ConfigurableEmbeddedServletContainer conownow;
+            AbstractConfigurableEmbeddedServletContainer fwf23f23;
+                AbstractEmbeddedServletContainerFactory wewe2322323;
+                    TomcatEmbeddedServletContainerFactory tomcatfs;
+                    UndertowEmbeddedServletContainerFactory undertowfs;
+                    JettyEmbeddedServletContainerFactory jettyfs;
+
+        EmbeddedServletContainer cont;
+        UndertowEmbeddedServletContainer wewe23f23f;
+        TomcatEmbeddedServletContainer weiuifu23;
+        JettyEmbeddedServletContainer gooi43gnoi2323;
+
+        GenericApplicationContext gac;
+        EmbeddedWebApplicationContext eac;
+        AnnotationConfigEmbeddedWebApplicationContext aaa23223;
+        XmlEmbeddedWebApplicationContext xmleac;
+
+        //  end
+
+        AnnotationConfigApplicationContext ac121;
+        AnnotationConfigEmbeddedWebApplicationContext eac11231;
+
+        EnvironmentAware wefwef;
+        Environment wefwef23f23;
+
+        JdbcTemplateAutoConfiguration auorooro;
+        ServerProperties rweoiwnoeb;
+
+        ApplicationListener al;
+        ApplicationContextInitializer acInit;
+        ParentContextCloserApplicationListener a23223;
+        ServletContextListener scl;
+        EmbeddedServletContainerInitializedEvent aa232323;
+
+        ServerEndpoint se;
+        WebMvcProperties www;
+        WebMvcConfigurer aa22323;
+        WebMvcAutoConfiguration abwbe232323;
+        WebMvcRegistrations eger4334;
+
+        WebApplicationInitializer wainit;
+            SpringBootServletInitializer sbsinit;
+            AbstractContextLoaderInitializer weoiow23;
+                AbstractDispatcherServletInitializer absdispsvlinit;
+                    AbstractAnnotationConfigDispatcherServletInitializer a2oinoi23;
+
+        ServletContext sc;
+
+        EnableAutoConfiguration aaa2323232112;
+        CassandraAutoConfiguration ebqerbqerb2323;
+        MongoAutoConfiguration d4gn3oi43o4ngoi34g;
+        MongoDataAutoConfiguration qevqerbqerb23;
+        MongoRepositoriesAutoConfiguration qoerinqeorbnoqerbno23902903;
+
+        HelloAutoConfiguration aaaa23223;
+
+        TransactionManagerCustomizers aaa232323;
+
+        DataSourceAutoConfiguration erbeqb2223;
 
 
     }
