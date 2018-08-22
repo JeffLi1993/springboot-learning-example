@@ -5,6 +5,7 @@ import com.spring.springboot.initializer.MyApplicationContextInitializer2;
 import com.spring.springboot.listener.*;
 import com.spring.springboot.service.HelloAutoConfiguration;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
 import org.springframework.boot.SpringBootConfiguration;
@@ -27,10 +28,12 @@ import org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration;
 import org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
+import org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration;
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider;
+import org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration;
 import org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers;
 import org.springframework.boot.autoconfigure.web.*;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
@@ -55,9 +58,7 @@ import org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationList
 import org.springframework.boot.logging.ClasspathLoggingApplicationListener;
 import org.springframework.boot.logging.LoggingApplicationListener;
 import org.springframework.boot.context.event.*;
-import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.boot.web.servlet.ServletContextInitializer;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.boot.web.servlet.*;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.*;
 import org.springframework.cache.annotation.EnableCaching;
@@ -69,6 +70,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.web.SpringServletContainerInitializer;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.AbstractContextLoaderInitializer;
@@ -95,7 +97,7 @@ import static com.sun.org.apache.xml.internal.serialize.LineSeparator.Web;
 
 /**
  * Spring Boot 应用启动类
- *
+ * <p>
  * Created by bysocket on 16/4/26.
  */
 // Spring Boot 应用的标识
@@ -127,7 +129,11 @@ public class Application {
     }
 
 
-    public void fwefwef(){
+
+
+    public void fwefwef() {
+
+        ApplicationRunner apprnnr;
 
         ServletContextInitializer ewfwef;
         WebApplicationInitializer wefwefwef;
@@ -160,8 +166,8 @@ public class Application {
 
         //  org.springframework.context
         ApplicationContextInitializer wefwefwwwef;
-            AutoConfigurationReportLoggingInitializer vnbvg;
-            ServerPortInfoApplicationContextInitializer fefwefewf;
+        AutoConfigurationReportLoggingInitializer vnbvg;
+        ServerPortInfoApplicationContextInitializer fefwefewf;
         //  javax.servlet
         ServletContainerInitializer svltContIniter2;
         //  org.springframework.web
@@ -174,23 +180,23 @@ public class Application {
 
 //        SpringApplicationRunListeners springAppRunLsnrs;
         SpringApplicationRunListener springAppRunLsnr;
-            EventPublishingRunListener ergergerg;
+        EventPublishingRunListener ergergerg;
         ApplicationEvent we135rwer;
-            SpringApplicationEvent erger34234;
-                ApplicationEnvironmentPreparedEvent ewrwer;
-                ApplicationPreparedEvent fwefw221ef;
-                ApplicationReadyEvent feefw2ef;
-                ApplicationFailedEvent efwefeeeeew;
-                ApplicationStartingEvent wefwefwef222333;
-                    ApplicationStartedEvent fewiioweirf;
-            ApplicationContextEvent erfer324;
-                ContextClosedEvent fwefwef234234;
-                ContextRefreshedEvent owefionwef;
-                ContextStoppedEvent voiwne;
-                ContextStartedEvent ovwieobwefe;
+        SpringApplicationEvent erger34234;
+        ApplicationEnvironmentPreparedEvent ewrwer;
+        ApplicationPreparedEvent fwefw221ef;
+        ApplicationReadyEvent feefw2ef;
+        ApplicationFailedEvent efwefeeeeew;
+        ApplicationStartingEvent wefwefwef222333;
+        ApplicationStartedEvent fewiioweirf;
+        ApplicationContextEvent erfer324;
+        ContextClosedEvent fwefwef234234;
+        ContextRefreshedEvent owefionwef;
+        ContextStoppedEvent voiwne;
+        ContextStartedEvent ovwieobwefe;
         ApplicationEventMulticaster gergerg;
-            AbstractApplicationEventMulticaster ewwefwef;
-                SimpleApplicationEventMulticaster sdgweg;
+        AbstractApplicationEventMulticaster ewwefwef;
+        SimpleApplicationEventMulticaster sdgweg;
         ApplicationListener lsnr;
 //            rergerg ergerg;
 //                rergerg ergerg;
@@ -211,7 +217,6 @@ public class Application {
         ServiceLoader svcLdr;
         ClassLoader clsLdr;
         SpringFactoriesLoader spFacLdr;
-
 
 
         //  4
@@ -463,33 +468,33 @@ public class Application {
         DispatcherServletAutoConfiguration fwefwef9090209f23f;
 
         ConfigurableEmbeddedServletContainer gerg345354345;
-            AbstractConfigurableEmbeddedServletContainer reer4545;
+        AbstractConfigurableEmbeddedServletContainer reer4545;
         EmbeddedServletContainerFactory r23r23r2333452345r;
-                AbstractEmbeddedServletContainerFactory fwefwef0203f;
-                    TomcatEmbeddedServletContainerFactory gwg4343t134twegweg;
-                    UndertowEmbeddedServletContainerFactory ggergeqrge314t143tqrg;
-                    JettyEmbeddedServletContainerFactory fwefqg34g341g;
+        AbstractEmbeddedServletContainerFactory fwefwef0203f;
+        TomcatEmbeddedServletContainerFactory gwg4343t134twegweg;
+        UndertowEmbeddedServletContainerFactory ggergeqrge314t143tqrg;
+        JettyEmbeddedServletContainerFactory fwefqg34g341g;
 
         EmbeddedServletContainer fwef123123wef;
-            JettyEmbeddedServletContainer r23r23r23r;
-            TomcatEmbeddedServletContainer gqgerg43g34g;
-            UndertowEmbeddedServletContainer gergergo090qergqrg;
+        JettyEmbeddedServletContainer r23r23r23r;
+        TomcatEmbeddedServletContainer gqgerg43g34g;
+        UndertowEmbeddedServletContainer gergergo090qergqrg;
 
-            DispatcherServlet ds;
+        DispatcherServlet ds;
 
         AbstractApplicationContext fwe090we0fw0ef;
-            GenericApplicationContext fwfwefwef;
-                GenericWebApplicationContext fwef092f023f;
-                    EmbeddedWebApplicationContext fwefwef234234234;
-                        AnnotationConfigEmbeddedWebApplicationContext wef0090wefwef;
-                        XmlEmbeddedWebApplicationContext ergergpeorpogperg0909erg;
+        GenericApplicationContext fwfwefwef;
+        GenericWebApplicationContext fwef092f023f;
+        EmbeddedWebApplicationContext fwefwef234234234;
+        AnnotationConfigEmbeddedWebApplicationContext wef0090wefwef;
+        XmlEmbeddedWebApplicationContext ergergpeorpogperg0909erg;
 
         EnableWebMvc wefwefwef430143901490;
         WebMvcConfigurer vfdvf122323;
-            WebMvcConfigurerAdapter erobeqribnoiqerbqerb;
+        WebMvcConfigurerAdapter erobeqribnoiqerbqerb;
         WebMvcConfigurationSupport vv2390923confi;
-            DelegatingWebMvcConfiguration greogioeirg;
-                WebMvcAutoConfiguration.EnableWebMvcConfiguration rogioerigerg;
+        DelegatingWebMvcConfiguration greogioeirg;
+        WebMvcAutoConfiguration.EnableWebMvcConfiguration rogioerigerg;
         WebServlet df;
         WebListener egerg;
         WebFilter fwef23;
@@ -533,11 +538,11 @@ public class Application {
 
         EmbeddedServletContainerFactory wewewe23232;
         ConfigurableEmbeddedServletContainer conownow;
-            AbstractConfigurableEmbeddedServletContainer fwf23f23;
-                AbstractEmbeddedServletContainerFactory wewe2322323;
-                    TomcatEmbeddedServletContainerFactory tomcatfs;
-                    UndertowEmbeddedServletContainerFactory undertowfs;
-                    JettyEmbeddedServletContainerFactory jettyfs;
+        AbstractConfigurableEmbeddedServletContainer fwf23f23;
+        AbstractEmbeddedServletContainerFactory wewe2322323;
+        TomcatEmbeddedServletContainerFactory tomcatfs;
+        UndertowEmbeddedServletContainerFactory undertowfs;
+        JettyEmbeddedServletContainerFactory jettyfs;
 
         EmbeddedServletContainer cont;
         UndertowEmbeddedServletContainer wewe23f23f;
@@ -573,10 +578,10 @@ public class Application {
         WebMvcRegistrations eger4334;
 
         WebApplicationInitializer wainit;
-            SpringBootServletInitializer sbsinit;
-            AbstractContextLoaderInitializer weoiow23;
-                AbstractDispatcherServletInitializer absdispsvlinit;
-                    AbstractAnnotationConfigDispatcherServletInitializer a2oinoi23;
+        SpringBootServletInitializer sbsinit;
+        AbstractContextLoaderInitializer weoiow23;
+        AbstractDispatcherServletInitializer absdispsvlinit;
+        AbstractAnnotationConfigDispatcherServletInitializer a2oinoi23;
 
         ServletContext sc;
 
@@ -592,8 +597,45 @@ public class Application {
 
         DataSourceAutoConfiguration erbeqb2223;
 
+        DispatcherServletAutoConfiguration erbqerbqeb323;
+        HttpMessageConvertersAutoConfiguration g3g34g43;
+        ServerPropertiesAutoConfiguration gr34go3ini3o4g;
+        WebClientAutoConfiguration vrebe43g34g;
+        EmbeddedServletContainerAutoConfiguration lnoienrboerb34g;
+
+        EnableWebMvc afef2232323;
+        WebMvcAutoConfiguration fwefweg34ginoi3n4g;
+        WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter g34g4hnoi42nho24ohi;
+        WebMvcConfigurerAdapter ewgtwrth3223;
+        WebMvcConfigurer rbqebrqe43g;
+
+        /*
+        *
+        * https://www.youtube.com/watch?v=uDl1qlJWE7A
+        *
+        * https://www.youtube.com/watch?v=viP3VCx1X6w
+        *
+        * */
+
+        ServletListenerRegistrationBean onionoi34343;
+        FilterRegistrationBean eroinoi23224;
+        ServletRegistrationBean oeqrinboi45981450801;
+
+        ImportBeanDefinitionRegistrar lknlknlk3434;
+        ImportSelector g34g34;
+        AutoConfigurationImportSelector greon3o4i;
+
+
+        ServletContainerInitializer rthr34oi;
+                SpringServletContainerInitializer noin340h89034;
+
+        WebApplicationInitializer niog340;
+            SpringBootServletInitializer noi3480384g;
+            AbstractContextLoaderInitializer n03n4g083490n;
+                AbstractDispatcherServletInitializer n034ng03409g;
+                    AbstractAnnotationConfigDispatcherServletInitializer aaa0394g0934g;
+            JerseyAutoConfiguration.JerseyWebApplicationInitializer gbgbg098hg34g34;
 
     }
 
 }
-
