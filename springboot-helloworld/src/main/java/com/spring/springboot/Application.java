@@ -4,7 +4,10 @@ import com.spring.springboot.initializer.MyApplicationContextInitializer1;
 import com.spring.springboot.initializer.MyApplicationContextInitializer2;
 import com.spring.springboot.listener.*;
 import com.spring.springboot.service.HelloAutoConfiguration;
-import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor;
+import org.springframework.aop.framework.autoproxy.AbstractBeanFactoryAwareAdvisingPostProcessor;
+import org.springframework.beans.factory.config.*;
+import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
@@ -18,6 +21,8 @@ import org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration;
 import org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.*;
 import org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.data.jpa.EntityManagerFactoryDependsOnPostProcessor;
+import org.springframework.boot.autoconfigure.data.mongo.MongoClientDependsOnBeanFactoryPostProcessor;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration;
@@ -51,6 +56,7 @@ import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletCon
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainerFactory;
+import org.springframework.boot.context.properties.ConfigurationBeanFactoryMetaData;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.diagnostics.FailureAnalyzer;
@@ -66,15 +72,19 @@ import org.springframework.context.annotation.*;
 import org.springframework.context.event.*;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.scheduling.annotation.AsyncAnnotationBeanPostProcessor;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.validation.beanvalidation.BeanValidationPostProcessor;
 import org.springframework.web.SpringServletContainerInitializer;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.AbstractContextLoaderInitializer;
 import org.springframework.web.context.support.GenericWebApplicationContext;
+import org.springframework.web.context.support.ServletContextAwareProcessor;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.handler.DispatcherServletWebRequest;
@@ -635,6 +645,31 @@ public class Application {
                 AbstractDispatcherServletInitializer n034ng03409g;
                     AbstractAnnotationConfigDispatcherServletInitializer aaa0394g0934g;
             JerseyAutoConfiguration.JerseyWebApplicationInitializer gbgbg098hg34g34;
+
+
+        BeanPostProcessor wepnip23p0g092;
+            ServletContextAwareProcessor g34onoi3n4ogi34;
+                WebApplicationContextServletContextAwareProcessor g3gon3oi4g;
+            AbstractAdvisingBeanPostProcessor g34gpm03m094g;
+                AbstractBeanFactoryAwareAdvisingPostProcessor g3009304g9;
+                    AsyncAnnotationBeanPostProcessor g30j0394jg0934;
+            BeanValidationPostProcessor g34ogn0934g;
+            InstantiationAwareBeanPostProcessor g340j09g3409g34g;
+                CommonAnnotationBeanPostProcessor gerg34g0934g09;
+            EmbeddedServletContainerCustomizerBeanPostProcessor g34j093j4g093j4g0934g;
+        //  ApplicationContextAwareProcessor
+        EmbeddedServletContainerAutoConfiguration.BeanPostProcessorsRegistrar o34ig0m0384g;
+        BeanFactoryPostProcessor g3g0934g09304;
+        //  ServletComponentRegisteringPostProcessor aaa3og4in3ogino34;
+            BeanDefinitionRegistryPostProcessor ff39h0394jg0934;
+                ConfigurationClassPostProcessor g340g3n09gn0934jg034;
+            ConfigurationBeanFactoryMetaData h0394g0934;
+            PropertyResourceConfigurer a0g390g93j04;
+                PlaceholderConfigurerSupport g3o4gin3oigo3i4;
+                    PropertySourcesPlaceholderConfigurer aa3goi3nogi34;
+            AbstractDependsOnBeanFactoryPostProcessor oi34ngo3n4oig3io4;
+                EntityManagerFactoryDependsOnPostProcessor jg093j409g34;
+                MongoClientDependsOnBeanFactoryPostProcessor g3gj09j039g4;
 
     }
 
