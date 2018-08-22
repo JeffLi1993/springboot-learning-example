@@ -65,6 +65,7 @@ import org.springframework.boot.logging.ClasspathLoggingApplicationListener;
 import org.springframework.boot.logging.LoggingApplicationListener;
 import org.springframework.boot.context.event.*;
 import org.springframework.boot.web.servlet.*;
+import org.springframework.boot.web.support.ServletContextApplicationContextInitializer;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.*;
 import org.springframework.cache.annotation.EnableCaching;
@@ -607,11 +608,17 @@ public class Application {
 
         DataSourceAutoConfiguration erbeqb2223;
 
+
+        //  ############################ WebMVC
+
         DispatcherServletAutoConfiguration erbqerbqeb323;
         HttpMessageConvertersAutoConfiguration g3g34g43;
         ServerPropertiesAutoConfiguration gr34go3ini3o4g;
         WebClientAutoConfiguration vrebe43g34g;
         EmbeddedServletContainerAutoConfiguration lnoienrboerb34g;
+
+
+        //  ############################ WebMvc AutoConfiguration
 
         EnableWebMvc afef2232323;
         WebMvcAutoConfiguration fwefweg34ginoi3n4g;
@@ -636,8 +643,10 @@ public class Application {
         AutoConfigurationImportSelector greon3o4i;
 
 
+        //  ############################ Initializer
+
         ServletContainerInitializer rthr34oi;
-                SpringServletContainerInitializer noin340h89034;
+            SpringServletContainerInitializer noin340h89034;
 
         WebApplicationInitializer niog340;
             SpringBootServletInitializer noi3480384g;
@@ -646,6 +655,13 @@ public class Application {
                     AbstractAnnotationConfigDispatcherServletInitializer aaa0394g0934g;
             JerseyAutoConfiguration.JerseyWebApplicationInitializer gbgbg098hg34g34;
 
+        ApplicationContextInitializer verver34gj03g093j940;
+            ServletContextApplicationContextInitializer g3oi3oi4gnoi;
+            DelegatingApplicationContextInitializer g3o4g039g409;
+            ServerPortInfoApplicationContextInitializer g34og34g09340g9;
+            ContextIdApplicationContextInitializer g34ing034g093j4gj9;
+
+        //  ############################ PostProcessor
 
         BeanPostProcessor wepnip23p0g092;
             ServletContextAwareProcessor g34onoi3n4ogi34;
@@ -670,6 +686,33 @@ public class Application {
             AbstractDependsOnBeanFactoryPostProcessor oi34ngo3n4oig3io4;
                 EntityManagerFactoryDependsOnPostProcessor jg093j409g34;
                 MongoClientDependsOnBeanFactoryPostProcessor g3gj09j039g4;
+
+
+        //  ############################ Listener
+
+        ApplicationListener allal;
+            MyEnvReadyListener gj09j0934g;
+            MyApplicationPreparedListener g30034g;
+            MyApplicationStartingListener gj093jg90j3904g;
+            MyApplicationFailListener gj039j4g093049g;
+            MyApplicationReadyListener gj03j4g093j40g9;
+            MyContextRefreshedListener g309j039g40934;
+            MyContextClosedListener gj039jg093409g;
+            MyContextStartedListener gj03jg903049j;
+            MyContextStoppedListener gj039g03940g934g;
+        ApplicationEvent g3ig30g0934gk09k;
+            SpringApplicationEvent g3g34g34g;
+                ApplicationEnvironmentPreparedEvent f3409309g4;
+                ApplicationFailedEvent verver340gm09;
+                ApplicationReadyEvent g34090934gj0j;
+                ApplicationStartingEvent g3409093kg0934;
+            ApplicationContextEvent g3m09m34g09;
+                ContextRefreshedEvent g30m093jg0934;
+                ContextStartedEvent go3ig093094gk;
+                ContextStoppedEvent go3i4g093049g0k;
+
+        //  ############################ Servlet Configure
+
 
     }
 
