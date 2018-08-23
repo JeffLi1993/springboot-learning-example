@@ -22,9 +22,6 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration;
-import org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration;
-import org.springframework.boot.actuate.autoconfigure.EndpointWebMvcManagementContextConfiguration;
-import org.springframework.boot.actuate.autoconfigure.ManagementContextConfiguration;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration;
@@ -542,7 +539,7 @@ public class Application {
 
         SpringBootCondition erververv;
 
-        EndpointWebMvcManagementContextConfiguration erf2309230f923f;
+//        EndpointWebMvcManagementContextConfiguration erf2309230f923f;
 
         SpringApplicationAdminJmxAutoConfiguration grgergwg0909g23g;
 
