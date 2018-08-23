@@ -104,9 +104,7 @@ import org.springframework.web.servlet.support.AbstractDispatcherServletInitiali
 import org.springframework.web.util.IntrospectorCleanupListener;
 import org.springframework.web.util.WebAppRootListener;
 
-import javax.servlet.ServletContainerInitializer;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextListener;
+import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebListener;
@@ -668,9 +666,7 @@ public class Application {
          * */
         ServletContainerInitializer rthr34oi;
             WsSci swioeowie;
-        AbstractDispatcherServletInitializer g34go3igoi3o4ginoi;
-
-        SpringServletContainerInitializer noin340h89034;
+            SpringServletContainerInitializer noin340h89034;
             LogbackServletContainerInitializer aaa34g09340g9j09;
             MyServletContainerInitializer g3ig039g093k4g0k;
 
@@ -803,6 +799,9 @@ public class Application {
             ContextCleanupListener fff34ogin3oigo43i;
             WsContextListener aaa3gpompopo;
             IntrospectorCleanupListener fgogoi34goi;
+
+        ServletContextEvent g34oinoi3n4ogi3no4ig;
+            ServletContextAttributeEvent g3goim3oin4go3in4goin;
 
 
         //  ############################ Spring Handlers
