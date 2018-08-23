@@ -114,8 +114,6 @@ import javax.websocket.server.ServerEndpoint;
 import java.util.ServiceLoader;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
-import static com.sun.org.apache.xml.internal.serialize.LineSeparator.Web;
-
 /**
  * Spring Boot 应用启动类
  * <p>
