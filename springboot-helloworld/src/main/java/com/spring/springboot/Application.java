@@ -1,10 +1,15 @@
 package com.spring.springboot;
 
+import ch.qos.logback.classic.servlet.LogbackServletContainerInitializer;
 import com.spring.springboot.initializer.MyApplicationContextInitializer1;
 import com.spring.springboot.initializer.MyApplicationContextInitializer2;
+import com.spring.springboot.initializer.MyServletContainerInitializer;
+import com.spring.springboot.initializer.MyWebApplicationInitializer;
 import com.spring.springboot.listener.*;
 import com.spring.springboot.runListener.MySprAppRunLsnr;
 import com.spring.springboot.service.HelloAutoConfiguration;
+import org.apache.tomcat.websocket.server.WsContextListener;
+import org.apache.tomcat.websocket.server.WsSci;
 import org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor;
 import org.springframework.aop.framework.autoproxy.AbstractBeanFactoryAwareAdvisingPostProcessor;
 import org.springframework.beans.factory.config.*;
@@ -80,18 +85,24 @@ import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.scheduling.annotation.AsyncAnnotationBeanPostProcessor;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.config.TaskNamespaceHandler;
 import org.springframework.validation.beanvalidation.BeanValidationPostProcessor;
 import org.springframework.web.SpringServletContainerInitializer;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.AbstractContextLoaderInitializer;
+import org.springframework.web.context.ContextCleanupListener;
+import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.context.support.ServletContextAwareProcessor;
 import org.springframework.web.servlet.DispatcherServlet;
+import org.springframework.web.servlet.config.MvcNamespaceHandler;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.handler.DispatcherServletWebRequest;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
+import org.springframework.web.util.IntrospectorCleanupListener;
+import org.springframework.web.util.WebAppRootListener;
 
 import javax.servlet.ServletContainerInitializer;
 import javax.servlet.ServletContext;
@@ -646,6 +657,35 @@ public class Application {
 
         //  ############################ Initializer
 
+        /**
+         * 类 ServletContainerInitializer 的 子类的 onStartup 方法是一个web应用中，我们的代码可以控制到的最早时间点。
+         * 其 子类 SpringServletContainerInitializer 专门处理各种 WebApplicationInitializer；
+         * 循环地 调起 各个 WebApplicationInitializer 的子类 的 方法 onStartup。
+         *
+         * 简单地说，SpringServletContainerInitializer 负责将 ServletContext 实例化并委托
+         * 给用户定义的 WebApplicationInitializer 实现。
+         * 然后每个 WebApplicationInitializer 负责完成初始化 ServletContext 的实际工作。
+         * */
+        ServletContainerInitializer rthr34oi;
+            WsSci swioeowie;
+        AbstractDispatcherServletInitializer g34go3igoi3o4ginoi;
+
+        SpringServletContainerInitializer noin340h89034;
+            LogbackServletContainerInitializer aaa34g09340g9j09;
+            MyServletContainerInitializer g3ig039g093k4g0k;
+
+        WebApplicationInitializer niog340;
+            SpringBootServletInitializer noi3480384g;
+            AbstractContextLoaderInitializer n03n4g083490n;
+                AbstractDispatcherServletInitializer n034ng03409g;
+                    AbstractAnnotationConfigDispatcherServletInitializer aaa0394g0934g;
+            JerseyAutoConfiguration.JerseyWebApplicationInitializer gbgbg098hg34g34;
+            MyWebApplicationInitializer f3gi3ng3o4igno3in4ogi3o4gio;
+
+        /**
+         * SpringBoot 启动中，会查找 ApplicationContextInitializer 的子类，
+         * 调起 其中的 各个 方法initialize。
+         * */
         ApplicationContextInitializer verver34gj03g093j940;
             ServletContextApplicationContextInitializer g3oi3oi4gnoi;
             DelegatingApplicationContextInitializer g3o4g039g409;
@@ -670,16 +710,6 @@ public class Application {
             org.springframework.boot.autoconfigure.SharedMetadataReaderFactoryContextInitializer,\
             org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer
         */
-
-        ServletContainerInitializer rthr34oi;
-            SpringServletContainerInitializer noin340h89034;
-
-        WebApplicationInitializer niog340;
-            SpringBootServletInitializer noi3480384g;
-            AbstractContextLoaderInitializer n03n4g083490n;
-                AbstractDispatcherServletInitializer n034ng03409g;
-                    AbstractAnnotationConfigDispatcherServletInitializer aaa0394g0934g;
-            JerseyAutoConfiguration.JerseyWebApplicationInitializer gbgbg098hg34g34;
 
         //  ############################ PostProcessor
 
@@ -710,6 +740,13 @@ public class Application {
 
         //  ############################ Listener
 
+        /**
+         *
+         * 类 SpringApplicationRunListener 通过 自动配置被调起，
+         * 其 子类 EventPublishingRunListener 专门处理 各种 ApplicationListener；
+         * 循环地 调起 各个 ApplicationListener 的子类。
+         * */
+
         SpringApplicationRunListener aprlsnr;
             EventPublishingRunListener g303049jg09;
             MySprAppRunLsnr g340g309g039k4g09;
@@ -724,6 +761,26 @@ public class Application {
             MyContextClosedListener gj039jg093409g;
             MyContextStartedListener gj03jg903049j;
             MyContextStoppedListener gj039g03940g934g;
+        /*
+            ## springboot
+            # Application Listeners
+            org.springframework.context.ApplicationListener=\
+            org.springframework.boot.ClearCachesApplicationListener,\
+            org.springframework.boot.builder.ParentContextCloserApplicationListener,\
+            org.springframework.boot.context.FileEncodingApplicationListener,\
+            org.springframework.boot.context.config.AnsiOutputApplicationListener,\
+            org.springframework.boot.context.config.ConfigFileApplicationListener,\
+            org.springframework.boot.context.config.DelegatingApplicationListener,\
+            org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener,\
+            org.springframework.boot.logging.ClasspathLoggingApplicationListener,\
+            org.springframework.boot.logging.LoggingApplicationListener
+
+            ## springboot-autoconfigure
+            # Application Listeners
+            org.springframework.context.ApplicationListener=\
+            org.springframework.boot.autoconfigure.BackgroundPreinitializer
+        */
+
         ApplicationEvent g3ig30g0934gk09k;
             SpringApplicationEvent g3g34g34g;
                 ApplicationEnvironmentPreparedEvent f3409309g4;
@@ -738,6 +795,34 @@ public class Application {
         //  ############################ Servlet Configure
 
 
+        //  ############################ Servlet Listener
+
+        ServletContextListener oieoivoir34g34g;
+            ContextLoaderListener vr3robinoi3bnio;
+            WebAppRootListener j0923jf02093;
+            ContextCleanupListener fff34ogin3oigo43i;
+            WsContextListener aaa3gpompopo;
+            IntrospectorCleanupListener fgogoi34goi;
+
+
+        //  ############################ Spring Handlers
+        /*
+            http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler
+            http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler
+            http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler
+            http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler
+            http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler
+            http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler
+            http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler
+            http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler
+            http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler
+            http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler
+            http://www.springframework.org/schema/oxm=org.springframework.oxm.config.OxmNamespaceHandler
+            http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler
+            http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler
+        */
+
+        MvcNamespaceHandler g3g34g3423232g;
     }
 
 }

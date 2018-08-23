@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan
-public class AppConfig
+public class AppConfig3
 {
     /**
      * 假设只想在没有其他 UserDAO 类型的 Spring bean 注册时才注册 MongoUserDAO bean，

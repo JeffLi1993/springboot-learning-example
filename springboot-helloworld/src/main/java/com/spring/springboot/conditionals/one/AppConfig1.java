@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AppConfig
+public class AppConfig1
 {
     @Bean
     @Conditional(MySQLDatabaseTypeCondition.class)

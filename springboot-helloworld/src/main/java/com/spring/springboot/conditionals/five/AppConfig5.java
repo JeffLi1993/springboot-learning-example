@@ -1,31 +1,28 @@
-package com.spring.springboot.conditionals.four;
+package com.spring.springboot.conditionals.five;
 
 import com.spring.springboot.conditionals.one.JdbcUserDAO;
 import com.spring.springboot.conditionals.one.MongoUserDAO;
 import com.spring.springboot.conditionals.UserDAO;
-import com.spring.springboot.conditionals.two.MongoDriverNotPresentsCondition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan
-public class AppConfig
+public class AppConfig5
 {
     /**
-     * 我们只想在属性占位符（properties placeholder）配置文件中设置属性 app.dbType = MONGO，
-     * 我们该怎么注册 MongoUserDAO bean
+     * 然而，使用注解实现 Condition 的方式更为优雅。而不是为 MYSQL 和 MongoDB 创建 Condition 实现。
+     * 我们可以创建一个 DatabaseType 注解
      * */
 
-    @Bean
-    @Conditional(MongoDriverNotPresentsCondition.class)
+    @DatabaseType("MYSQL")
     public UserDAO jdbcUserDAO(){
         return new JdbcUserDAO();
     }
  
     @Bean
-    @Conditional(MongoDbTypePropertyCondition.class)
+    @DatabaseType("MONGO")
     public UserDAO mongoUserDAO(){
         return new MongoUserDAO();
     }

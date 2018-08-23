@@ -10,6 +10,6 @@ import javax.servlet.ServletException;
  */
 public class MyWebApplicationInitializer implements WebApplicationInitializer {
     public void onStartup(ServletContext sc) throws ServletException {
-        System.out.println("~~~~~~~~~~~~~~~[WebApplicationInitializer]frankie Initializer: Server Info =====" + sc.getServerInfo());
+        System.out.println("\n\n\n\n\n\n\n~~~~~~~~~~~~~~~[WebApplicationInitializer]frankie Initializer: Server Info =====" + sc.getServerInfo());
     }
 }

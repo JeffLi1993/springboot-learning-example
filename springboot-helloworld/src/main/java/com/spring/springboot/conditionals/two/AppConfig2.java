@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan
-public class AppConfig
+public class AppConfig2
 {
     /**
      * 假设想要当 MongoDB java 驱动程序类 com.mongodb.Server
