@@ -15,30 +15,30 @@ public class MySprAppRunLsnr implements SpringApplicationRunListener {
 
 
     public void starting(){
-        System.out.println("Frankie Yang 的 SpringAppRunListener starting ！！！");
+        System.out.println("**************[SpringApplicationRunListener]Frankie Yang 的 SpringAppRunListener starting ！！！");
 
     }
 
     public void environmentPrepared(ConfigurableEnvironment environment){
-        System.out.println("Frankie Yang 的 SpringAppRunListener environmentPrepared ！！！");
+        System.out.println("**************[SpringApplicationRunListener]Frankie Yang 的 SpringAppRunListener environmentPrepared ！！！");
 
     }
 
 
     public void contextPrepared(ConfigurableApplicationContext context){
-        System.out.println("Frankie Yang 的 SpringAppRunListener contextPrepared ！！！");
+        System.out.println("**************[SpringApplicationRunListener]Frankie Yang 的 SpringAppRunListener contextPrepared ！！！");
 
     }
 
 
     public void contextLoaded(ConfigurableApplicationContext context){
-        System.out.println("Frankie Yang 的 SpringAppRunListener contextLoaded ！！！");
+        System.out.println("**************[SpringApplicationRunListener]Frankie Yang 的 SpringAppRunListener contextLoaded ！！！");
 
 
     }
 
     public void finished(ConfigurableApplicationContext context, Throwable exception){
-        System.out.println("Frankie Yang 的 SpringAppRunListener finished ！！！");
+        System.out.println("**************[SpringApplicationRunListener]Frankie Yang 的 SpringAppRunListener finished ！！！");
 
     }
 

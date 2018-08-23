@@ -9,6 +9,6 @@ import org.springframework.context.event.ContextRefreshedEvent;
 public class MyContextRefreshedListener implements ApplicationListener<ContextRefreshedEvent> {
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        System.out.println("Frankie Yang 的 Context refreshed ！！！");
+        System.out.println("**************[ApplicationListener]Frankie Yang 的 Context refreshed ！！！");
     }
 }

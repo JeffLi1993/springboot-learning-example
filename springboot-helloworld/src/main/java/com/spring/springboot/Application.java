@@ -3,6 +3,7 @@ package com.spring.springboot;
 import com.spring.springboot.initializer.MyApplicationContextInitializer1;
 import com.spring.springboot.initializer.MyApplicationContextInitializer2;
 import com.spring.springboot.listener.*;
+import com.spring.springboot.runListener.MySprAppRunLsnr;
 import com.spring.springboot.service.HelloAutoConfiguration;
 import org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor;
 import org.springframework.aop.framework.autoproxy.AbstractBeanFactoryAwareAdvisingPostProcessor;
@@ -645,6 +646,31 @@ public class Application {
 
         //  ############################ Initializer
 
+        ApplicationContextInitializer verver34gj03g093j940;
+            ServletContextApplicationContextInitializer g3oi3oi4gnoi;
+            DelegatingApplicationContextInitializer g3o4g039g409;
+            ServerPortInfoApplicationContextInitializer g34og34g09340g9;
+            ContextIdApplicationContextInitializer g34ing034g093j4gj9;
+            ConfigurationWarningsApplicationContextInitializer g34n0934g09j0;
+            AutoConfigurationReportLoggingInitializer g34oin304g09340g9;
+            MyApplicationContextInitializer1 init34f23f09j091;
+            MyApplicationContextInitializer2 init34f23f09j092;
+        /*
+            ## springboot
+            # Application Context Initializers
+            org.springframework.context.ApplicationContextInitializer=\
+            org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer,\
+            org.springframework.boot.context.ContextIdApplicationContextInitializer,\
+            org.springframework.boot.context.config.DelegatingApplicationContextInitializer,\
+            org.springframework.boot.context.embedded.ServerPortInfoApplicationContextInitializer
+
+            ## springboot-autoconfigure
+            # Initializers
+            org.springframework.context.ApplicationContextInitializer=\
+            org.springframework.boot.autoconfigure.SharedMetadataReaderFactoryContextInitializer,\
+            org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer
+        */
+
         ServletContainerInitializer rthr34oi;
             SpringServletContainerInitializer noin340h89034;
 
@@ -654,12 +680,6 @@ public class Application {
                 AbstractDispatcherServletInitializer n034ng03409g;
                     AbstractAnnotationConfigDispatcherServletInitializer aaa0394g0934g;
             JerseyAutoConfiguration.JerseyWebApplicationInitializer gbgbg098hg34g34;
-
-        ApplicationContextInitializer verver34gj03g093j940;
-            ServletContextApplicationContextInitializer g3oi3oi4gnoi;
-            DelegatingApplicationContextInitializer g3o4g039g409;
-            ServerPortInfoApplicationContextInitializer g34og34g09340g9;
-            ContextIdApplicationContextInitializer g34ing034g093j4gj9;
 
         //  ############################ PostProcessor
 
@@ -689,6 +709,10 @@ public class Application {
 
 
         //  ############################ Listener
+
+        SpringApplicationRunListener aprlsnr;
+            EventPublishingRunListener g303049jg09;
+            MySprAppRunLsnr g340g309g039k4g09;
 
         ApplicationListener allal;
             MyEnvReadyListener gj09j0934g;

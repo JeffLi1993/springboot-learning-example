@@ -8,7 +8,7 @@ import org.springframework.core.annotation.Order;
 public class MyApplicationContextInitializer1 implements ApplicationContextInitializer {
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext) {
-        System.out.println("frankie Initializer: bean count=====" + applicationContext.getBeanDefinitionCount());
+        System.out.println("~~~~~~~~~~~~~~~[ApplicationContextInitializer]frankie Initializer: bean count=====" + applicationContext.getBeanDefinitionCount());
     }
 }
 
