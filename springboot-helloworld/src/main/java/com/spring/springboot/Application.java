@@ -6,6 +6,8 @@ import org.springframework.boot.SpringApplicationRunListener;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration;
 import org.springframework.boot.context.config.AnsiOutputApplicationListener;
 import org.springframework.boot.context.config.ConfigFileApplicationListener;
 import org.springframework.boot.context.config.DelegatingApplicationListener;
@@ -23,6 +25,9 @@ import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.Condition;
+import org.springframework.context.annotation.Conditional;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.*;
 import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -145,6 +150,16 @@ public class Application {
 //            rergerg ergerg;
 //                rergerg ergerg;
 
+
+        ConditionalOnBean gwgweg;
+
+        ConfigurationPropertiesAutoConfiguration gfergerg;
+
+
+        Profile wefwef;
+
+        Condition regerg;
+        Conditional fwefwewef;
 
     }
 
