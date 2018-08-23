@@ -9,6 +9,6 @@ import org.springframework.context.event.ContextClosedEvent;
 public class MyContextClosedListener implements ApplicationListener<ContextClosedEvent> {
     @Override
     public void onApplicationEvent(ContextClosedEvent event) {
-        System.out.println("Frankie Yang 的 Context closed ！！！");
+        System.out.println("**************[ApplicationListener]Frankie Yang 的 Context closed ！！！");
     }
 }

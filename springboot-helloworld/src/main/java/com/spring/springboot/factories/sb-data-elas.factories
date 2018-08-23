@@ -1,0 +1,1 @@
+org.springframework.data.repository.core.support.RepositoryFactorySupport=org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactory

@@ -9,6 +9,6 @@ import org.springframework.context.ApplicationListener;
 public class MyApplicationPreparedListener implements ApplicationListener<ApplicationPreparedEvent> {
     @Override
     public void onApplicationEvent(ApplicationPreparedEvent event) {
-        System.out.println("Frankie Yang 的 Application prepared ！！！");
+        System.out.println("**************[ApplicationListener]Frankie Yang 的 Application prepared ！！！");
     }
 }
