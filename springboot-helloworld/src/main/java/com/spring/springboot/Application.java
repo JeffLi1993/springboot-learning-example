@@ -653,6 +653,19 @@ public class Application {
         AutoConfigurationImportSelector greon3o4i;
 
 
+        //  ############################ Servlet Listener
+
+        ServletContextListener oieoivoir34g34g;
+            ContextLoaderListener vr3robinoi3bnio;
+            WebAppRootListener j0923jf02093;
+            ContextCleanupListener fff34ogin3oigo43i;
+            WsContextListener aaa3gpompopo;
+            IntrospectorCleanupListener fgogoi34goi;
+
+        ServletContextEvent g34oinoi3n4ogi3no4ig;
+            ServletContextAttributeEvent g3goim3oin4go3in4goin;
+
+
         //  ############################ Initializer
 
         /**
@@ -790,18 +803,6 @@ public class Application {
 
         //  ############################ Servlet Configure
 
-
-        //  ############################ Servlet Listener
-
-        ServletContextListener oieoivoir34g34g;
-            ContextLoaderListener vr3robinoi3bnio;
-            WebAppRootListener j0923jf02093;
-            ContextCleanupListener fff34ogin3oigo43i;
-            WsContextListener aaa3gpompopo;
-            IntrospectorCleanupListener fgogoi34goi;
-
-        ServletContextEvent g34oinoi3n4ogi3no4ig;
-            ServletContextAttributeEvent g3goim3oin4go3in4goin;
 
 
         //  ############################ Spring Handlers
