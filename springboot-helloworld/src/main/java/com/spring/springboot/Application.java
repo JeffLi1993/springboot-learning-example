@@ -18,9 +18,10 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
 import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration;
-import org.springframework.boot.actuate.autoconfigure.EndpointWebMvcManagementContextConfiguration;
-import org.springframework.boot.actuate.autoconfigure.ManagementContextConfiguration;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration;
@@ -75,6 +76,9 @@ import org.springframework.boot.web.support.ServletContextApplicationContextInit
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.*;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.Condition;
+import org.springframework.context.annotation.Conditional;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.*;
 import org.springframework.context.event.*;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -221,6 +225,17 @@ public class Application {
 //                rergerg ergerg;
 
 
+        ConditionalOnBean gwgweg;
+
+        ConfigurationPropertiesAutoConfiguration gfergerg;
+
+
+        Profile wefwef;
+
+        Condition regerg;
+        Conditional fwefwewef;
+
+    }
         //  3
 
         Conditional fwefwdedwe;
@@ -524,7 +539,7 @@ public class Application {
 
         SpringBootCondition erververv;
 
-        EndpointWebMvcManagementContextConfiguration erf2309230f923f;
+//        EndpointWebMvcManagementContextConfiguration erf2309230f923f;
 
         SpringApplicationAdminJmxAutoConfiguration grgergwg0909g23g;
 
@@ -812,24 +827,5 @@ public class Application {
 
 
 
-        //  ############################ Spring Handlers
-        /*
-            http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler
-            http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler
-            http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler
-            http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler
-            http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler
-            http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler
-            http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler
-            http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler
-            http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler
-            http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler
-            http://www.springframework.org/schema/oxm=org.springframework.oxm.config.OxmNamespaceHandler
-            http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler
-            http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler
-        */
-
-        MvcNamespaceHandler g3g34g3423232g;
-    }
-
 }
+
