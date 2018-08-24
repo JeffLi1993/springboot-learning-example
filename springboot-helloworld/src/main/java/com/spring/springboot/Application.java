@@ -690,6 +690,15 @@ public class Application {
             MyWebApplicationInitializer f3gi3ng3o4igno3in4ogi3o4gio;
 
         /**
+         * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         * 总而言之，可以总结一下：
+         * 1， 始祖级别的 Initializer，启动 各个WebApplicationInitializer（似乎 ContextLoaderListener 有同样的功效）；
+         * 2， 接口WebApplicationInitializer 的 方法onStartup 的参数是 ServletContext；
+         * 3， 接口ApplicationContextInitializer 的 方法onStartup 的 参数是 ? extends ConfigurableApplicationContext。
+         * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         * */
+
+        /**
          * SpringBoot 启动中，会查找 ApplicationContextInitializer 的子类，
          * 调起 其中的 各个 方法initialize。
          * */
