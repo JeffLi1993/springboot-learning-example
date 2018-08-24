@@ -665,21 +665,7 @@ public class Application {
         ImportSelector g34g34;
         AutoConfigurationImportSelector greon3o4i;
 
-
-        //  ############################ Servlet Listener
-
-        ServletContextListener oieoivoir34g34g;
-            ContextLoaderListener vr3robinoi3bnio;
-            WebAppRootListener j0923jf02093;
-            ContextCleanupListener fff34ogin3oigo43i;
-            WsContextListener aaa3gpompopo;
-            IntrospectorCleanupListener fgogoi34goi;
-
-        ServletContextEvent g34oinoi3n4ogi3no4ig;
-            ServletContextAttributeEvent g3goim3oin4go3in4goin;
-
-
-        //  ############################ Initializer
+    //  ############################ Initializer
 
         /**
          * 类 ServletContainerInitializer 的 子类的 onStartup 方法是一个web应用中，我们的代码可以控制到的最早时间点。
@@ -709,6 +695,7 @@ public class Application {
          * 总而言之，可以总结一下：
          * 1， 始祖级别的 Initializer，启动 各个WebApplicationInitializer（似乎 ContextLoaderListener 有同样的功效）；
          * 2， 接口WebApplicationInitializer 的 方法onStartup 的参数是 ServletContext；
+         * 2b, 其中 子类SpringBootServletInitializer 有点特殊功能：拉起 ContextLoaderListener；
          * 3， 接口ApplicationContextInitializer 的 方法onStartup 的 参数是 ? extends ConfigurableApplicationContext。
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * */
@@ -742,7 +729,20 @@ public class Application {
             org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer
         */
 
-        //  ############################ PostProcessor
+    //  ############################ Servlet Listener
+
+        ServletContextListener oieoivoir34g34g;
+            ContextLoaderListener vr3robinoi3bnio;
+            WebAppRootListener j0923jf02093;
+            ContextCleanupListener fff34ogin3oigo43i;
+            WsContextListener aaa3gpompopo;
+            IntrospectorCleanupListener fgogoi34goi;
+
+        ServletContextEvent g34oinoi3n4ogi3no4ig;
+            ServletContextAttributeEvent g3goim3oin4go3in4goin;
+
+
+    //  ############################ PostProcessor
 
         BeanPostProcessor wepnip23p0g092;
             ServletContextAwareProcessor g34onoi3n4ogi34;

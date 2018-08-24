@@ -33,17 +33,17 @@ public class ClientApplication extends SpringBootServletInitializer implements E
 
         try {
 
-            logger.warn("0");
+            logger.warn("[ClientApplication]0");
             ConfigurableApplicationContext run = SpringApplication.run(ClientApplication.class, args);
 
-            logger.warn("1");
+            logger.warn("[ClientApplication]1");
             CityDubboConsumerService cityService = run.getBean(CityDubboConsumerService.class);
 //            CityDubboConsumerService cityService = run.getBean("CityDubboConsumerService");
 
-            logger.warn("2");
+            logger.warn("[ClientApplication]2");
             cityService.printCity();
 
-            logger.warn("3:\t" + cityService.printCity().toString());
+            logger.warn("[ClientApplication]3:\t" + cityService.printCity().toString());
 
         } catch (Exception e){}
 
