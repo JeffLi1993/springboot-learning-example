@@ -684,7 +684,7 @@ public class Application {
             WsSci swioeowie;
             SpringServletContainerInitializer noin340h89034;
             LogbackServletContainerInitializer aaa34g09340g9j09;
-            MyServletContainerInitializer g3ig039g093k4g0k;
+            MyServletContainerInitializer g3ig039g093k4g0k; //   No Recognized
 
         WebApplicationInitializer niog340;
             SpringBootServletInitializer noi3480384g;
@@ -692,8 +692,8 @@ public class Application {
                 AbstractDispatcherServletInitializer n034ng03409g;
                     AbstractAnnotationConfigDispatcherServletInitializer aaa0394g0934g;
             JerseyAutoConfiguration.JerseyWebApplicationInitializer gbgbg098hg34g34;
-            MyWebApplicationInitializer f3gi3ng3o4igno3in4ogi3o4gio;
-            MyWebApplicationInitializer2 f3gg3498j9g834984ogi3o4gio;
+            MyWebApplicationInitializer f3gi3ng3o4igno3in4ogi3o4gio;    //  No Recognized
+            MyWebApplicationInitializer2 f3gg3498j9g834984ogi3o4gio;    //  No Recognized
 
 
         /**
@@ -732,8 +732,8 @@ public class Application {
             ContextIdApplicationContextInitializer g34ing034g093j4gj9;
             ConfigurationWarningsApplicationContextInitializer g34n0934g09j0;
             AutoConfigurationReportLoggingInitializer g34oin304g09340g9;
-            MyApplicationContextInitializer1 init34f23f09j091;
-            MyApplicationContextInitializer2 init34f23f09j092;
+            MyApplicationContextInitializer1 init34f23f09j091;  //  Recognized
+            MyApplicationContextInitializer2 init34f23f09j092;  //  Recognized
         /*
             ## springboot
             # Application Context Initializers
@@ -801,8 +801,10 @@ public class Application {
 
         SpringApplicationRunListener aprlsnr;
             EventPublishingRunListener g303049jg09;
-            MySprAppRunLsnr g340g309g039k4g09;
+            MySprAppRunLsnr g340g309g039k4g09;  //  Recognized
 
+
+        //  All Recognized
         ApplicationListener allal;
             MyEnvReadyListener gj09j0934g;
             MyApplicationPreparedListener g30034g;
@@ -845,8 +847,6 @@ public class Application {
                 ContextStoppedEvent go3i4g093049g0k;
 
         //  ############################ Servlet Configure
-
-
 
 }
 
