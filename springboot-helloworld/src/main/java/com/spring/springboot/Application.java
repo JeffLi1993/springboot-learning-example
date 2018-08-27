@@ -690,11 +690,11 @@ public class Application {
         /**
          * 注册Servlet、Filter、Listener的方法，两种：
          *
-         * 1， （war）注册到WebApplicationInitializer的实现类中：
+         * 1， （war）注册到 WebApplicationInitializer 的实现类中：
          *      servletContext.addListener()
          *      servletContext.addFilter()
          *      servletContext.addServlet()
-         * 2， （jar）注册到任意一个@Configuration配置类中：
+         * 2， （jar）注册到任意一个 @Configuration 配置类中：
          *      ServletRegistrationBean
          *      FilterRegistrationBean
          *      ServletListenerRegistrationBean
@@ -755,6 +755,11 @@ public class Application {
         ServletContextEvent g34oinoi3n4ogi3no4ig;
             ServletContextAttributeEvent g3goim3oin4go3in4goin;
 
+        /**
+         * 接口 ServletContextListener 可以实现，做一些 定制性 的事情；
+         * 类 ContextLoaderListener 已经实现了 接口 ServletContextListener，
+         * 借助 "工具类" ContextLoader 完成了一些事情了，算是一个输出性的东西，不容置喙。
+         * */
 
     //  ############################ PostProcessor
 
