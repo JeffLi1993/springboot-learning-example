@@ -1,4 +1,4 @@
-package com.spring.springboot.listener;
+package com.spring.springboot.appListener;
 
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;

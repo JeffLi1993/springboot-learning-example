@@ -1,4 +1,4 @@
-package com.spring.springboot.listener;
+package com.spring.springboot.scListener;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;

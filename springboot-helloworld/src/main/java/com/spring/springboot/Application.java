@@ -2,8 +2,10 @@ package com.spring.springboot;
 
 import ch.qos.logback.classic.servlet.LogbackServletContainerInitializer;
 import com.spring.springboot.initializer.*;
-import com.spring.springboot.listener.*;
-import com.spring.springboot.runListener.MySprAppRunLsnr;
+import com.spring.springboot.appListener.*;
+import com.spring.springboot.saRunListener.MySprAppRunLsnr;
+import com.spring.springboot.scListener.MyListener;
+import com.spring.springboot.scListener.MyServletContextListener;
 import com.spring.springboot.service.HelloAutoConfiguration;
 import org.apache.tomcat.websocket.server.WsContextListener;
 import org.apache.tomcat.websocket.server.WsSci;
@@ -29,20 +31,15 @@ import org.springframework.boot.autoconfigure.data.jpa.EntityManagerFactoryDepen
 import org.springframework.boot.autoconfigure.data.mongo.MongoClientDependsOnBeanFactoryPostProcessor;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration;
-import org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
 import org.springframework.boot.autoconfigure.freemarker.FreeMarkerTemplateAvailabilityProvider;
 import org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration;
-import org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration;
-import org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
 import org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration;
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
-import org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider;
-import org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration;
 import org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers;
 import org.springframework.boot.autoconfigure.web.*;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
@@ -63,7 +60,6 @@ import org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServle
 import org.springframework.boot.context.properties.ConfigurationBeanFactoryMetaData;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.diagnostics.FailureAnalyzer;
 import org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener;
 import org.springframework.boot.logging.ClasspathLoggingApplicationListener;
 import org.springframework.boot.logging.LoggingApplicationListener;
@@ -86,7 +82,6 @@ import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.scheduling.annotation.AsyncAnnotationBeanPostProcessor;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.config.TaskNamespaceHandler;
 import org.springframework.validation.beanvalidation.BeanValidationPostProcessor;
 import org.springframework.web.SpringServletContainerInitializer;
 import org.springframework.web.WebApplicationInitializer;
@@ -97,9 +92,7 @@ import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.context.support.ServletContextAwareProcessor;
 import org.springframework.web.servlet.DispatcherServlet;
-import org.springframework.web.servlet.config.MvcNamespaceHandler;
 import org.springframework.web.servlet.config.annotation.*;
-import org.springframework.web.servlet.handler.DispatcherServletWebRequest;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
 import org.springframework.web.util.IntrospectorCleanupListener;
@@ -110,10 +103,8 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebListener;
 import javax.servlet.annotation.WebServlet;
-import javax.sql.DataSource;
 import javax.websocket.server.ServerEndpoint;
 import java.util.ServiceLoader;
-import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 /**
  * Spring Boot 应用启动类
@@ -758,6 +749,8 @@ public class Application {
             ContextCleanupListener fff34ogin3oigo43i;
             WsContextListener aaa3gpompopo;
             IntrospectorCleanupListener fgogoi34goi;
+            MyServletContextListener gg34g09j093jg904;  // Recognized
+            MyListener jf293f982j3f9823;
 
         ServletContextEvent g34oinoi3n4ogi3no4ig;
             ServletContextAttributeEvent g3goim3oin4go3in4goin;

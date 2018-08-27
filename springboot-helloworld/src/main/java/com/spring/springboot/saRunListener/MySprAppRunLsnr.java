@@ -1,4 +1,4 @@
-package com.spring.springboot.runListener;
+package com.spring.springboot.saRunListener;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
