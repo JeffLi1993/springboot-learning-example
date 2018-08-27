@@ -649,6 +649,13 @@ public class Application {
         WebMvcConfigurerAdapter ewgtwrth3223;
         WebMvcConfigurer rbqebrqe43g;
 
+        /**
+         * implements WebMvcConfigurer                  ：不会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * implements WebMvcConfigurer + @EnableWebMvc  ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * extends WebMvcConfigurationSupport           ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * extends DelegatingWebMvcConfiguration        ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * */
+
         /*
         *
         * https://www.youtube.com/watch?v=uDl1qlJWE7A
@@ -690,15 +697,31 @@ public class Application {
             JerseyAutoConfiguration.JerseyWebApplicationInitializer gbgbg098hg34g34;
             MyWebApplicationInitializer f3gi3ng3o4igno3in4ogi3o4gio;
 
+
+        /**
+         * 注册Servlet、Filter、Listener的方法，两种：
+         *
+         * 1， （war）注册到WebApplicationInitializer的实现类中：
+         *      servletContext.addListener()
+         *      servletContext.addFilter()
+         *      servletContext.addServlet()
+         * 2， （jar）注册到任意一个@Configuration配置类中：
+         *      ServletRegistrationBean
+         *      FilterRegistrationBean
+         *      ServletListenerRegistrationBean
+         * */
+
         /**
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * 总而言之，可以总结一下：
-         * 1， 始祖级别的 Initializer，启动 各个WebApplicationInitializer（似乎 ContextLoaderListener 有同样的功效）；
+         * 0， 始祖级的 Tomcat 的方法 org.apache.catalina.core.StandardContext#startInternal() 调用各个 ServletContainerInitializer 的 onStartup；
+         * 1， 其中一个 Initializer --- SpringServletContainerInitializer，启动 各个WebApplicationInitializer（似乎 ContextLoaderListener 有同样的功效）；
          * 2， 接口WebApplicationInitializer 的 方法onStartup 的参数是 ServletContext；
          * 2b, 其中 子类SpringBootServletInitializer 有点特殊功能：拉起 ContextLoaderListener；
          * 3， 接口ApplicationContextInitializer 的 方法onStartup 的 参数是 ? extends ConfigurableApplicationContext。
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * */
+
 
         /**
          * SpringBoot 启动中，会查找 ApplicationContextInitializer 的子类，
