@@ -13,7 +13,7 @@ import javax.servlet.ServletException;
 @Configuration
 public class MyWebApplicationInitializer implements WebApplicationInitializer {
     @Override
-    public void onStartup(ServletContext sc) throws ServletException {
-        System.out.println("\n\n\n\n\n\n\n~~~~~~~~~~~~~~~[WebApplicationInitializer]frankie Initializer: Server Info =====" + sc.getServerInfo());
+    public void onStartup(ServletContext sc) /*throws ServletException */{
+        System.out.println("\n\n\n\n\n\n\n~~~~~~~~~~~~~~~[WebApplicationInitializer]frankie MyWebApplicationInitializer: Server Info =====" + sc.getServerInfo());
     }
 }

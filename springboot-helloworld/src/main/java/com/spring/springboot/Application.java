@@ -1,10 +1,7 @@
 package com.spring.springboot;
 
 import ch.qos.logback.classic.servlet.LogbackServletContainerInitializer;
-import com.spring.springboot.initializer.MyApplicationContextInitializer1;
-import com.spring.springboot.initializer.MyApplicationContextInitializer2;
-import com.spring.springboot.initializer.MyServletContainerInitializer;
-import com.spring.springboot.initializer.MyWebApplicationInitializer;
+import com.spring.springboot.initializer.*;
 import com.spring.springboot.listener.*;
 import com.spring.springboot.runListener.MySprAppRunLsnr;
 import com.spring.springboot.service.HelloAutoConfiguration;
@@ -696,6 +693,7 @@ public class Application {
                     AbstractAnnotationConfigDispatcherServletInitializer aaa0394g0934g;
             JerseyAutoConfiguration.JerseyWebApplicationInitializer gbgbg098hg34g34;
             MyWebApplicationInitializer f3gi3ng3o4igno3in4ogi3o4gio;
+            MyWebApplicationInitializer2 f3gg3498j9g834984ogi3o4gio;
 
 
         /**
