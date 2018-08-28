@@ -4,4 +4,4 @@
 #com.ibigsea.spring_boot_starter_hello.HelloAutoConfiguration
 
 org.springframework.boot.SpringApplicationRunListener=\
-com.spring.springboot.runListener.MySprAppRunLsnr
+com.spring.springboot.saRunListener.MySprAppRunLsnr

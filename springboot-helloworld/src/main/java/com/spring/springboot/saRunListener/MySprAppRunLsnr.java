@@ -34,7 +34,6 @@ public class MySprAppRunLsnr implements SpringApplicationRunListener {
     public void contextLoaded(ConfigurableApplicationContext context){
         System.out.println("**************[SpringApplicationRunListener]Frankie Yang 的 SpringAppRunListener contextLoaded ！！！");
 
-
     }
 
     public void finished(ConfigurableApplicationContext context, Throwable exception){

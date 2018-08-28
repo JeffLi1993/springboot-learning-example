@@ -638,18 +638,17 @@ public class Application {
         WebMvcConfigurer rbqebrqe43g;
 
         /**
+         * + @Configuration
          * implements WebMvcConfigurer                  ：不会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          * implements WebMvcConfigurer + @EnableWebMvc  ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          * extends WebMvcConfigurationSupport           ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          * extends DelegatingWebMvcConfiguration        ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * implements WebMvcConfigurer + @EnableAutoConfiguration   ：OK
          * */
 
         /*
-        *
         * https://www.youtube.com/watch?v=uDl1qlJWE7A
-        *
         * https://www.youtube.com/watch?v=viP3VCx1X6w
-        *
         * */
 
         ServletListenerRegistrationBean onionoi34343;
