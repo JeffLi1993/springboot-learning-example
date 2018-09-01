@@ -759,8 +759,9 @@ public class Application {
          * 类 ContextLoaderListener 已经实现了 接口 ServletContextListener，
          * 借助 "工具类" ContextLoader 完成了一些事情了，算是一个输出性的东西，不容置喙。
          * 
-         * 这个 Listener 可以说 非常重要！因为 这个Listener 是 “初始化” 的起点！在此之前 一直在收集配置；再次之后，开始使用配置！
-         * 这个冲锋号角，由ServletContextListener 吹响！
+         * 接口 ContextLoaderListener 绝对不是“输出性的东西” ，而且非常重要，是 “初始化” 的起点！
+         * 在此之前 一直在收集配置；再此之后，开始使用配置（初始化），形成具有完整层级和正确功能的 AC！
+         * 这个过程由 接口 ServletContextListener 的实现类 ContextLoaderListener 发起！
          */
 
     //  ############################ PostProcessor
