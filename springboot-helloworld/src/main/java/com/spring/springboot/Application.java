@@ -40,6 +40,8 @@ import org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration;
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
+import org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration;
 import org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers;
 import org.springframework.boot.autoconfigure.web.*;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
@@ -630,37 +632,7 @@ public class Application {
         EmbeddedServletContainerAutoConfiguration lnoienrboerb34g;
 
 
-        //  ############################ WebMvc AutoConfiguration
-
-        EnableWebMvc afef2232323;
-        WebMvcAutoConfiguration fwefweg34ginoi3n4g;
-        WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter g34g4hnoi42nho24ohi;
-        WebMvcConfigurerAdapter ewgtwrth3223;
-        WebMvcConfigurer rbqebrqe43g;
-
-        /**
-         * + @Configuration
-         * implements WebMvcConfigurer                  ：不会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
-         * implements WebMvcConfigurer + @EnableWebMvc  ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
-         * extends WebMvcConfigurationSupport           ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
-         * extends DelegatingWebMvcConfiguration        ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
-         * implements WebMvcConfigurer + @EnableAutoConfiguration   ：OK
-         * */
-
-        /*
-        * https://www.youtube.com/watch?v=uDl1qlJWE7A
-        * https://www.youtube.com/watch?v=viP3VCx1X6w
-        * */
-
-        ServletListenerRegistrationBean onionoi34343;
-        FilterRegistrationBean eroinoi23224;
-        ServletRegistrationBean oeqrinboi45981450801;
-
-        ImportBeanDefinitionRegistrar lknlknlk3434;
-        ImportSelector g34g34;
-        AutoConfigurationImportSelector greon3o4i;
-
-    //  ############################ Initializer
+        //  ############################ Initializer
 
         /**
          * 类 ServletContainerInitializer 的 子类的 onStartup 方法是一个web应用中，我们的代码可以控制到的最早时间点。
@@ -795,7 +767,6 @@ public class Application {
         //  ############################ Listener
 
         /**
-         *
          * 类 SpringApplicationRunListener 通过 自动配置被调起，
          * 其 子类 EventPublishingRunListener 专门处理 各种 ApplicationListener；
          * 循环地 调起 各个 ApplicationListener 的子类。
@@ -854,6 +825,65 @@ public class Application {
         ServiceLoader oinepirg0394jg03j94;
         ClassLoader grg0934g0j3094g09;
 
+        //  ############################ AutoConfiguration 1 WebMvc
+
+        EnableWebMvc afef2232323;
+        WebMvcAutoConfiguration fwefweg34ginoi3n4g;
+        WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter g34g4hnoi42nho24ohi;
+        WebMvcConfigurerAdapter ewgtwrth3223;
+        WebMvcConfigurer rbqebrqe43g;
+
+        /**
+         * + @Configuration
+         * implements WebMvcConfigurer                  ：不会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * implements WebMvcConfigurer + @EnableWebMvc  ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * extends WebMvcConfigurationSupport           ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * extends DelegatingWebMvcConfiguration        ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * implements WebMvcConfigurer + @EnableAutoConfiguration   ：OK
+         * */
+
+            /*
+            * https://www.youtube.com/watch?v=uDl1qlJWE7A
+            * https://www.youtube.com/watch?v=viP3VCx1X6w
+            * */
+
+        ServletListenerRegistrationBean onionoi34343;
+        FilterRegistrationBean eroinoi23224;
+        ServletRegistrationBean oeqrinboi45981450801;
+
+        ImportBeanDefinitionRegistrar lknlknlk3434;
+        ImportSelector g34g34;
+        AutoConfigurationImportSelector greon3o4i;
+
+
+        //  ############################ AutoConfiguration 2 EmbeddedServletContainerAutoConfiguration
+
+        EmbeddedServletContainerAutoConfiguration g43g34;
+
+        EmbeddedServletContainerFactory g30g93094g0934;
+        AbstractEmbeddedServletContainerFactory g34g03409gk3049gk09;
+        JettyEmbeddedServletContainerFactory g34j0394g0349gk09;
+        TomcatEmbeddedServletContainerFactory g30g304gk09;
+        UndertowEmbeddedServletContainerFactory g3049gk0394kg09;
+
+        ServletContextInitializer g30g90394g09;
+        RegistrationBean g3gergp;
+        ServletRegistrationBean g340j3094g;
+        ServletListenerRegistrationBean g34gj03j4g09;
+        FilterRegistrationBean g34gj0394g034gk09;
+        DelegatingFilterProxyRegistrationBean g0349gj3094g09;
+
+        //  ############################ AutoConfiguration 3
+
+
+        //  ############################ AutoConfiguration 4
+
+
+        //  ############################ AutoConfiguration 5
+
+
+        //  ############################ AutoConfiguration 6
+
 
         /*
         * TODO 必须搞搞清楚
@@ -897,6 +927,21 @@ public class Application {
         *
         * 最重要的东西 就是 类 SpringFactoriesLoader，接受 类型 作为 参数key，获取对应类型的 配置。
         * */
+
+        //  ############################ EnableXXX Anno
+
+        EnableScheduling enSchd;
+        EnableAspectJAutoProxy enAspJ;
+        EnableAutoConfiguration enAuCfg;
+        EnableWebMvc enWmvc;
+        EnableCaching enCach;
+        EnableLoadTimeWeaving enLdtmwv;
+        EnableMBeanExport enMbn;
+        EnableOAuth2Sso enOA;
+        EnableConfigurationProperties enCfgPrp;
+
+
+
 
 }
 
