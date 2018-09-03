@@ -88,6 +88,7 @@ import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.AbstractContextLoaderInitializer;
 import org.springframework.web.context.ContextCleanupListener;
+import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.context.support.ServletContextAwareProcessor;
@@ -844,6 +845,46 @@ public class Application {
                 ContextStoppedEvent go3i4g093049g0k;
 
         //  ############################ Servlet Configure
+
+        ContextLoader gregerg34gj093j409g;
+        ServiceLoader oinepirg0394jg03j94;
+        ClassLoader grg0934g0j3094g09;
+
+
+        /*
+        * TODO 必须搞搞清楚
+        * spring.factories 文件有很多个，而且其中不止有 AutoConfigure 一种，
+        * 还有 其他十多种，是否 所有的这些，都是通过 EnableAutoConfiguration 拉入？
+        * 具体拉入逻辑需要研究研究，搞搞清楚。
+        *
+        *
+        * spring.factories 文件的类型：
+        *
+        * EnableAutoConfiguration
+        * SpringApplicationRunListener
+        * PropertySourceLoader
+        * ApplicationContextInitializer
+        * ApplicationListener
+        * EnvironmentPostProcessor
+        * FailureAnalyzer
+        * FailureAnalysisReporter
+        * ManagementContextConfiguration
+        * AutoConfigurationImportListener
+        * AutoConfigurationImportFilter
+        * TemplateAvailabilityProvider
+        *
+        * SpringDataJacksonModules
+        * RepositoryFactorySupport
+        * RepositoryFactorySupport
+        * RepositoryFactorySupport
+        *
+        * BeanInfoFactory
+        *
+        * TestExecutionListener
+        * ContextCustomizerFactory
+        *
+        * */
+
 
 }
 
