@@ -864,31 +864,39 @@ public class Application {
         *
         * spring.factories 文件的类型：
         *
-        * EnableAutoConfiguration
-        * SpringApplicationRunListener
-        * PropertySourceLoader
+        * （默认情况下，springboot 启动时，SpringFactoriesLoader 拉入的类型的顺讯如下，某几个多次出现）
         * ApplicationContextInitializer
         * ApplicationListener
+        * SpringApplicationRunListener
         * EnvironmentPostProcessor
+        * PropertySourceLoader
+        * BeanInfoFactory
         * FailureAnalyzer
-        * FailureAnalysisReporter
-        * ManagementContextConfiguration
-        * AutoConfigurationImportListener
+        * EnableAutoConfiguration
         * AutoConfigurationImportFilter
+        * AutoConfigurationImportListener
         * TemplateAvailabilityProvider
+        * ManagementContextConfiguration
         *
+        * FailureAnalysisReporter
         * SpringDataJacksonModules
         * RepositoryFactorySupport
         * RepositoryFactorySupport
         * RepositoryFactorySupport
-        *
-        * BeanInfoFactory
-        *
         * TestExecutionListener
         * ContextCustomizerFactory
         *
+        * 应该是这样，spring-boot 启动，有一个繁复的过程；
+        * 在这个过程中，有很多个阶段，不同的阶段，会需要不同的"配置"。
+        *
+        * 比如 ApplicationContextInitializer 相关阶段，需要 从 spring.factories 获取 "类型"ApplicationContextInitializer 的配置；
+        * 而 ApplicationListener 相关阶段，需要 从 spring.factories 获取 "类型"ApplicationListener 的配置。
+        * 然后 AutoConfiguration 相关阶段，需要 从 spring.factories 获取 "类型"AutoConfiguration 的配置。
+        *
+        * 大概情况应该就是这样的逻辑。
+        *
+        * 最重要的东西 就是 类 SpringFactoriesLoader，接受 类型 作为 参数key，获取对应类型的 配置。
         * */
-
 
 }
 
