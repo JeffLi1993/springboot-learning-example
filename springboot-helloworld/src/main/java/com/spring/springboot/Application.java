@@ -610,6 +610,7 @@ public class Application {
 
         ServletContext sc;
 
+        ImportBeanDefinitionRegistrar g34g98j9834g98h98h9;
         EnableAutoConfiguration aaa2323232112;
         CassandraAutoConfiguration ebqerbqerb2323;
         MongoAutoConfiguration d4gn3oi43o4ngoi34g;
@@ -623,7 +624,7 @@ public class Application {
         DataSourceAutoConfiguration erbeqb2223;
 
 
-        //  ############################ WebMVC
+        //  ############################ WebMVC 相关 AutoConfiguration
 
         DispatcherServletAutoConfiguration erbqerbqeb323;
         HttpMessageConvertersAutoConfiguration g3g34g43;
@@ -842,10 +843,10 @@ public class Application {
          * implements WebMvcConfigurer + @EnableAutoConfiguration   ：OK
          * */
 
-            /*
-            * https://www.youtube.com/watch?v=uDl1qlJWE7A
-            * https://www.youtube.com/watch?v=viP3VCx1X6w
-            * */
+        /*
+        * https://www.youtube.com/watch?v=uDl1qlJWE7A
+        * https://www.youtube.com/watch?v=viP3VCx1X6w
+        * */
 
         ServletListenerRegistrationBean onionoi34343;
         FilterRegistrationBean eroinoi23224;
@@ -858,20 +859,25 @@ public class Application {
 
         //  ############################ AutoConfiguration 2 EmbeddedServletContainerAutoConfiguration
 
+        /**
+         * 这里有个问题：
+         * ServletContextInitializer 与 ContextLoaderListener 有什么关系？
+         * */
+
         EmbeddedServletContainerAutoConfiguration g43g34;
 
         EmbeddedServletContainerFactory g30g93094g0934;
-        AbstractEmbeddedServletContainerFactory g34g03409gk3049gk09;
-        JettyEmbeddedServletContainerFactory g34j0394g0349gk09;
-        TomcatEmbeddedServletContainerFactory g30g304gk09;
-        UndertowEmbeddedServletContainerFactory g3049gk0394kg09;
+            AbstractEmbeddedServletContainerFactory g34g03409gk3049gk09;
+                JettyEmbeddedServletContainerFactory g34j0394g0349gk09;
+                TomcatEmbeddedServletContainerFactory g30g304gk09;
+                UndertowEmbeddedServletContainerFactory g3049gk0394kg09;
 
         ServletContextInitializer g30g90394g09;
-        RegistrationBean g3gergp;
-        ServletRegistrationBean g340j3094g;
-        ServletListenerRegistrationBean g34gj03j4g09;
-        FilterRegistrationBean g34gj0394g034gk09;
-        DelegatingFilterProxyRegistrationBean g0349gj3094g09;
+            RegistrationBean g3gergp;
+            ServletRegistrationBean g340j3094g;
+            ServletListenerRegistrationBean g34gj03j4g09;
+                FilterRegistrationBean g34gj0394g034gk09;
+                DelegatingFilterProxyRegistrationBean g0349gj3094g09;
 
         //  ############################ AutoConfiguration 3
 
@@ -941,6 +947,23 @@ public class Application {
         EnableConfigurationProperties enCfgPrp;
 
 
+        //  ############################ EnableXXX Anno Customize
+
+        /**
+         * 使用 AutoConfiguration 有两种做法
+         * 1， 把 @Configuration 的类，加入 *.factories，作为 key EnableAutoConfiguration 的 value；
+         *      这样的话，EnableAutoConfiguration 的 Importer 会 以 EnableAutoConfiguration 为类型 load 这个 类。
+         * 2， 创建一个 注解 @EnableXXX；其定义本身 具有 注解 Import，把 @Configuration 的类 作为参数。
+         *
+         *
+         * 接口 ImportSelector 声明了 一个方法 selectImports；
+         *
+         * 注解 Import 可以接受 三种类型的参数（可以被加载的类型）：
+         *  ImportSelector 实现类 （ @EnableAutoConfiguration）
+         *  Configuration 注解 （其他 @EnableXXX）
+         *  ImportBeanDefinitionRegistrar 实现类 （其他。。。）
+         *
+         * */
 
 
 }
