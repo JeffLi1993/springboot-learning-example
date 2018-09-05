@@ -705,7 +705,7 @@ public class Application {
          *
          * ServletContextInitializer 与 WebApplicationInitializer 有什么关系？
          *
-         * 说到比较，应该拿 ServletContextInitializer 与 WebApplicationInitializer 相提并论；
+         * 应该拿 ServletContextInitializer 与 WebApplicationInitializer 对比，二者的成员方法的参数都是 ServletContext；
          * 类 SpringServletContainerInitializer 会 自动识别 到 WebApplicationInitializer，但 不会 自动识别 ServletContextInitializer。
          *
          * 所以，ServletContextInitializer 和 WebApplicationInitializer 可以说，功能类似，目的接近。
