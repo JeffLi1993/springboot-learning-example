@@ -7,7 +7,7 @@ import org.springframework.web.WebApplicationInitializer;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
-@Configuration
+//@Configuration
 @Order(7)
 public class MyWebApplicationInitializer2 implements WebApplicationInitializer {
     @Override

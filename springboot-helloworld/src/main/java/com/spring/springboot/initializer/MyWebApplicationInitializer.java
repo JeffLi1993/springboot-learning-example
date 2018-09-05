@@ -11,7 +11,7 @@ import javax.servlet.ServletException;
 /**
  * @author Frankie Yang on 2018/8/23.
  */
-@Configuration
+//@Configuration
 @Order(6)
 public class MyWebApplicationInitializer implements WebApplicationInitializer {
     @Override

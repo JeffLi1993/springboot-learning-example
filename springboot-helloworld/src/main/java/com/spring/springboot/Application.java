@@ -646,6 +646,26 @@ public class Application {
          * 给用户定义的 WebApplicationInitializer 实现。
          * 然后每个 WebApplicationInitializer 负责完成初始化 ServletContext 的实际工作。
          * */
+
+        /**
+         * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         * 总而言之，可以总结一下：
+         * 0， 始祖级的 Tomcat 的方法 org.apache.catalina.core.StandardContext#startInternal() 调用各个 ServletContainerInitializer 的 onStartup；
+         * 1， 其中一个 Initializer --- SpringServletContainerInitializer，启动 各个 WebApplicationInitializer（似乎 ContextLoaderListener 有同样的功效）；
+         * 2， 接口 WebApplicationInitializer 的 方法onStartup 的参数是 ServletContext；
+         * 2b, 其中 子类 SpringBootServletInitializer 有点特殊功能：拉起 ContextLoaderListener；
+         *
+         * 5， 接口 ApplicationContextInitializer 相关执行（在 SpringApplication 的 方法run，或者 @EnableAutoConfiguration），
+         *     其 方法onStartup 的 参数是 ? extends ConfigurableApplicationContext。
+         * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         * */
+
+        /**
+         * TODO 有个问题：
+         * 接口 ServletContainerInitializer 的 实现类 设置在 某个文本文件中，由 某个 Listener 获取并且实例化。
+         * 这个 Listener 是什么？
+         * */
+
         ServletContainerInitializer rthr34oi;
             WsSci swioeowie;
             SpringServletContainerInitializer noin340h89034;
@@ -661,7 +681,6 @@ public class Application {
             MyWebApplicationInitializer f3gi3ng3o4igno3in4ogi3o4gio;    //  No Recognized
             MyWebApplicationInitializer2 f3gg3498j9g834984ogi3o4gio;    //  No Recognized
 
-
         /**
          * 注册Servlet、Filter、Listener的方法，两种：
          *
@@ -673,19 +692,6 @@ public class Application {
          *      ServletRegistrationBean
          *      FilterRegistrationBean
          *      ServletListenerRegistrationBean
-         * */
-
-        /**
-         * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-         * 总而言之，可以总结一下：
-         * 0， 始祖级的 Tomcat 的方法 org.apache.catalina.core.StandardContext#startInternal() 调用各个 ServletContainerInitializer 的 onStartup；
-         * 1， 其中一个 Initializer --- SpringServletContainerInitializer，启动 各个 WebApplicationInitializer（似乎 ContextLoaderListener 有同样的功效）；
-         * 2， 接口 WebApplicationInitializer 的 方法onStartup 的参数是 ServletContext；
-         * 2b, 其中 子类 SpringBootServletInitializer 有点特殊功能：拉起 ContextLoaderListener；
-         *
-         * 5， 接口 ApplicationContextInitializer 相关执行（在 SpringApplication 的 方法run，或者 @EnableAutoConfiguration），
-         *     其 方法onStartup 的 参数是 ? extends ConfigurableApplicationContext。
-         * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * */
 
         //  ############################ AutoConfiguration 2 EmbeddedServletContainerAutoConfiguration
@@ -710,6 +716,12 @@ public class Application {
          *
          * 所以，ServletContextInitializer 和 WebApplicationInitializer 可以说，功能类似，目的接近。
          * */
+
+        /**
+         * 还可以对比 ServletContainerInitializer 和 ServletContextInitializer ？
+         *
+         * */
+
         EmbeddedServletContainerAutoConfiguration g43g34;
 
         EmbeddedServletContainerFactory g30g93094g0934;
