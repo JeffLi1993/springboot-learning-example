@@ -679,7 +679,7 @@ public class Application {
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * 总而言之，可以总结一下：
          * 0， 始祖级的 Tomcat 的方法 org.apache.catalina.core.StandardContext#startInternal() 调用各个 ServletContainerInitializer 的 onStartup；
-         * 1， 其中一个 Initializer --- SpringServletContainerInitializer，启动 各个WebApplicationInitializer（似乎 ContextLoaderListener 有同样的功效）；
+         * 1， 其中一个 Initializer --- SpringServletContainerInitializer，启动 各个 WebApplicationInitializer（似乎 ContextLoaderListener 有同样的功效）；
          * 2， 接口 WebApplicationInitializer 的 方法onStartup 的参数是 ServletContext；
          * 2b, 其中 子类 SpringBootServletInitializer 有点特殊功能：拉起 ContextLoaderListener；
          *
@@ -688,6 +688,42 @@ public class Application {
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * */
 
+        //  ############################ AutoConfiguration 2 EmbeddedServletContainerAutoConfiguration
+
+        /**
+         * 这里有个问题：
+         * ServletContextInitializer 与 ContextLoaderListener 有什么关系？
+         *
+         * 一系列 ServletContextInitializer 的 处理起点 在 EnableAutoConfiguration，并且是其中一个类型：EmbeddedServletContainerAutoConfiguration。
+         *
+         * 而 ContextLoaderListener 的 起点似乎很早，早在 Servlet 容器 启动时，由 ServletContainerInitializer（SpringServletContainerInitializer）
+         * 开始，到 WebApplicationInitializer（SpringBootServletInitializer），然后就是 ContextLoaderListener。
+         *
+         * */
+
+        /**
+         *
+         * ServletContextInitializer 与 WebApplicationInitializer 有什么关系？
+         *
+         * 说到比较，应该拿 ServletContextInitializer 与 WebApplicationInitializer 相提并论；
+         * 类 SpringServletContainerInitializer 会 自动识别 到 WebApplicationInitializer，但 不会 自动识别 ServletContextInitializer。
+         *
+         * 所以，ServletContextInitializer 和 WebApplicationInitializer 可以说，功能类似，目的接近。
+         * */
+        EmbeddedServletContainerAutoConfiguration g43g34;
+
+        EmbeddedServletContainerFactory g30g93094g0934;
+            AbstractEmbeddedServletContainerFactory g34g03409gk3049gk09;
+                JettyEmbeddedServletContainerFactory g34j0394g0349gk09;
+                TomcatEmbeddedServletContainerFactory g30g304gk09;
+                UndertowEmbeddedServletContainerFactory g3049gk0394kg09;
+
+        ServletContextInitializer g30g90394g09;
+            RegistrationBean g3gergp;
+            ServletRegistrationBean g340j3094g;
+            ServletListenerRegistrationBean g34gj03j4g09;
+                FilterRegistrationBean g34gj0394g034gk09;
+                DelegatingFilterProxyRegistrationBean g0349gj3094g09;
 
         /**
          * SpringBoot 启动中，会查找 ApplicationContextInitializer 的子类，
@@ -861,27 +897,7 @@ public class Application {
         AutoConfigurationImportSelector greon3o4i;
 
 
-        //  ############################ AutoConfiguration 2 EmbeddedServletContainerAutoConfiguration
 
-        /**
-         * 这里有个问题：
-         * ServletContextInitializer 与 ContextLoaderListener 有什么关系？
-         * */
-
-        EmbeddedServletContainerAutoConfiguration g43g34;
-
-        EmbeddedServletContainerFactory g30g93094g0934;
-            AbstractEmbeddedServletContainerFactory g34g03409gk3049gk09;
-                JettyEmbeddedServletContainerFactory g34j0394g0349gk09;
-                TomcatEmbeddedServletContainerFactory g30g304gk09;
-                UndertowEmbeddedServletContainerFactory g3049gk0394kg09;
-
-        ServletContextInitializer g30g90394g09;
-            RegistrationBean g3gergp;
-            ServletRegistrationBean g340j3094g;
-            ServletListenerRegistrationBean g34gj03j4g09;
-                FilterRegistrationBean g34gj0394g034gk09;
-                DelegatingFilterProxyRegistrationBean g0349gj3094g09;
 
         //  ############################ AutoConfiguration 3
 
