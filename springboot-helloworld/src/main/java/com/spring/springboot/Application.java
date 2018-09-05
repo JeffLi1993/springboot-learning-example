@@ -7,6 +7,7 @@ import com.spring.springboot.saRunListener.MySprAppRunLsnr;
 import com.spring.springboot.scListener.MyListener;
 import com.spring.springboot.scListener.MyServletContextListener;
 import com.spring.springboot.autocfg.HelloAutoConfiguration;
+import org.apache.catalina.startup.ContextConfig;
 import org.apache.tomcat.websocket.server.WsContextListener;
 import org.apache.tomcat.websocket.server.WsSci;
 import org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor;
@@ -634,8 +635,17 @@ public class Application {
         WebClientAutoConfiguration vrebe43g34g;
         EmbeddedServletContainerAutoConfiguration lnoienrboerb34g;
 
+        //  ############################ Initializer -1
 
-        //  ############################ Initializer
+        org.apache.catalina.startup.ContextConfig gg245gweqreg34gg;
+        org.apache.catalina.startup.EngineConfig g34go0930g94;
+        org.apache.catalina.startup.HostConfig g3g3049gj0340g9;
+        org.apache.catalina.startup.UserConfig gg0394jg0934g09;
+        /**
+         * 下面的 ServletContainerInitializer 有 上述 xxxConfig 相关 Listener 触发！
+         * */
+
+    //  ############################ Initializer 0
 
         /**
          * 类 ServletContainerInitializer 的 子类的 onStartup 方法是一个web应用中，我们的代码可以控制到的最早时间点。
@@ -742,7 +752,9 @@ public class Application {
             ServletListenerRegistrationBean g34gj03j4g09;
                 FilterRegistrationBean g34gj0394g034gk09;
                 DelegatingFilterProxyRegistrationBean g0349gj3094g09;
+
         /**
+         * TODO 搞搞清楚
          * 有些 Listener 监控 Servlet 容器 的 生命(Tomcat内部)；
          * 有些 Listener 监控 [Web]ApplicationContext 的生命 --- ServletContextListener；
          * 有些 Listener 监控 Application 的生命 --- ApplicationListener;
