@@ -6,7 +6,7 @@ import com.spring.springboot.appListener.*;
 import com.spring.springboot.saRunListener.MySprAppRunLsnr;
 import com.spring.springboot.scListener.MyListener;
 import com.spring.springboot.scListener.MyServletContextListener;
-import com.spring.springboot.service.HelloAutoConfiguration;
+import com.spring.springboot.autocfg.HelloAutoConfiguration;
 import org.apache.tomcat.websocket.server.WsContextListener;
 import org.apache.tomcat.websocket.server.WsSci;
 import org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor;
@@ -41,7 +41,6 @@ import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
-import org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration;
 import org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers;
 import org.springframework.boot.autoconfigure.web.*;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
@@ -116,6 +115,9 @@ import java.util.ServiceLoader;
  */
 // Spring Boot 应用的标识
 @SpringBootApplication
+//@Configuration
+//@ComponentScan
+//@EnableAutoConfiguration(exclude = Tomcat.class)
 public class Application {
 
     public static void main(String[] args) {
@@ -678,9 +680,11 @@ public class Application {
          * 总而言之，可以总结一下：
          * 0， 始祖级的 Tomcat 的方法 org.apache.catalina.core.StandardContext#startInternal() 调用各个 ServletContainerInitializer 的 onStartup；
          * 1， 其中一个 Initializer --- SpringServletContainerInitializer，启动 各个WebApplicationInitializer（似乎 ContextLoaderListener 有同样的功效）；
-         * 2， 接口WebApplicationInitializer 的 方法onStartup 的参数是 ServletContext；
-         * 2b, 其中 子类SpringBootServletInitializer 有点特殊功能：拉起 ContextLoaderListener；
-         * 3， 接口ApplicationContextInitializer 的 方法onStartup 的 参数是 ? extends ConfigurableApplicationContext。
+         * 2， 接口 WebApplicationInitializer 的 方法onStartup 的参数是 ServletContext；
+         * 2b, 其中 子类 SpringBootServletInitializer 有点特殊功能：拉起 ContextLoaderListener；
+         *
+         * 5， 接口 ApplicationContextInitializer 相关执行（在 SpringApplication 的 方法run，或者 @EnableAutoConfiguration），
+         *     其 方法onStartup 的 参数是 ? extends ConfigurableApplicationContext。
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * */
 

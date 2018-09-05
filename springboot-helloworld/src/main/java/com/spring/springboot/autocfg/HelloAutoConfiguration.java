@@ -1,5 +1,7 @@
-package com.spring.springboot.service;
+package com.spring.springboot.autocfg;
 
+import com.spring.springboot.service.Hello;
+import com.spring.springboot.service.HelloProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -26,6 +28,8 @@ public class HelloAutoConfiguration {
     public Hello hello() {
         Hello hello = new Hello();
         hello.setMsg(helloProperties.getMsg());
+
+        System.out.println("Frankie Hello Auto Configuration");
         return hello;
     }
 
