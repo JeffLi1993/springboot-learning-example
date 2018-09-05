@@ -664,6 +664,8 @@ public class Application {
          * TODO 有个问题：
          * 接口 ServletContainerInitializer 的 实现类 设置在 某个文本文件中，由 某个 Listener 获取并且实例化。
          * 这个 Listener 是什么？
+         *
+         * 这个 Listener 应该是 Servlet 容器内部的功能！
          * */
 
         ServletContainerInitializer rthr34oi;
@@ -692,6 +694,10 @@ public class Application {
          *      ServletRegistrationBean
          *      FilterRegistrationBean
          *      ServletListenerRegistrationBean
+         * 3，  使用注解：
+         *      WebServlet
+         *      WebListener
+         *      WebFilter
          * */
 
         //  ############################ AutoConfiguration 2 EmbeddedServletContainerAutoConfiguration
@@ -719,7 +725,7 @@ public class Application {
 
         /**
          * 还可以对比 ServletContainerInitializer 和 ServletContextInitializer ？
-         *
+         * 还可以对比 WebApplicationInitializer 和 ApplicationContextInitializer ?
          * */
 
         EmbeddedServletContainerAutoConfiguration g43g34;
@@ -736,6 +742,16 @@ public class Application {
             ServletListenerRegistrationBean g34gj03j4g09;
                 FilterRegistrationBean g34gj0394g034gk09;
                 DelegatingFilterProxyRegistrationBean g0349gj3094g09;
+        /**
+         * 有些 Listener 监控 Servlet 容器 的 生命(Tomcat内部)；
+         * 有些 Listener 监控 [Web]ApplicationContext 的生命 --- ServletContextListener；
+         * 有些 Listener 监控 Application 的生命 --- ApplicationListener;
+         *
+         * 有些 Initializer 初始化 ServletContainer --- ServletContainerInitializer；
+         * 有些 Initializer 初始化 WebApplication --- WebApplicationInitializer。
+         * 有些 Initializer 初始化 ServletContext --- ServletContextInitializer；
+         * 有些 Initializer 初始化 [Web]ApplicationContext --- ApplicationContextInitializer；
+         * */
 
         /**
          * SpringBoot 启动中，会查找 ApplicationContextInitializer 的子类，
@@ -785,9 +801,10 @@ public class Application {
          * 类 ContextLoaderListener 已经实现了 接口 ServletContextListener，
          * 借助 "工具类" ContextLoader 完成了一些事情了，算是一个输出性的东西，不容置喙。
          * 
-         * 接口 ContextLoaderListener 绝对不是“输出性的东西” ，而且非常重要，是 “初始化” 的起点！
-         * 在此之前 一直在收集配置；再此之后，开始使用配置（初始化），形成具有完整层级和正确功能的 AC！
-         * 这个过程由 接口 ServletContextListener 的实现类 ContextLoaderListener 发起！
+         * 接口 ContextLoaderListener 绝对不是“输出性的东西”，而且非常重要！
+         * 监控了 [Root] WebApplicationContext 从无到有再到无 过程中的 重要节点！
+         * 在此之前 一直在收集配置；再此之后，开始使用配置（初始化 WebApplicationContext），形成具有完整层级和正确功能的 AC！
+         * 这个过程由 "某个事件" 触发，再由接口 ServletContextListener 的实现类 ContextLoaderListener 的某个成员方法 完成 ！
          */
 
     //  ############################ PostProcessor
