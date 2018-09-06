@@ -8,6 +8,7 @@ import com.spring.springboot.scListener.MyListener;
 import com.spring.springboot.scListener.MyServletContextListener;
 import com.spring.springboot.autocfg.HelloAutoConfiguration;
 import org.apache.catalina.startup.ContextConfig;
+import org.apache.catalina.startup.WebappServiceLoader;
 import org.apache.tomcat.websocket.server.WsContextListener;
 import org.apache.tomcat.websocket.server.WsSci;
 import org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor;
@@ -645,7 +646,7 @@ public class Application {
          * 下面的 ServletContainerInitializer 有 上述 xxxConfig 相关 Listener 触发！
          * */
 
-    //  ############################ Initializer 0
+        //  ############################ Initializer 0
 
         /**
          * 类 ServletContainerInitializer 的 子类的 onStartup 方法是一个web应用中，我们的代码可以控制到的最早时间点。
@@ -656,6 +657,22 @@ public class Application {
          * 给用户定义的 WebApplicationInitializer 实现。
          * 然后每个 WebApplicationInitializer 负责完成初始化 ServletContext 的实际工作。
          * */
+
+        //  ############################ ServiceLoader
+        /**
+         * responsible for loading SpringServletContainerInitializer
+         * (implementation of ServletContainerInitializer) from that file
+         *
+         * Tomcat Startup Procedure:
+         * 1, Tomcat initialize the ServletContext
+         * 2, ContextConfig is notified with this context startup event
+         * 3, service-loading is delegated to WebappServiceLoader<ServletContainerInitializer>
+         * 4, WebappServiceLoader scans in WEB-INF/lib jars for the file
+         *      META-INF/services/javax.servlet.ServletContainerInitializer inorder to load the implementation
+         * 5, Once loaded return to step 3 and, ContextConfig will call implementation's
+         *      (here SpringServletContainerInitializer) onStartup method which will do rest of the things.
+         * */
+        WebappServiceLoader eovenoribnoierb;
 
         /**
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -668,14 +685,24 @@ public class Application {
          * 5， 接口 ApplicationContextInitializer 相关执行（在 SpringApplication 的 方法run，或者 @EnableAutoConfiguration），
          *     其 方法onStartup 的 参数是 ? extends ConfigurableApplicationContext。
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         *
+         * 补充，上面的说法 关于 WebApplicationInitializer 和 ContextLoaderListener 完全正确。
+         * programmatic declaration and registration of servlet, filter and listener components，
+         * these methods from within ServletContextListener#contextInitialized method
+         * or ServletContainerInitializer#onStartup method.
+         *
+         * 各个 WebApplicationInitializer/ServletContextInitializer 是为了 "丰富" ServletContext，
+         * 而 ServletContextListener（ContextLoaderListener）的功效也是 "找机会" "丰富" ServletContext。
          * */
 
         /**
          * TODO 有个问题：
          * 接口 ServletContainerInitializer 的 实现类 设置在 某个文本文件中，由 某个 Listener 获取并且实例化。
-         * 这个 Listener 是什么？
+         * 这个 Listener 是什么？--- ContextConfig ！
          *
-         * 这个 Listener 应该是 Servlet 容器内部的功能！
+         * Tomcat has LifecycleListeners those will listen to lifecycle events like start, stop etc.
+         * org.apache.catalina.startup.ContextConfig is such a startup event listener for a
+         * ServletContext that configures the properties of that ServletContext, and the associated defined servlets.
          * */
 
         ServletContainerInitializer rthr34oi;
@@ -684,6 +711,11 @@ public class Application {
             LogbackServletContainerInitializer aaa34g09340g9j09;
             MyServletContainerInitializer g3ig039g093k4g0k; //   No Recognized
 
+        /**
+         * Spring WebApplicationInitializer provides a programatic way to configure the
+         * Spring DispatcherServlet and ContextLoaderListener in Servlet 3.0+ compliant
+         * servlet containers , rather than adding this configuration through a web.xml file.
+         * */
         WebApplicationInitializer niog340;
             SpringBootServletInitializer noi3480384g;
             AbstractContextLoaderInitializer n03n4g083490n;
@@ -710,6 +742,40 @@ public class Application {
          *      WebFilter
          * */
 
+        /**
+         * WebApplicationInitializer 与 web.xml 重叠部分
+         *
+         <servlet>
+           <servlet-name>dispatcher</servlet-name>
+           <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+                    </servlet-class>
+           <init-param>
+             <param-name>contextConfigLocation</param-name>
+             <param-value>/WEB-INF/spring/dispatcher-config.xml</param-value>
+           </init-param>
+           <load-on-startup>1</load-on-startup>
+         </servlet>
+
+         <servlet-mapping>
+           <servlet-name>dispatcher</servlet-name>
+           <url-pattern>/</url-pattern>
+         </servlet-mapping>
+
+         public class MyWebAppInitializer implements WebApplicationInitializer {
+            @Override
+            public void onStartup(ServletContext container) {
+                XmlWebApplicationContext appContext = new XmlWebApplicationContext();
+                appContext.setConfigLocation("/WEB-INF/spring/dispatcher-config.xml");
+
+                ServletRegistration.Dynamic dispatcher =
+                    container.addServlet("dispatcher", new DispatcherServlet(appContext));
+                dispatcher.setLoadOnStartup(1);
+                dispatcher.addMapping("/");
+            }
+         }
+         * */
+
         //  ############################ AutoConfiguration 2 EmbeddedServletContainerAutoConfiguration
 
         /**
@@ -724,19 +790,43 @@ public class Application {
          * */
 
         /**
+         * 还可以对比 ServletContainerInitializer 和 WebApplicationInitializer ？
+         * 根和茎茎的关系
          *
+         * 还可以对比 ServletContainerInitializer 和 ServletContextInitializer ？
+         * 根和茎茎的关系
+         *
+         * 还可以对比 ServletContextInitializer 和 WebApplicationInitializer ？
+         * 功效相同，用法不同
+         *
+         * 还可以对比 WebApplicationInitializer 和 ApplicationContextInitializer ?
+         * 完全没有相似性
+         * */
+
+        /**
          * ServletContextInitializer 与 WebApplicationInitializer 有什么关系？
          *
          * 应该拿 ServletContextInitializer 与 WebApplicationInitializer 对比，二者的成员方法的参数都是 ServletContext；
          * 类 SpringServletContainerInitializer 会 自动识别 到 WebApplicationInitializer，但 不会 自动识别 ServletContextInitializer。
          *
-         * 所以，ServletContextInitializer 和 WebApplicationInitializer 可以说，功能类似，目的接近。
+         * 注解如下：
+         * Interface used to configure a Servlet 3.0+ context programmatically. Unlike WebApplicationInitializer,
+         * classes that implement this interface (and do not implement WebApplicationInitializer) will not be
+         * detected by SpringServletContainerInitializer and hence will not be automatically bootstrapped by
+         * the Servlet container.
+         *
+         * 可见，ServletContextInitializer 和 WebApplicationInitializer 功效是相同的，估计仅仅是用法不同。
          * */
 
         /**
-         * 还可以对比 ServletContainerInitializer 和 ServletContextInitializer ？
-         * 还可以对比 WebApplicationInitializer 和 ApplicationContextInitializer ?
+         * WebApplicationInitializer is used by a Servlet Container at startup of the web application
+         * and provides a way for programmatic creating a web application(replacement for a web.xml file),
+         * （可以说在 MVC 之前）
+         * ApplicationContextInitializer provides a hook to configure the Spring application context
+         * before it gets fully created
+         * （可以说在 AC 过程中）
          * */
+
 
         EmbeddedServletContainerAutoConfiguration g43g34;
 
@@ -755,14 +845,17 @@ public class Application {
 
         /**
          * TODO 搞搞清楚
-         * 有些 Listener 监控 Servlet 容器 的 生命(Tomcat内部)；
+         * 有些 Listener 监控 Servlet 容器 的生命(Tomcat内部)；
          * 有些 Listener 监控 [Web]ApplicationContext 的生命 --- ServletContextListener；
          * 有些 Listener 监控 Application 的生命 --- ApplicationListener;
          *
-         * 有些 Initializer 初始化 ServletContainer --- ServletContainerInitializer；
-         * 有些 Initializer 初始化 WebApplication --- WebApplicationInitializer。
-         * 有些 Initializer 初始化 ServletContext --- ServletContextInitializer；
-         * 有些 Initializer 初始化 [Web]ApplicationContext --- ApplicationContextInitializer；
+         * 有些 Initializer 初始化 ServletContainer --- ServletContainerInitializer(SC + WebApplicationInitializer[])；
+         * 有些 Initializer 初始化 WebApplication --- WebApplicationInitializer(SC);
+         * 有些 Initializer 初始化 ServletContext --- ServletContextInitializer(SC)；
+         * 有些 Initializer 初始化 [Web]ApplicationContext --- ApplicationContextInitializer(AC)；
+         *
+         * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         * 上面的顺序，对应很正确
          * */
 
         /**
@@ -803,7 +896,7 @@ public class Application {
             WsContextListener aaa3gpompopo;
             IntrospectorCleanupListener fgogoi34goi;
             MyServletContextListener gg34g09j093jg904;  // Recognized
-            MyListener jf293f982j3f9823;
+            MyListener jf293f982j3f9823;    // Recognized
 
         ServletContextEvent g34oinoi3n4ogi3no4ig;
             ServletContextAttributeEvent g3goim3oin4go3in4goin6;
@@ -1026,6 +1119,36 @@ public class Application {
          *
          * */
 
+        // TODO 大功告成
+
+        /**
+         *
+         * Spring Boot Initialization Steps:
+         1, SpringApplication.run() creates EmbeddedWebApplicationContext application context;
+         2, Calls its refresh() method;
+         3, Refresh process reads annotations of the starting class TestSpring. It looks for import annotations.
+         EnableAutoConfiguration is one of them. For an import annotation the refresh process gets the corresponding
+         class from the annotation value and invokes its selectImports() method;
+         4, In case of @EnableAutoConfiguration the corresponding class is EnableAutoConfigurationImportSelector
+         whose selectImports() loads tons of other import selectors from the META-INF/spring.factories;
+         5, This process continues recursively. Also, all bean definitions, that are inside these import selectors,
+         are read. I.e. it includes beans defined by a method with the @Bean annotation, i.e. beans that require
+         the Spring context to call the corresponding method automatically to instantiate them;
+         6, The resfresh() continues and reaches onRefresh(), the createEmbeddedServletContainer() method is called inside;
+         7, Among read bean defitions at the previous step, beans implementing ServletContextInitializer are
+         searched for and instantiated. One of them is the bean, defined by the
+         DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration#dispatcherServletRegistration()
+         method of ServletRegistrationBean type that extends ServletContextInitializer. As you can guess from the
+         name of the class, such initializers add a given servlet (in this case DispatcherServlet) to a given
+         ServletContext, when their onStartup() method is invoked;
+         8, A tomcat embedded server is created (not started completely yet). All found ServletContextInitializers
+         at the previous step are passed to this tomcat initialization - this is where the onStartup() methods of
+         those ServletContextInitializers are called and DispatcherServlet gets created and registered as servlet;
+         9, End of onRefresh() of application context;
+         10,The finishRefresh() is called where tomcat is finally started by TomcatEmbeddedServletContainer.start();
+         11,End of refresh() of application context and other final initialization steps;
+         12,The app is running.
+         * */
 
 }
 

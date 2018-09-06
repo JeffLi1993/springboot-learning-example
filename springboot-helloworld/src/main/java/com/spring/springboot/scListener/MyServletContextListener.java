@@ -11,7 +11,8 @@ import javax.servlet.annotation.WebListener;
 /**
  * @author Frankie Yang on 2018/8/24.
  */
-@Component
+//@Component
+@WebListener
 public class MyServletContextListener implements ServletContextListener {
 
     public void contextInitialized(ServletContextEvent sce){
