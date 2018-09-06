@@ -858,6 +858,30 @@ public class Application {
          * 上面的顺序，对应很正确
          * */
 
+        //  ############################ Servlet Listener
+        ServletContextListener oieoivoir34g34g;
+            ContextLoaderListener vr3robinoi3bnio;
+            WebAppRootListener j0923jf02093;
+            ContextCleanupListener fff34ogin3oigo43i;
+            WsContextListener aaa3gpompopo;
+            IntrospectorCleanupListener fgogoi34goi;
+            MyServletContextListener gg34g09j093jg904;  // Recognized
+            MyListener jf293f982j3f9823;    // Recognized
+
+        ServletContextEvent g34oinoi3n4ogi3no4ig;
+            ServletContextAttributeEvent g3goim3oin4go3in4goin6;
+
+        /**
+         * 接口 ServletContextListener 可以实现，做一些 定制性 的事情；
+         * 类 ContextLoaderListener 已经实现了 接口 ServletContextListener，
+         * 借助 "工具类" ContextLoader 完成了一些事情了，算是一个输出性的东西，不容置喙。
+         *
+         * 接口 ContextLoaderListener 绝对不是“输出性的东西”，而且非常重要！
+         * 监控了 [Root] WebApplicationContext 从无到有再到无 过程中的 重要节点！
+         * 在此之前 一直在收集配置；再此之后，开始使用配置（初始化 WebApplicationContext），形成具有完整层级和正确功能的 AC！
+         * 这个过程由 "某个事件" 触发，再由接口 ServletContextListener 的实现类 ContextLoaderListener 的某个成员方法 完成 ！
+         */
+
         /**
          * SpringBoot 启动中，会查找 ApplicationContextInitializer 的子类，
          * 调起 其中的 各个 方法initialize。
@@ -887,30 +911,6 @@ public class Application {
             org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer
         */
 
-    //  ############################ Servlet Listener
-
-        ServletContextListener oieoivoir34g34g;
-            ContextLoaderListener vr3robinoi3bnio;
-            WebAppRootListener j0923jf02093;
-            ContextCleanupListener fff34ogin3oigo43i;
-            WsContextListener aaa3gpompopo;
-            IntrospectorCleanupListener fgogoi34goi;
-            MyServletContextListener gg34g09j093jg904;  // Recognized
-            MyListener jf293f982j3f9823;    // Recognized
-
-        ServletContextEvent g34oinoi3n4ogi3no4ig;
-            ServletContextAttributeEvent g3goim3oin4go3in4goin6;
-
-        /**
-         * 接口 ServletContextListener 可以实现，做一些 定制性 的事情；
-         * 类 ContextLoaderListener 已经实现了 接口 ServletContextListener，
-         * 借助 "工具类" ContextLoader 完成了一些事情了，算是一个输出性的东西，不容置喙。
-         * 
-         * 接口 ContextLoaderListener 绝对不是“输出性的东西”，而且非常重要！
-         * 监控了 [Root] WebApplicationContext 从无到有再到无 过程中的 重要节点！
-         * 在此之前 一直在收集配置；再此之后，开始使用配置（初始化 WebApplicationContext），形成具有完整层级和正确功能的 AC！
-         * 这个过程由 "某个事件" 触发，再由接口 ServletContextListener 的实现类 ContextLoaderListener 的某个成员方法 完成 ！
-         */
 
     //  ############################ PostProcessor
 
