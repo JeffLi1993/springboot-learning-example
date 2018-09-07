@@ -1019,10 +1019,13 @@ public class Application {
 
         /**
          * + @Configuration
-         * extends WebMvcConfigurationSupport           ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
-         * extends DelegatingWebMvcConfiguration        ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
-         * implements WebMvcConfigurer                  ：不会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
-         * implements WebMvcConfigurer + @EnableWebMvc  ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * 1， extends WebMvcConfigurationSupport           ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * 2， extends DelegatingWebMvcConfiguration        ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * 3， implements WebMvcConfigurer                  ：不会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * 4， implements WebMvcConfigurer + @EnableWebMvc  ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         *
+         * 第 3 种情况适用于，想保留 Spring-Boot 默认 MVC 配置 并仅想 补充一些 其他配置，可以只 继承 WebMvcConfigurer；
+         * 同时，最好不使用使用 注解@Configuration，而应该使用 @Component。
          *
          * Important !
          * To customize the configuration imported by @EnableWebMvc, we should extend
@@ -1060,7 +1063,6 @@ public class Application {
 
 
         /*
-        * TODO 必须搞搞清楚
         * spring.factories 文件有很多个，而且其中不止有 AutoConfigure 一种，
         * 还有 其他十多种，是否 所有的这些，都是通过 EnableAutoConfiguration 拉入？
         * 具体拉入逻辑需要研究研究，搞搞清楚。
@@ -1115,7 +1117,6 @@ public class Application {
         EnableConfigurationProperties enCfgPrp;
 
         /**
-         * TODO 还是没搞懂
          * Enable 就是 "识别"功能 的开关；打开开关，就开始识别，关上开关，就不再识别。
          *
          * 比如， 使用了 注解@EnableScheduling，就开始满世界找 @Scheduled；如果没有使用，就忽略 @Scheduled。
@@ -1140,7 +1141,7 @@ public class Application {
          *
          * */
 
-        // TODO 大功告成
+        // TODO ApplicationListener 和 SpringApplicationRunListener 的处理顺序？
 
         /**
          *
