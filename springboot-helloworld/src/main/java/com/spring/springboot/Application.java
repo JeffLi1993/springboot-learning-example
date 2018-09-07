@@ -1101,6 +1101,10 @@ public class Application {
         EnableOAuth2Sso enOA;
         EnableConfigurationProperties enCfgPrp;
 
+        /**
+         * TODO 还是没搞懂
+         * */
+
 
         //  ############################ EnableXXX Anno Customize
 
