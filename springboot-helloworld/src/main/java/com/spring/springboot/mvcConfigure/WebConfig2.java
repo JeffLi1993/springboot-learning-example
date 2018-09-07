@@ -8,7 +8,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
 @Configuration
-@EnableAutoConfiguration
 public class WebConfig2 extends /*WebMvcConfigurer*/ WebMvcConfigurerAdapter {
 
     public void addInterceptors(InterceptorRegistry registry){

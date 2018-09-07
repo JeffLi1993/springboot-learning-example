@@ -10,7 +10,6 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan
 public class WebConfig extends /*WebMvcConfigurer*/ WebMvcConfigurerAdapter {
 
     public void addInterceptors(InterceptorRegistry registry){

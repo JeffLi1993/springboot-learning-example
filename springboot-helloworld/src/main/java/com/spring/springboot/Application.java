@@ -3,6 +3,8 @@ package com.spring.springboot;
 import ch.qos.logback.classic.servlet.LogbackServletContainerInitializer;
 import com.spring.springboot.initializer.*;
 import com.spring.springboot.appListener.*;
+import com.spring.springboot.mvcConfigure.WebConfig;
+import com.spring.springboot.mvcConfigure.WebConfig2;
 import com.spring.springboot.saRunListener.MySprAppRunLsnr;
 import com.spring.springboot.scListener.MyListener;
 import com.spring.springboot.scListener.MyServletContextListener;
@@ -19,6 +21,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
 import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.actuate.endpoint.mvc.JolokiaMvcEndpoint;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
@@ -1006,17 +1009,26 @@ public class Application {
 
         EnableWebMvc afef2232323;
         WebMvcAutoConfiguration fwefweg34ginoi3n4g;
-        WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter g34g4hnoi42nho24ohi;
-        WebMvcConfigurerAdapter ewgtwrth3223;
         WebMvcConfigurer rbqebrqe43g;
+            WebMvcConfigurerAdapter ewgtwrth3223;
+                WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter g34g4hnoi42nho24ohi;
+                JolokiaMvcEndpoint gj9034jg0394jg09;
+                WebConfig g304gj093j4g;
+                WebConfig2 g9384g9834hg98h;
+//          WebMvcConfigurerComposite fff340gj3904gj9;
 
         /**
          * + @Configuration
-         * implements WebMvcConfigurer                  ：不会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
-         * implements WebMvcConfigurer + @EnableWebMvc  ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          * extends WebMvcConfigurationSupport           ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          * extends DelegatingWebMvcConfiguration        ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
-         * implements WebMvcConfigurer + @EnableAutoConfiguration   ：OK
+         * implements WebMvcConfigurer                  ：不会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * implements WebMvcConfigurer + @EnableWebMvc  ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         *
+         * Important !
+         * To customize the configuration imported by @EnableWebMvc, we should extend
+         * the class WebMvcConfigurerAdapter and override the methods we want to do
+         * related customization with. Our extended WebMvcConfigurerAdapter methods are
+         * called back from WebMvcConfigurationSupport during configuration stage.
          * */
 
         /*
@@ -1107,10 +1119,7 @@ public class Application {
          * Enable 就是 "识别"功能 的开关；打开开关，就开始识别，关上开关，就不再识别。
          *
          * 比如， 使用了 注解@EnableScheduling，就开始满世界找 @Scheduled；如果没有使用，就忽略 @Scheduled。
-         * 比如， 使用了 注解@EnableWebMvc，就开始满世界找 WebMvcConfigurer 的实现类；如果没有使用，就忽略。
-         *
-         * 另外，关于 WebMvc，如果没有 @EnableWebMvc，找不了 WebMvcConfigurer，还是会找其他东西，
-         * 比如 WebMvcConfigurationSupport 或者 DelegatingWebMvcConfiguration 及其 子类。
+         * 比如， 使用了 注解@EnableWebMvc，就开始满世界找 MVC 相关注解，比如各种 HandlerXXX，Controller，XXXAdapter之类。
          * */
 
         //  ############################ EnableXXX Anno Customize
