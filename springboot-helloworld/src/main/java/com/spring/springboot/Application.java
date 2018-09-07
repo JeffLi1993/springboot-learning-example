@@ -85,6 +85,7 @@ import org.springframework.core.io.support.SpringFactoriesLoader;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.scheduling.annotation.AsyncAnnotationBeanPostProcessor;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.validation.beanvalidation.BeanValidationPostProcessor;
 import org.springframework.web.SpringServletContainerInitializer;
 import org.springframework.web.WebApplicationInitializer;
@@ -1103,8 +1104,14 @@ public class Application {
 
         /**
          * TODO 还是没搞懂
+         * Enable 就是 "识别"功能 的开关；打开开关，就开始识别，关上开关，就不再识别。
+         *
+         * 比如， 使用了 注解@EnableScheduling，就开始满世界找 @Scheduled；如果没有使用，就忽略 @Scheduled。
+         * 比如， 使用了 注解@EnableWebMvc，就开始满世界找 WebMvcConfigurer 的实现类；如果没有使用，就忽略。
+         *
+         * 另外，关于 WebMvc，如果没有 @EnableWebMvc，找不了 WebMvcConfigurer，还是会找其他东西，
+         * 比如 WebMvcConfigurationSupport 或者 DelegatingWebMvcConfiguration 及其 子类。
          * */
-
 
         //  ############################ EnableXXX Anno Customize
 
