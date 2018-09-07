@@ -116,9 +116,10 @@ import java.util.ServiceLoader;
  * Created by bysocket on 16/4/26.
  */
 // Spring Boot 应用的标识
-@SpringBootApplication
+//@SpringBootApplication
 //@Configuration
-//@ComponentScan
+@ComponentScan
+@EnableAutoConfiguration
 //@EnableAutoConfiguration(exclude = Tomcat.class)
 public class Application {
 
