@@ -21,6 +21,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
 import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.actuate.autoconfigure.EndpointWebMvcChildContextConfiguration;
 import org.springframework.boot.actuate.endpoint.mvc.JolokiaMvcEndpoint;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -48,6 +49,10 @@ import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 import org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers;
 import org.springframework.boot.autoconfigure.web.*;
+import org.springframework.boot.autoconfigure.websocket.JettyWebSocketContainerCustomizer;
+import org.springframework.boot.autoconfigure.websocket.TomcatWebSocketContainerCustomizer;
+import org.springframework.boot.autoconfigure.websocket.UndertowWebSocketContainerCustomizer;
+import org.springframework.boot.autoconfigure.websocket.WebSocketContainerCustomizer;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
 import org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer;
 import org.springframework.boot.context.ContextIdApplicationContextInitializer;
@@ -1144,6 +1149,12 @@ public class Application {
         // TODO ApplicationListener 和 SpringApplicationRunListener 的处理顺序？
 
         EmbeddedServletContainerCustomizer wef029j3f02j30f9;
+            ServerProperties g34g03j0934g;
+            WebSocketContainerCustomizer gj0349gj034jg0934;
+                TomcatWebSocketContainerCustomizer gg3409gj093;
+                UndertowWebSocketContainerCustomizer gj0394jg0394jg;
+                JettyWebSocketContainerCustomizer fg0943jg0394g;
+
         // TODO 以及 各种 其他 Customizer
 
         /**
