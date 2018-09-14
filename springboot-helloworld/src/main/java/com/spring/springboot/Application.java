@@ -711,9 +711,11 @@ public class Application {
          * 再补充：上面的说法 关于 WebApplicationInitializer 和 ContextLoaderListener 完全错误！
          * WebApplicationInitializer 与 ContextLoaderListener 没有任何对等关系！
          * 其实 ContextLoaderListener 比较简单，监听容器的某个事件，然后触发执行 initWebApplicationContext，没有其他逻辑；
-         * 而 WebApplicationInitializer 没这么简单。首先，WebApplicationInitializer 是一个接口，它可以有多个子类，这些子类
-         * 都会被 SpringServletContainerInitializer 唤起；而且 WebApplicationInitializer 承担的职责范围很大，包括不限于
-         * [ContextLoaderListener 和] DispatcherServlet。TODO 这里还需要进一步研究理解。
+         * 而 WebApplicationInitializer 并不简单，首先，它是一个接口，可以有多个子类，这些子类都会被 SpringServletContainerInitializer
+         * 唤起；而且 WebApplicationInitializer 职责稍有不同，包括不限于
+         * [ContextLoaderListener 和] DispatcherServlet，主要是配置 DispatcherServlet。
+         * 
+         * 由此可见，ContextLoaderListener 的作用时间很靠前，而 WebApplicationInitializer 作用时间比较靠后。
          * */
 
         /**
