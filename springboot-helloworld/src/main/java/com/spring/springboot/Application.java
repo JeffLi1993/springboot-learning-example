@@ -703,6 +703,8 @@ public class Application {
          *
          * 各个 WebApplicationInitializer/ServletContextInitializer 是为了 "丰富" ServletContext，
          * 而 ServletContextListener（ContextLoaderListener）的功效也是 "找机会" "丰富" ServletContext。
+         * 
+         * TODO 这里说的“丰富”，是否就是 Root ApplicationContext 的初始化呢？
          * */
 
         /**
