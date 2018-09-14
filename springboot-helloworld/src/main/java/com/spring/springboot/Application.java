@@ -623,6 +623,8 @@ public class Application {
         AbstractAnnotationConfigDispatcherServletInitializer a2oinoi23;
 
         ServletContext sc;
+        org.apache.catalina.servlet4preview.ServletContext g34g304ijg09340g9;
+
 
         ImportBeanDefinitionRegistrar g34g98j9834g98h98h9;
         EnableAutoConfiguration aaa2323232112;
@@ -711,7 +713,7 @@ public class Application {
          * 其实 ContextLoaderListener 比较简单，监听容器的某个事件，然后触发执行 initWebApplicationContext，没有其他逻辑；
          * 而 WebApplicationInitializer 没这么简单。首先，WebApplicationInitializer 是一个接口，它可以有多个子类，这些子类
          * 都会被 SpringServletContainerInitializer 唤起；而且 WebApplicationInitializer 承担的职责范围很大，包括不限于
-         * ContextLoaderListener 和 DispatcherServlet。TODO 这里还需要进一步研究理解。
+         * [ContextLoaderListener 和] DispatcherServlet。TODO 这里还需要进一步研究理解。
          * */
 
         /**
