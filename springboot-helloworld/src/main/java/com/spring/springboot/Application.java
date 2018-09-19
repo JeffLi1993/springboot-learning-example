@@ -723,10 +723,8 @@ public class Application {
          * ContextLoaderListener 执行一些动作，效果是给 ServletContext 设置一个属性，比如 ROOT_APPLICATION_CONTEXT啥啥，
          * 而 WebApplicationInitializer 就是给 ServletContext 设置任何/全部属性，只是记下来并没有马上执行。
          * 上面之所以说，WebApplicationInitializer 不简单，就是因为 WebApplicationInitializer 并没有什么具体行为，因为它就是一个 Hook。
-         * 而 WebApplicationInitializer 并不简单，首先，它是一个接口，可以有多个子类，这些子类都会被 SpringServletContainerInitializer
-         * 唤起；而且 WebApplicationInitializer 职责稍有不同，包括不限于
-         * [ContextLoaderListener 和] DispatcherServlet，主要是配置 DispatcherServlet。
-         *
+	 * 
+         * 有时候，使用了 WebApplicationInitializer，就不再需要 ContextLoaderListener
          * */
 
         /**
