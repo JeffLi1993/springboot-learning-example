@@ -723,8 +723,11 @@ public class Application {
          * ContextLoaderListener 执行一些动作，效果是给 ServletContext 设置一个属性，比如 ROOT_APPLICATION_CONTEXT啥啥，
          * 而 WebApplicationInitializer 就是给 ServletContext 设置任何/全部属性，只是记下来并没有马上执行。
          * 上面之所以说，WebApplicationInitializer 不简单，就是因为 WebApplicationInitializer 并没有什么具体行为，因为它就是一个 Hook。
-	 * 
-         * 有时候，使用了 WebApplicationInitializer，就不再需要 ContextLoaderListener
+         *
+         * 有时候，使用了 WebApplicationInitializer，就不再需要 ContextLoaderListener。
+         *
+         * 接口/Hook WebApplicationInitializer 有多种子类，普通的类 可以用来设置 ROOT上下文(Root-Application-Context)，
+         * 而那些 Abstract***ServletInitializer，用来设置 子上下文（servlet-Application-Context），也可以设置 ROOT上下文。
          * */
 
         /**
