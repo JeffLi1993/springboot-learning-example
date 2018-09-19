@@ -15,6 +15,7 @@ public class AnnotationsBasedApplicationInitializer extends AbstractContextLoade
     }
 }
 
+@Configuration
 class RootApplicationConfig {
 
 }
