@@ -836,6 +836,9 @@ public class Application {
          *
          * 还可以对比 WebApplicationInitializer 和 ApplicationContextInitializer ?
          * 完全没有相似性
+         *
+         * 还可以对比 ApplicationContextInitializer 和 ServletContextInitializer ？
+         * 有没有关系？
          * */
 
         /**
