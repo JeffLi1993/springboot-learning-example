@@ -889,9 +889,12 @@ public class Application {
          * 有些 Initializer 初始化 ServletContext/WebApplication --- ServletContextInitializer(SC)；
          * 有些 Initializer 初始化 [Web]ApplicationContext --- ApplicationContextInitializer(AC)；
          * 
-         * ServletContextInitializer 和 WebApplicationInitializer 效果相同，用法不同；都是以 SC 为参数，通过各种方式，构造 SC 的属性：两个上下文，以及 Filters 和 Listeners）;
-         * 而 ROOT-AC 是指 根据配置 加载 全部的 与MVC 无关的 Bean。
-         * Servlet-AC 是指 根据配置 加载 与MVC 有关的 Bean，包括 Servlet、Listener 和 Filter。
+         * ServletContextInitializer 和 WebApplicationInitializer 效果相同，用法不同；都是以 SC 为参数，通过各种方式，构造 SC 的属性：两个上下文，以及 Filters 和 Listeners;
+         * 而 ROOT-AC 是指 根据配置 加载 全部的 与MVC 无关的 Bean，
+         * Servlet-AC 是指 根据配置 加载 与MVC 有关的 Bean。
+         *
+         * 在 ROOT容器创建 与 Servlet容器创建 之间，还会创建监听器、过滤器等,
+         * 完整的加载/创建顺序是这样：ServletContext - context-param - listener- filter - servlet
          *
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * 上面的顺序，对应很正确
