@@ -1,4 +1,4 @@
-package com.spring.springboot.initializer;
+package com.spring.springboot.initializer2;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.AbstractContextLoaderInitializer;

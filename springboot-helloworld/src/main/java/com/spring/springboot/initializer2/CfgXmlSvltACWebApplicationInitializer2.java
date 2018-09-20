@@ -1,13 +1,10 @@
-package com.spring.springboot.initializer;
+package com.spring.springboot.initializer2;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import com.spring.springboot.initializer2.SecureWebAppConfig;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
 
 import javax.servlet.ServletContext;
@@ -17,7 +14,7 @@ import javax.servlet.ServletRegistration;
 /**
  * @author Frankie Yang on 2018/9/20.
  */
-public class CfgXmlSvltACWebApplicationInitializer3 extends AbstractDispatcherServletInitializer {
+public class CfgXmlSvltACWebApplicationInitializer2 extends AbstractDispatcherServletInitializer {
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {

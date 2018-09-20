@@ -1,5 +1,6 @@
-package com.spring.springboot.initializer;
+package com.spring.springboot.initializer2;
 
+import com.spring.springboot.initializer2.SecureWebAppConfig;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;

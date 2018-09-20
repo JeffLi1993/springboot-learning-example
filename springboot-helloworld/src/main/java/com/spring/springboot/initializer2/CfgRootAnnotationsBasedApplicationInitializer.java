@@ -1,11 +1,11 @@
-package com.spring.springboot.initializer;
+package com.spring.springboot.initializer2;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.AbstractContextLoaderInitializer;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
-public class AnnotationsBasedApplicationInitializer extends AbstractContextLoaderInitializer {
+public class CfgRootAnnotationsBasedApplicationInitializer extends AbstractContextLoaderInitializer {
   
     @Override
     protected WebApplicationContext createRootApplicationContext() {
@@ -16,7 +16,3 @@ public class AnnotationsBasedApplicationInitializer extends AbstractContextLoade
     }
 }
 
-@Configuration
-class RootApplicationConfig {
-
-}
