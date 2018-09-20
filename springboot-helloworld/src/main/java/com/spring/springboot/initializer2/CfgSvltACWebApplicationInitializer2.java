@@ -54,13 +54,27 @@ public class CfgSvltACWebApplicationInitializer2 extends AbstractDispatcherServl
 
     @Override
     protected String[] getServletMappings(){
-        return new String[]{};
+        return new String[] { "/s/api/*" };
     }
 
     @Override
     protected String getServletName() {
-        return "another-dispatcher-021";
+        return "secure-dispatcher-021";
     }
+
+    /**
+     <servlet>
+         <servlet-name>secure-webapp</servlet-name>
+         <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+         </servlet-class>
+         <load-on-startup>1</load-on-startup>
+     </servlet>
+     <servlet-mapping>
+         <servlet-name>secure-webapp</servlet-name>
+         <url-pattern>/s/api/*</url-pattern>
+     </servlet-mapping>
+     */
 
 }
 

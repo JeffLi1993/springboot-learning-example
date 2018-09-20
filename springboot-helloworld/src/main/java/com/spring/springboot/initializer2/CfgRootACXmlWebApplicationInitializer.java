@@ -27,4 +27,12 @@ public class CfgRootACXmlWebApplicationInitializer implements WebApplicationInit
 
     }
 
+    /**
+     <listener>
+         <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+         </listener-class>
+     </listener>
+     */
+
 }

@@ -12,7 +12,14 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 //Normal context
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"com.spring.springboot.initializer2"})
+@ComponentScan(basePackages = {"com.spring.springboot.contexts.normal"})
 public class NormalWebAppConfig /*implements WebMvcConfigurer*/ extends WebMvcConfigurerAdapter {
     //...
+
+    /**
+     * 大概相当于：
+     <!-- normal-webapp-servlet.xml -->
+     <context:component-scan base-package="com.baeldung.contexts.normal" />
+     *
+     */
 }

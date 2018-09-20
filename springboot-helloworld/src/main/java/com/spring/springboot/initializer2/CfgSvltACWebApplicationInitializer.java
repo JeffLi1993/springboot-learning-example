@@ -17,13 +17,13 @@ public class CfgSvltACWebApplicationInitializer extends AbstractAnnotationConfig
 
         AnnotationConfigWebApplicationContext secureWebAppContext
                 = new AnnotationConfigWebApplicationContext();
-        secureWebAppContext.register(SecureWebAppConfig.class);
+        secureWebAppContext.register(NormalWebAppConfig.class);
         return secureWebAppContext;
     }
 
     @Override
     protected String[] getServletMappings() {
-        return new String[] { "/s/api/*" };
+        return new String[] { "/api/*" };
     }
 
     @Override
@@ -38,7 +38,20 @@ public class CfgSvltACWebApplicationInitializer extends AbstractAnnotationConfig
 
     @Override
     protected String getServletName() {
-        return "another-dispatcher-026";
+        return "normal-dispatcher-026";
     }
 
+    /**
+     <servlet>
+         <servlet-name>normal-webapp</servlet-name>
+         <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+         </servlet-class>
+         <load-on-startup>1</load-on-startup>
+     </servlet>
+     <servlet-mapping>
+         <servlet-name>normal-webapp</servlet-name>
+         <url-pattern>/api/*</url-pattern>
+     </servlet-mapping>
+     */
 }

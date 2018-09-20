@@ -12,7 +12,14 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 //"Secure" context
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"spring.springboot.initializer2"})
+@ComponentScan(basePackages = {"spring.springboot.contexts.secure"})
 public class SecureWebAppConfig /*implements WebMvcConfigurer*/ extends WebMvcConfigurerAdapter {
     //...
+
+    /**
+     * 大概相当于
+     <!-- secure-webapp-servlet.xml -->
+     <context:component-scan base-package="com.baeldung.contexts.secure" />
+
+     * */
 }
