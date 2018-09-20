@@ -902,6 +902,13 @@ public class Application {
          *
          * */
 
+        /**
+         * Listener 注册的三种方式：
+         * web.xml 里的 <listener/>
+         * 注解 @WebListener
+         * 方法 SC.addListener
+         */
+
         //  ############################ Servlet Listener
         ServletContextListener oieoivoir34g34g;
             ContextLoaderListener vr3robinoi3bnio;
