@@ -888,7 +888,9 @@ public class Application {
          * 有些 Initializer 初始化 WebApplication --- WebApplicationInitializer(SC);
          * 有些 Initializer 初始化 ServletContext/WebApplication --- ServletContextInitializer(SC)；
          * 有些 Initializer 初始化 [Web]ApplicationContext --- ApplicationContextInitializer(AC)；
-         *
+	 * 
+	 * ServletContextInitializer 和 WebApplicationInitializer 效果相同，用法不同；都是以 SC 为参数，通过各种方式，构造 SC 的属性：两个上下文。
+	 *
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * 上面的顺序，对应很正确
          *
