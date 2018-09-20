@@ -1,6 +1,5 @@
 package com.spring.springboot.initializer;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -33,10 +32,5 @@ public class CfgSvltACWebApplicationInitializer extends AbstractAnnotationConfig
     protected Class[] getServletConfigClasses(){
         return new Class[]{};
     }
-
-}
-
-@Configuration
-class SecureWebAppConfig {
 
 }

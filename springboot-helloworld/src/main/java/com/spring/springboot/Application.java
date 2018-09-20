@@ -727,7 +727,7 @@ public class Application {
          * 有时候，使用了 WebApplicationInitializer，就不再需要 ContextLoaderListener。
          *
          * 接口/Hook WebApplicationInitializer 有多种子类，普通的类 可以用来设置 ROOT上下文(Root-Application-Context)，
-         * 而那些 Abstract***ServletInitializer，用来设置 子上下文（servlet-Application-Context），也可以设置 ROOT上下文。
+         * 而那些 Abstract***[Loader|Servlet]Initializer，用来设置 子上下文（servlet-Application-Context），也可以设置 ROOT上下文。
          * */
 
         /**
