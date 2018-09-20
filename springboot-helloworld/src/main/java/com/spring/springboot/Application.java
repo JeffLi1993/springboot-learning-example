@@ -886,11 +886,16 @@ public class Application {
          *
          * 有些 Initializer 初始化 ServletContainer --- ServletContainerInitializer(SC + WebApplicationInitializer[])；
          * 有些 Initializer 初始化 WebApplication --- WebApplicationInitializer(SC);
-         * 有些 Initializer 初始化 ServletContext --- ServletContextInitializer(SC)；
+         * 有些 Initializer 初始化 ServletContext/WebApplication --- ServletContextInitializer(SC)；
          * 有些 Initializer 初始化 [Web]ApplicationContext --- ApplicationContextInitializer(AC)；
          *
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * 上面的顺序，对应很正确
+         *
+         * SpringBoot 中，默认的 WebApplicationInitializer 似乎并不会被执行；
+         * 可以使用 ServletContextInitializer 和 SpringBootServletInitializer 代替，
+         * 再 配合使用 FilterRegistrationBean, ServletRegistrationBean 和 ServletListenerRegistrationBean。
+         *
          * */
 
         //  ############################ Servlet Listener
