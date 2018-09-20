@@ -1,6 +1,7 @@
 package com.spring.springboot.initializer2;
 
 import com.spring.springboot.initializer2.SecureWebAppConfig;
+import org.springframework.core.annotation.Order;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -8,6 +9,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 /**
  * @author Frankie Yang on 2018/9/19.
  */
+@Order(26)
 public class CfgSvltACWebApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
@@ -32,6 +34,11 @@ public class CfgSvltACWebApplicationInitializer extends AbstractAnnotationConfig
     @Override
     protected Class[] getServletConfigClasses(){
         return new Class[]{};
+    }
+
+    @Override
+    protected String getServletName() {
+        return "another-dispatcher-026";
     }
 
 }
