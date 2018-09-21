@@ -641,7 +641,7 @@ public class Application {
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * 总而言之，可以总结一下：
          * 0， 始祖级的 Tomcat 的方法 org.apache.catalina.core.StandardContext#startInternal() 调用各个 ServletContainerInitializer 的 onStartup；
-         * 1， 其中一个 Initializer --- SpringServletContainerInitializer，启动 各个 WebApplicationInitializer（似乎 ContextLoaderListener 有同样的功效）；
+         * 1， 其中一个 Initializer --- SpringServletContainerInitializer，启动 各个 WebApplicationInitializer（似乎 ContextLoaderListener（应该是 ServletContextInitializer）有同样的功效）；
          * 2， 接口 WebApplicationInitializer 的 方法onStartup 的参数是 ServletContext；
          * 2b, 其中 子类 SpringBootServletInitializer 有点特殊功能：拉起 ContextLoaderListener；
          *
@@ -674,6 +674,8 @@ public class Application {
          * ContextLoaderListener 执行一些动作，效果是给 ServletContext 设置一个属性，比如 ROOT_APPLICATION_CONTEXT啥啥，
          * 而 WebApplicationInitializer 就是给 ServletContext 设置任何/全部属性，只是记下来并没有马上执行。
          * 上面之所以说，WebApplicationInitializer 不简单，就是因为 WebApplicationInitializer 并没有什么具体行为，因为它就是一个 Hook。
+         * 
+         * 【上面对对错错的说法，全都错误】WebApplicationInitializer 和 ContextLoaderListener 毫无关系，不能相提并论！
          *
          * 有时候，使用了 WebApplicationInitializer，就不再需要 ContextLoaderListener。
          *
