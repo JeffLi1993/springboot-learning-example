@@ -163,17 +163,17 @@ public class Application {
 
         ApplicationRunner apprnnr;
 
-        ServletContextInitializer ewfwef;
-        WebApplicationInitializer wefwefwef;
-        ApplicationContextInitializer wefwefwefwef;
-
         SpringBootConfiguration wer;
         EnableAutoConfiguration wrwer23;
 
         EnableScheduling we3r;
         EnableCaching werwer;
-
         EnableWebMvc fwefwefwef;
+
+        EnableAutoConfiguration feef242342343ef;
+        EnableMBeanExport egwegwegweg;
+        EnableScheduling gewrgwegweg;
+        EnableWebMvc fwefwefwef133123123123;
 
         SpringFactoriesLoader wer2323r23r;
 
@@ -189,20 +189,12 @@ public class Application {
         ClasspathLoggingApplicationListener fwefwewefwef;
         LoggingApplicationListener fwefweflwefl;
 
+        ApplicationListener gergergerg;
+        ParentContextCloserApplicationListener grgergergerg;
+        FileEncodingApplicationListener wgwegweg;
+        DelegatingApplicationListener wefwe23423424fwef;
 
         //  1
-
-        //  org.springframework.context
-        ApplicationContextInitializer wefwefwwwef;
-        AutoConfigurationReportLoggingInitializer vnbvg;
-        ServerPortInfoApplicationContextInitializer fefwefewf;
-        //  javax.servlet
-        ServletContainerInitializer svltContIniter2;
-        //  org.springframework.web
-        WebApplicationInitializer webAppIniter;
-        //  org.springframework.boot.web.servlet
-        ServletContextInitializer svltCntxIniter;
-
 
         //  2
 
@@ -226,26 +218,16 @@ public class Application {
         AbstractApplicationEventMulticaster ewwefwef;
         SimpleApplicationEventMulticaster sdgweg;
         ApplicationListener lsnr;
-//            rergerg ergerg;
-//                rergerg ergerg;
-
-
-        ConditionalOnBean gwgweg;
-
-        ConfigurationPropertiesAutoConfiguration gfergerg;
-
 
         Profile wefwef;
-
+        ConditionalOnBean gwgweg;
+        ConfigurationPropertiesAutoConfiguration gfergerg;
         Condition regerg;
         Conditional fwefwewef;
+        ConditionalOnWebApplication fwhjfgjfgjefwef;
 
     }
         //  3
-
-        Conditional fwefwdedwe;
-        ConditionalOnWebApplication fwhjfgjfgjefwef;
-
         DispatcherServlet dispSvlt;
         SpringFactoriesLoader spFacldr;
 
@@ -253,32 +235,18 @@ public class Application {
 
         JmxAutoConfiguration gegerg;
 
+        //  ############################ Loader
         ServiceLoader svcLdr;
         ClassLoader clsLdr;
         SpringFactoriesLoader spFacLdr;
 
-
         //  4
 
 //        AutoConfigureWebMvc sfsdff;
-        WebMvcAutoConfiguration wefeeewefwef;
-
-        WebApplicationInitializer fwefw2123123e;
-        ApplicationContextInitializer vervwr324234;
-
-        MessageSourceAutoConfiguration fef92309020934234;
-
-        ApplicationListener gergergerg;
-        ParentContextCloserApplicationListener grgergergerg;
-        FileEncodingApplicationListener wgwegweg;
-        DelegatingApplicationListener wefwe23423424fwef;
-
         MessageSourceAutoConfiguration ge23454325rgergerg;
-
         WebMvcAutoConfiguration grgweg;
 
         /*
-
             # AutoConfigureWebMvc auto-configuration imports
             org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureWebMvc=\
             org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\
@@ -317,7 +285,6 @@ public class Application {
 
         */
 
-        ApplicationListener fw21111e;
         AutoConfigurationImportFilter gwrgwegweg;
 
         BackgroundPreinitializer gwegwegweg;
@@ -328,13 +295,7 @@ public class Application {
         ComponentScan fwefwefwe3214134f;
         ComponentScans fwefwefwefw451345351e;
 
-        EnableAutoConfiguration feef242342343ef;
-        EnableMBeanExport egwegwegweg;
-        EnableScheduling gewrgwegweg;
-        EnableWebMvc fwefwefwef133123123123;
-
         SpringApplicationAdminJmxAutoConfiguration fwe2323f;
-
 
 //        AutoConfigureWebMvc fwef575466wef;
         MessageSourceAutoConfiguration gergerge456245645rg;
@@ -500,34 +461,34 @@ public class Application {
 
         SpringApplicationAdminJmxAutoConfiguration ergqhqrhqrh;
 
-
         //  6
 
         EmbeddedServletContainerAutoConfiguration fwefoiwef989we89f;
         DispatcherServletAutoConfiguration fwefwef9090209f23f;
 
         ConfigurableEmbeddedServletContainer gerg345354345;
-        AbstractConfigurableEmbeddedServletContainer reer4545;
-        EmbeddedServletContainerFactory r23r23r2333452345r;
-        AbstractEmbeddedServletContainerFactory fwefwef0203f;
-        TomcatEmbeddedServletContainerFactory gwg4343t134twegweg;
-        UndertowEmbeddedServletContainerFactory ggergeqrge314t143tqrg;
-        JettyEmbeddedServletContainerFactory fwefqg34g341g;
+            AbstractConfigurableEmbeddedServletContainer reer4545;
+                EmbeddedServletContainerFactory r23r23r2333452345r;
+                    AbstractEmbeddedServletContainerFactory fwefwef0203f;
+                        TomcatEmbeddedServletContainerFactory gwg4343t134twegweg;
+                        UndertowEmbeddedServletContainerFactory ggergeqrge314t143tqrg;
+                        JettyEmbeddedServletContainerFactory fwefqg34g341g;
 
         EmbeddedServletContainer fwef123123wef;
-        JettyEmbeddedServletContainer r23r23r23r;
-        TomcatEmbeddedServletContainer gqgerg43g34g;
-        UndertowEmbeddedServletContainer gergergo090qergqrg;
+            JettyEmbeddedServletContainer r23r23r23r;
+            TomcatEmbeddedServletContainer gqgerg43g34g;
+            UndertowEmbeddedServletContainer gergergo090qergqrg;
 
         DispatcherServlet ds;
 
         AbstractApplicationContext fwe090we0fw0ef;
-        GenericApplicationContext fwfwefwef;
-        GenericWebApplicationContext fwef092f023f;
-        EmbeddedWebApplicationContext fwefwef234234234;
-        AnnotationConfigEmbeddedWebApplicationContext wef0090wefwef;
-        XmlEmbeddedWebApplicationContext ergergpeorpogperg0909erg;
+            GenericApplicationContext fwfwefwef;
+                GenericWebApplicationContext fwef092f023f;
+                    EmbeddedWebApplicationContext fwefwef234234234;
+                        AnnotationConfigEmbeddedWebApplicationContext wef0090wefwef;
+                            XmlEmbeddedWebApplicationContext ergergpeorpogperg0909erg;
 
+        //  ############################ WebMVC
         EnableWebMvc wefwefwef430143901490;
         WebMvcConfigurer vfdvf122323;
         WebMvcConfigurerAdapter erobeqribnoiqerbqerb;
@@ -539,11 +500,6 @@ public class Application {
         WebFilter fwef23;
         WebInitParam eropowe;
 
-
-        ServletContextInitializer fwefwefwef23452435345;
-
-        SpringBootCondition erververv;
-
 //        EndpointWebMvcManagementContextConfiguration erf2309230f923f;
 
         SpringApplicationAdminJmxAutoConfiguration grgergwg0909g23g;
@@ -552,22 +508,17 @@ public class Application {
         ConditionalOnClass ergerg0314901943014;
         ConditionalOnBean gregergerg2039023;
 
-
-        EnableScheduling fwef01092;
-        ApplicationContextInitializer fwefwefwef1203910293;
-
         BeanPostProcessor gregeg013409014;
 
         ConfigurationProperties tohijioqehr;
         EnableConfigurationProperties eroignoinerng;
+        EnableScheduling fwef01092;
 
         ApplicationContext ac;
         RequestMapping reqMap;
 
         EnableAutoConfiguration foweio23;
         DataSourceAutoConfiguration ewoi2o3io2i3of;
-
-        WebMvcConfigurerAdapter weadpt;
 
         HttpMessageConverter wewwe;
         ServletRegistrationBean wqqwq232323;
@@ -576,22 +527,22 @@ public class Application {
         EmbeddedServletContainerCustomizer fwefwe2323;
 
         EmbeddedServletContainerFactory wewewe23232;
-        ConfigurableEmbeddedServletContainer conownow;
-        AbstractConfigurableEmbeddedServletContainer fwf23f23;
-        AbstractEmbeddedServletContainerFactory wewe2322323;
-        TomcatEmbeddedServletContainerFactory tomcatfs;
-        UndertowEmbeddedServletContainerFactory undertowfs;
-        JettyEmbeddedServletContainerFactory jettyfs;
+            ConfigurableEmbeddedServletContainer conownow;
+                AbstractConfigurableEmbeddedServletContainer fwf23f23;
+                    AbstractEmbeddedServletContainerFactory wewe2322323;
+                        TomcatEmbeddedServletContainerFactory tomcatfs;
+                        UndertowEmbeddedServletContainerFactory undertowfs;
+                        JettyEmbeddedServletContainerFactory jettyfs;
 
         EmbeddedServletContainer cont;
-        UndertowEmbeddedServletContainer wewe23f23f;
-        TomcatEmbeddedServletContainer weiuifu23;
-        JettyEmbeddedServletContainer gooi43gnoi2323;
+            UndertowEmbeddedServletContainer wewe23f23f;
+            TomcatEmbeddedServletContainer weiuifu23;
+            JettyEmbeddedServletContainer gooi43gnoi2323;
 
         GenericApplicationContext gac;
-        EmbeddedWebApplicationContext eac;
-        AnnotationConfigEmbeddedWebApplicationContext aaa23223;
-        XmlEmbeddedWebApplicationContext xmleac;
+            EmbeddedWebApplicationContext eac;
+                AnnotationConfigEmbeddedWebApplicationContext aaa23223;
+                    XmlEmbeddedWebApplicationContext xmleac;
 
         //  end
 
@@ -617,10 +568,10 @@ public class Application {
         WebMvcRegistrations eger4334;
 
         WebApplicationInitializer wainit;
-        SpringBootServletInitializer sbsinit;
-        AbstractContextLoaderInitializer weoiow23;
-        AbstractDispatcherServletInitializer absdispsvlinit;
-        AbstractAnnotationConfigDispatcherServletInitializer a2oinoi23;
+            SpringBootServletInitializer sbsinit;
+            AbstractContextLoaderInitializer weoiow23;
+                AbstractDispatcherServletInitializer absdispsvlinit;
+                    AbstractAnnotationConfigDispatcherServletInitializer a2oinoi23;
 
         ServletContext sc;
         org.apache.catalina.servlet4preview.ServletContext g34g304ijg09340g9;
