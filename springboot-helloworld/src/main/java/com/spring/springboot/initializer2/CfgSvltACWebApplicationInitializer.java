@@ -45,7 +45,7 @@ public class CfgSvltACWebApplicationInitializer extends AbstractAnnotationConfig
      <servlet>
          <servlet-name>normal-webapp</servlet-name>
          <servlet-class>
-            org.springframework.web.servlet.DispatcherServlet
+             org.springframework.web.servlet.DispatcherServlet
          </servlet-class>
          <init-param>
              <param-name>contextConfigLocation</param-name>
