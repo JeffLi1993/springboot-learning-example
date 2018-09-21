@@ -30,8 +30,8 @@ public class CfgSvltACWebApplicationInitializer2 extends AbstractDispatcherServl
      实现 抽象类 AbstractDispatcherServletInitializer 有一点不好，就是 必须实现 两个上下文，ROOT上下文 和 servlet上下文；
      所以，如果我们需要 多个 servlet上下文的话，就麻烦了。
 
-     好在 它的方法 createRootApplicationContext 可以返回 null，这样就行了；多个 servlet上下文时，实现
-     多个 AbstractDispatcherServletInitializer 并且都不搞 ROOT上下文，然后再 单独搞一个 ROOT上下文。
+     好在 它的方法 createRootApplicationContext 可以返回 null，这样也好；多个 servlet上下文时，实现
+     多个 AbstractDispatcherServletInitializer 并且都不搞 ROOT上下文；然后再 单独搞一个 ROOT上下文。
 
      还可以 使用 @Order 注解设置 各个"servlet上下文" 的顺序。
 
@@ -68,6 +68,10 @@ public class CfgSvltACWebApplicationInitializer2 extends AbstractDispatcherServl
          <servlet-class>
             org.springframework.web.servlet.DispatcherServlet
          </servlet-class>
+         <init-param>
+             <param-name>contextConfigLocation</param-name>
+             <param-value>com.spring.springboot.initializer2.SecureWebAppConfig</param-value>
+         </init-param>
          <load-on-startup>1</load-on-startup>
      </servlet>
      <servlet-mapping>
