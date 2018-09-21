@@ -26,4 +26,22 @@ public class CfgSvltACXmlWebApplicationInitializer implements WebApplicationInit
         normal.addMapping("/api/*");
     }
 
+    /**
+     <servlet>
+         <servlet-name>normal-webapp</servlet-name>
+         <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+         </servlet-class>
+         <init-param>
+             <param-name>contextConfigLocation</param-name>
+             <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+             <!--    上面是MVC上下文：读servlet-context.xml的配置    -->
+         </init-param>
+         <load-on-startup>1</load-on-startup>
+     </servlet>
+     <servlet-mapping>
+         <servlet-name>normal-webapp</servlet-name>
+         <url-pattern>/api/*</url-pattern>
+     </servlet-mapping>
+     */
 }
