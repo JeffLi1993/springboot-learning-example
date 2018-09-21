@@ -10,7 +10,10 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
  */
 @Order(11)
 public class CfgRootACWebApplicationInitializer extends AbstractContextLoaderInitializer {
-  
+    /**
+     * 抽象类 AbstractContextLoaderInitializer 本意是 创建一个 ContextLoaderListener 并且注册到 Servlet Container；
+     * 当然，这些默认操作隐藏了，方法 createRootApplicationContext 只需要 AC.register 方法。 
+     */  
     @Override
     protected WebApplicationContext createRootApplicationContext() {
         AnnotationConfigWebApplicationContext rootContext
@@ -18,5 +21,17 @@ public class CfgRootACWebApplicationInitializer extends AbstractContextLoaderIni
         rootContext.register(RootApplicationConfig.class);
         return rootContext;
     }
+
+    /**
+     <listener>
+         <listener-class>
+             org.springframework.web.context.ContextLoaderListener
+         </listener-class>
+     </listener>
+     <context-param>
+         <param-name>contextConfigLocation</param-name>
+         <param-value>com.spring.springboot.initializer2.RootApplicationConfig</param-value>
+     </context-param>
+     */
 }
 
