@@ -703,8 +703,8 @@ public class Application {
          * these methods from within ServletContextListener#contextInitialized method
          * or ServletContainerInitializer#onStartup method.
          *
-         * 各个 WebApplicationInitializer/ServletContextInitializer 是为了 "丰富" ServletContext，
-         * 而 ServletContextListener（ContextLoaderListener）的功效也是 "找机会" "丰富" ServletContext。
+         * 各个 WebApplicationInitializer/ServletContextInitializer 是为了【通过 JavaConfig】 "丰富" ServletContext，
+         * 而 ServletContextListener（ContextLoaderListener）的功效也是 "找机会"【通过xml】 "丰富" ServletContext。
          * 
          * TODO 这里说的“丰富”，是否就是 Root ApplicationContext 的初始化呢？
          * 
@@ -853,7 +853,8 @@ public class Application {
          * detected by SpringServletContainerInitializer and hence will not be automatically bootstrapped by
          * the Servlet container.
          *
-         * 可见，ServletContextInitializer 和 WebApplicationInitializer 功效是相同的，估计仅仅是用法不同。
+         * 可见，ServletContextInitializer 和 WebApplicationInitializer 功效是相同的，估计仅仅是用法不同；
+         * 主要区别是，WebApplicationInitializer 给 Servlet Container 使用，而 ServletContextInitializer 给 Spring 使用。
          * */
 
         /**
@@ -895,6 +896,12 @@ public class Application {
          * ServletContextInitializer 和 WebApplicationInitializer 效果相同，用法不同；都是以 SC 为参数，通过各种方式，构造 SC 的属性：两个上下文，以及 Filters 和 Listeners;
          * 而 ROOT-AC 是指 根据配置 加载 全部的 与MVC 无关的 Bean，
          * Servlet-AC 是指 根据配置 加载 与MVC 有关的 Bean。
+         *
+         * WebApplicationInitializer VS ApplicationContextInitializer
+         * So to conclude, except for the Initializer suffix, both WebApplicationInitializer and ApplicationContextInitializer serve fairly
+         * different purposes. Whereas the WebApplicationInitializer is used by a Servlet Container at startup of the web application and 
+         * provides a way for programmatic creating a web application(replacement for a web.xml file), ApplicationContextInitializer provides
+         * a hook to configure the Spring application context before it gets fully created.
          *
          * 在 ROOT容器创建 与 Servlet容器创建 之间，还会创建监听器、过滤器等,
          * 完整的加载/创建顺序是这样：ServletContext - context-param - listener- filter - servlet
