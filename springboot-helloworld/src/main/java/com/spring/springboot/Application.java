@@ -865,6 +865,8 @@ public class Application {
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * 上面的顺序，对应很正确
          *
+         * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         * Important !
          * SpringBoot 中，默认的 WebApplicationInitializer 似乎并不会被执行；
          * 可以使用 ServletContextInitializer 和 SpringBootServletInitializer 代替，
          * 再 配合使用 FilterRegistrationBean, ServletRegistrationBean 和 ServletListenerRegistrationBean。
