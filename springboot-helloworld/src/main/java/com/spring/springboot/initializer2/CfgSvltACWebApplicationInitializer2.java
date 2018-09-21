@@ -31,7 +31,7 @@ public class CfgSvltACWebApplicationInitializer2 extends AbstractDispatcherServl
      所以，如果我们需要 多个 servlet上下文的话，就麻烦了。
 
      好在 它的方法 createRootApplicationContext 可以返回 null，这样也好；多个 servlet上下文时，实现
-     多个 AbstractDispatcherServletInitializer 并且都不搞 ROOT上下文；然后再 单独搞一个 ROOT上下文。
+     多个 AbstractDispatcherServletInitializer 并且其中 ROOT上下文 都是 null；然后 再实现一个 AbstractContextLoaderInitializer 搞 ROOT上下文。
 
      还可以 使用 @Order 注解设置 各个"servlet上下文" 的顺序。
 
