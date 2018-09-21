@@ -676,6 +676,7 @@ public class Application {
          * 上面之所以说，WebApplicationInitializer 不简单，就是因为 WebApplicationInitializer 并没有什么具体行为，因为它就是一个 Hook。
          * 
          * 【上面对对错错的说法，全都错误】WebApplicationInitializer 和 ContextLoaderListener 毫无关系，不能相提并论！
+         * 可以说 WebApplicationInitializer 能做各种配置，Root上下文、子上下文、Filter 和 Listener，以及其他；而 ContextLoaderListener 只搞 Root上下文。
          *
          * 有时候，使用了 WebApplicationInitializer，就不再需要 ContextLoaderListener。
          *
