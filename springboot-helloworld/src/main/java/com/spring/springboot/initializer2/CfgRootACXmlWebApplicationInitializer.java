@@ -30,9 +30,12 @@ public class CfgRootACXmlWebApplicationInitializer implements WebApplicationInit
     /**
      <listener>
          <listener-class>
-            org.springframework.web.context.ContextLoaderListener
+             org.springframework.web.context.ContextLoaderListener
          </listener-class>
      </listener>
+     <context-param>
+         <param-name>contextConfigLocation</param-name>
+         <param-value>/WEB-INF/spring/root-context.xml</param-value>
+     </context-param>
      */
-
 }
