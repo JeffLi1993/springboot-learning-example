@@ -761,7 +761,7 @@ public class Application {
             MyWebApplicationInitializer2 f3gg3498j9g834984ogi3o4gio;    //  No Recognized
 
         /**
-         * 注册Servlet、Filter、Listener的方法，两种：
+         * 注册Servlet、Filter、Listener的方法，两/四种：
          *
          * 1， （war）注册到 WebApplicationInitializer 的实现类中：
          *      servletContext.addListener()
@@ -775,6 +775,7 @@ public class Application {
          *      WebServlet
          *      WebListener
          *      WebFilter
+         * 4,   xml方式:<listener/>, <servlet/>, <filter/>
          * */
 
         /**
@@ -916,10 +917,11 @@ public class Application {
          * */
 
         /**
-         * Listener 注册的三种方式：
+         * Listener 注册的三/四种方式：
          * web.xml 里的 <listener/>
          * 注解 @WebListener
          * 方法 SC.addListener
+         * Bean方式 ServletListenerRegistrationBean
          */
 
         //  ############################ Servlet Listener
