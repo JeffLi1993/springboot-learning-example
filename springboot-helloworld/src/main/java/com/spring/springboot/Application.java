@@ -903,6 +903,9 @@ public class Application {
          * 监控了 [Root] WebApplicationContext 从无到有再到无 过程中的 重要节点！
          * 在此之前 一直在收集配置；再此之后，开始使用配置（初始化 WebApplicationContext），形成具有完整层级和正确功能的 AC！
          * 这个过程由 "某个事件" 触发，再由接口 ServletContextListener 的实现类 ContextLoaderListener 的某个成员方法 完成 ！
+         *
+         * 不容置喙个屁，ServletContextListener 是 SpringMVC 框架的开端，在 web.xml 配置文件中，由容器触发“开始”事件(ServletContext)，
+         * 而 ServletContextListener 响应事件：读取 Root上下文 的配置文件，开始搞 Root上下文。
          */
 
         /**
@@ -1041,6 +1044,7 @@ public class Application {
          * 2， extends DelegatingWebMvcConfiguration        ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          * 3， implements WebMvcConfigurer                  ：不会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          * 4， implements WebMvcConfigurer + @EnableWebMvc  ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * 5,  @EnableWebMvc                                : 直接使用@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          *
          * 第 4 种情况适用于，想保留 Spring-Boot 默认 MVC 配置 并仅想 补充一些 其他配置，可以只 继承 WebMvcConfigurer；
          * 同时，最好不使用使用 注解@Configuration，而应该使用 @Component。
