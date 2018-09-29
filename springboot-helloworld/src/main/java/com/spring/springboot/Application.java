@@ -567,12 +567,6 @@ public class Application {
         WebMvcAutoConfiguration abwbe232323;
         WebMvcRegistrations eger4334;
 
-        WebApplicationInitializer wainit;
-            SpringBootServletInitializer sbsinit;
-            AbstractContextLoaderInitializer weoiow23;
-                AbstractDispatcherServletInitializer absdispsvlinit;
-                    AbstractAnnotationConfigDispatcherServletInitializer a2oinoi23;
-
         ServletContext sc;
         org.apache.catalina.servlet4preview.ServletContext g34g304ijg09340g9;
 
