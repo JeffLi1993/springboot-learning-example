@@ -784,9 +784,6 @@ public class Application {
          * 还可以对比 ServletContextInitializer 和 WebApplicationInitializer ？
          * 功效相同，用法不同
          *
-         * 还可以对比 WebApplicationInitializer 和 ApplicationContextInitializer ?
-         * 完全没有相似性
-         *
          * 还可以对比 ApplicationContextInitializer 和 ServletContextInitializer ？
          * 有没有关系？
          * */
@@ -854,7 +851,7 @@ public class Application {
          * a hook to configure the Spring application context before it gets fully created.
          *
          * 在 ROOT容器创建 与 Servlet容器创建 之间，还会创建监听器、过滤器等,
-         * 完整的加载/创建顺序是这样：ServletContext - context-param - listener- filter - servlet
+         * 完整的加载/创建顺序是这样：ServletContext - context-param - listener - filter - servlet
          *
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * 上面的顺序，对应很正确
@@ -1113,7 +1110,8 @@ public class Application {
         *
         * 比如 ApplicationContextInitializer 相关阶段，需要 从 spring.factories 获取 "类型"ApplicationContextInitializer 的配置；
         * 而 ApplicationListener 相关阶段，需要 从 spring.factories 获取 "类型"ApplicationListener 的配置。
-        * 然后 AutoConfiguration 相关阶段，需要 从 spring.factories 获取 "类型"AutoConfiguration 的配置。
+        * 而 WebMvc 相关阶段，需要 从 spring.factories 获取 “类型”WebMvcAutoConfiguration 的配置（可以使用 @EnableWebMvc 修改定制）。
+        * 然后 xxxAutoConfiguration 相关阶段，需要 从 spring.factories 获取 "类型"xxxAutoConfiguration 的配置。
         *
         * 大概情况应该就是这样的逻辑。
         *
@@ -1154,7 +1152,8 @@ public class Application {
          *  ImportSelector 实现类 （ @EnableAutoConfiguration）
          *  Configuration 注解 （其他 @EnableXXX）
          *  ImportBeanDefinitionRegistrar 实现类 （其他。。。）
-         *
+         * TODO 这里忘了，再研究研究
+         * 
          * */
 
         // TODO ApplicationListener 和 SpringApplicationRunListener 的处理顺序？
