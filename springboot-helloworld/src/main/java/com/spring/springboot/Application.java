@@ -122,7 +122,7 @@ import java.util.ServiceLoader;
 /**
  * Spring Boot 应用启动类
  * <p>
- * Created by bysocket on 16/4/26.
+ * Created by franklin on 17/4/26.
  */
 // Spring Boot 应用的标识
 //@SpringBootApplication
@@ -161,15 +161,14 @@ public class Application {
 
     public void fwefwef() {
 
-        ApplicationRunner apprnnr;
-
         SpringBootConfiguration wer;
         EnableAutoConfiguration wrwer23;
+
+        ApplicationRunner apprnnr;
 
         EnableScheduling we3r;
         EnableCaching werwer;
         EnableWebMvc fwefwefwef;
-
         EnableAutoConfiguration feef242342343ef;
         EnableMBeanExport egwegwegweg;
         EnableScheduling gewrgwegweg;
@@ -177,8 +176,10 @@ public class Application {
 
         SpringFactoriesLoader wer2323r23r;
 
+        //  1
+
         SpringApplicationRunListener wewerl;
-        ApplicationListener fwefwef;
+        ApplicationListener gergergerg;
 
         ParentContextCloserApplicationListener ewf;
         FileEncodingApplicationListener fwefwe;
@@ -188,36 +189,31 @@ public class Application {
         LiquibaseServiceLocatorApplicationListener gwgwegweg;
         ClasspathLoggingApplicationListener fwefwewefwef;
         LoggingApplicationListener fwefweflwefl;
-
-        ApplicationListener gergergerg;
         ParentContextCloserApplicationListener grgergergerg;
         FileEncodingApplicationListener wgwegweg;
         DelegatingApplicationListener wefwe23423424fwef;
-
-        //  1
 
         //  2
 
 //        SpringApplicationRunListeners springAppRunLsnrs;
         SpringApplicationRunListener springAppRunLsnr;
-        EventPublishingRunListener ergergerg;
-        ApplicationEvent we135rwer;
-        SpringApplicationEvent erger34234;
-        ApplicationEnvironmentPreparedEvent ewrwer;
-        ApplicationPreparedEvent fwefw221ef;
-        ApplicationReadyEvent feefw2ef;
-        ApplicationFailedEvent efwefeeeeew;
-        ApplicationStartingEvent wefwefwef222333;
-        ApplicationStartedEvent fewiioweirf;
-        ApplicationContextEvent erfer324;
-        ContextClosedEvent fwefwef234234;
-        ContextRefreshedEvent owefionwef;
-        ContextStoppedEvent voiwne;
-        ContextStartedEvent ovwieobwefe;
-        ApplicationEventMulticaster gergerg;
-        AbstractApplicationEventMulticaster ewwefwef;
-        SimpleApplicationEventMulticaster sdgweg;
-        ApplicationListener lsnr;
+            EventPublishingRunListener ergergerg;
+                ApplicationEvent we135rwer;
+                SpringApplicationEvent erger34234;
+                ApplicationEnvironmentPreparedEvent ewrwer;
+                ApplicationPreparedEvent fwefw221ef;
+                ApplicationReadyEvent feefw2ef;
+                ApplicationFailedEvent efwefeeeeew;
+                ApplicationStartingEvent wefwefwef222333;
+                ApplicationStartedEvent fewiioweirf;
+                ApplicationContextEvent erfer324;
+                ContextClosedEvent fwefwef234234;
+                ContextRefreshedEvent owefionwef;
+                ContextStoppedEvent voiwne;
+                ContextStartedEvent ovwieobwefe;
+                ApplicationEventMulticaster gergerg;
+                AbstractApplicationEventMulticaster ewwefwef;
+                SimpleApplicationEventMulticaster sdgweg;
 
         Profile wefwef;
         ConditionalOnBean gwgweg;
@@ -225,14 +221,12 @@ public class Application {
         Condition regerg;
         Conditional fwefwewef;
         ConditionalOnWebApplication fwhjfgjfgjefwef;
-
     }
+
         //  3
         DispatcherServlet dispSvlt;
-        SpringFactoriesLoader spFacldr;
 
         //  657567
-
         JmxAutoConfiguration gegerg;
 
         //  ############################ Loader
@@ -241,231 +235,41 @@ public class Application {
         SpringFactoriesLoader spFacLdr;
 
         //  4
+        SpringBootConfiguration fwefwe5367537357;
 
 //        AutoConfigureWebMvc sfsdff;
         MessageSourceAutoConfiguration ge23454325rgergerg;
-        WebMvcAutoConfiguration grgweg;
-
-        /*
-            # AutoConfigureWebMvc auto-configuration imports
-            org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureWebMvc=\
-            org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\
-            org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration,\
-            org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration,\
-            org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration,\
-            org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,\
-            org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration,\
-            org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration,\
-            org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
-
-            # Application Listeners
-            org.springframework.context.ApplicationListener=\
-            org.springframework.boot.ClearCachesApplicationListener,\
-            org.springframework.boot.builder.ParentContextCloserApplicationListener,\
-            org.springframework.boot.context.FileEncodingApplicationListener,\
-            org.springframework.boot.context.config.AnsiOutputApplicationListener,\
-            org.springframework.boot.context.config.ConfigFileApplicationListener,\
-            org.springframework.boot.context.config.DelegatingApplicationListener,\
-            org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener,\
-            org.springframework.boot.logging.ClasspathLoggingApplicationListener,\
-            org.springframework.boot.logging.LoggingApplicationListener
-
-            # AutoConfigureWebClient auto-configuration imports
-            org.springframework.boot.test.autoconfigure.web.client.AutoConfigureWebClient=\
-            org.springframework.boot.test.autoconfigure.web.client.WebClientRestTemplateAutoConfiguration,\
-            org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration
-
-        */
-
-        AutoConfigurationImportFilter gwrgwegweg;
-
-        BackgroundPreinitializer gwegwegweg;
-
-        SpringBootConfiguration fwefwe5367537357;
-
-        ServletComponentScan fwefwef2443634613;
-        ComponentScan fwefwefwe3214134f;
-        ComponentScans fwefwefwefw451345351e;
-
-        SpringApplicationAdminJmxAutoConfiguration fwe2323f;
-
-//        AutoConfigureWebMvc fwef575466wef;
         MessageSourceAutoConfiguration gergerge456245645rg;
-
         WebMvcAutoConfiguration fewfwefwef;
         GroovyTemplateAutoConfiguration ggwegweg;
+        FlywayAutoConfiguration gergergergerg;
+        MongoDataAutoConfiguration vczvzxvzxcv;
+        EmbeddedServletContainerAutoConfiguration fwefoiwef989we89f;
+        DispatcherServletAutoConfiguration fwefwef9090209f23f;
+        SpringApplicationAdminJmxAutoConfiguration grgergwg0909g23g;
+        CassandraAutoConfiguration ebqerbqerb2323;
+        MongoAutoConfiguration d4gn3oi43o4ngoi34g;
+        MongoRepositoriesAutoConfiguration qoerinqeorbnoqerbno23902903;
+        DataSourceAutoConfiguration erbeqb2223;
 
+        //  5
         ConfigurationWarningsApplicationContextInitializer wevwevwev;
         ContextIdApplicationContextInitializer gwegweg;
         DelegatingApplicationContextInitializer grgrgrg;
         ServerPortInfoApplicationContextInitializer fwefepfpe;
-
         CacheAutoConfiguration gerger56u356u356u;
         ApplicationContextInitializer gergerg34g34g34;
-
-        /*
-
-            # Application Context Initializers
-            org.springframework.context.ApplicationContextInitializer=\
-            org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer,\
-            org.springframework.boot.context.ContextIdApplicationContextInitializer,\
-            org.springframework.boot.context.config.DelegatingApplicationContextInitializer,\
-            org.springframework.boot.context.embedded.ServerPortInfoApplicationContextInitializer
-
-            # AutoConfigureCache auto-configuration imports
-            org.springframework.boot.test.autoconfigure.core.AutoConfigureCache=\
-            org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration
-
-            # AutoConfigureDataJpa auto-configuration imports
-            org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureDataJpa=\
-            org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
-            org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration,\
-            org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration,\
-            org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
-
-            # AutoConfigureDataMongo auto-configuration imports
-            org.springframework.boot.test.autoconfigure.data.mongo.AutoConfigureDataMongo=\
-            org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,\
-            org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration
-
-            # AutoConfigureJdbc auto-configuration imports
-            org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureJdbc=\
-            org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
-            org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration,\
-            org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
-
-            # Auto Configure
-            org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-            org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
-            org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
-            org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\
-            org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,\
-            org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration,\
-            org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration,\
-            org.springframework.boot.autoconfigure.cloud.CloudAutoConfiguration,\
-            org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\
-            org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration,\
-            org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration,\
-            org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.ldap.LdapDataAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.solr.SolrRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration,\
-            org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration,\
-            org.springframework.boot.autoconfigure.elasticsearch.jest.JestAutoConfiguration,\
-            org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration,\
-            org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration,\
-            org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration,\
-            org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration,\
-            org.springframework.boot.autoconfigure.hazelcast.HazelcastAutoConfiguration,\
-            org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAutoConfiguration,\
-            org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration,\
-            org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jdbc.JndiDataSourceAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jdbc.XADataSourceAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jms.JmsAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jms.JndiConnectionFactoryAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jms.activemq.ActiveMQAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jms.artemis.ArtemisAutoConfiguration,\
-            org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration,\
-            org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration,\
-            org.springframework.boot.autoconfigure.jooq.JooqAutoConfiguration,\
-            org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration,\
-            org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration,\
-            org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration,\
-            org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration,\
-            org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration,\
-            org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration,\
-            org.springframework.boot.autoconfigure.mobile.DeviceResolverAutoConfiguration,\
-            org.springframework.boot.autoconfigure.mobile.DeviceDelegatingViewResolverAutoConfiguration,\
-            org.springframework.boot.autoconfigure.mobile.SitePreferenceAutoConfiguration,\
-            org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration,\
-            org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,\
-            org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration,\
-            org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration,\
-            org.springframework.boot.autoconfigure.reactor.ReactorAutoConfiguration,\
-            org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration,\
-            org.springframework.boot.autoconfigure.security.SecurityFilterAutoConfiguration,\
-            org.springframework.boot.autoconfigure.security.FallbackWebSecurityAutoConfiguration,\
-            org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration,\
-            org.springframework.boot.autoconfigure.sendgrid.SendGridAutoConfiguration,\
-            org.springframework.boot.autoconfigure.session.SessionAutoConfiguration,\
-            org.springframework.boot.autoconfigure.social.SocialWebAutoConfiguration,\
-            org.springframework.boot.autoconfigure.social.FacebookAutoConfiguration,\
-            org.springframework.boot.autoconfigure.social.LinkedInAutoConfiguration,\
-            org.springframework.boot.autoconfigure.social.TwitterAutoConfiguration,\
-            org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration,\
-            org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration,\
-            org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration,\
-            org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration,\
-            org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration,\
-            org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration,\
-            org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration,\
-            org.springframework.boot.autoconfigure.websocket.WebSocketMessagingAutoConfiguration,\
-            org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration
-
-        */
-
-        FlywayAutoConfiguration gergergergerg;
-
-        MongoDataAutoConfiguration vczvzxvzxcv;
-        AutoConfigurationImportFilter gwefwef;
-        AutoConfigurationImportListener fwefwe3513451435;
+        BackgroundPreinitializer gwegwegweg;
         ApplicationContextInitializer fwefwefwef234234;
 
-        SpringApplicationAdminJmxAutoConfiguration ergqhqrhqrh;
-
         //  6
+        AutoConfigurationImportFilter gwefwef;
+        AutoConfigurationImportListener fwefwe3513451435;
+        ServletComponentScan fwefwef2443634613;
+        ComponentScan fwefwefwe3214134f;
+        ComponentScans fwefwefwefw451345351e;
 
-        EmbeddedServletContainerAutoConfiguration fwefoiwef989we89f;
-        DispatcherServletAutoConfiguration fwefwef9090209f23f;
-
+        //  7
         ConfigurableEmbeddedServletContainer gerg345354345;
             AbstractConfigurableEmbeddedServletContainer reer4545;
                 EmbeddedServletContainerFactory r23r23r2333452345r;
@@ -502,8 +306,6 @@ public class Application {
 
 //        EndpointWebMvcManagementContextConfiguration erf2309230f923f;
 
-        SpringApplicationAdminJmxAutoConfiguration grgergwg0909g23g;
-
         FreeMarkerTemplateAvailabilityProvider gergergerg93148951485915;
         ConditionalOnClass ergerg0314901943014;
         ConditionalOnBean gregergerg2039023;
@@ -518,7 +320,6 @@ public class Application {
         RequestMapping reqMap;
 
         EnableAutoConfiguration foweio23;
-        DataSourceAutoConfiguration ewoi2o3io2i3of;
 
         HttpMessageConverter wewwe;
         ServletRegistrationBean wqqwq232323;
@@ -570,20 +371,12 @@ public class Application {
         ServletContext sc;
         org.apache.catalina.servlet4preview.ServletContext g34g304ijg09340g9;
 
-
         ImportBeanDefinitionRegistrar g34g98j9834g98h98h9;
-        EnableAutoConfiguration aaa2323232112;
-        CassandraAutoConfiguration ebqerbqerb2323;
-        MongoAutoConfiguration d4gn3oi43o4ngoi34g;
-        MongoDataAutoConfiguration qevqerbqerb23;
-        MongoRepositoriesAutoConfiguration qoerinqeorbnoqerbno23902903;
 
+        EnableAutoConfiguration aaa2323232112;
         HelloAutoConfiguration aaaa23223;
 
         TransactionManagerCustomizers aaa232323;
-
-        DataSourceAutoConfiguration erbeqb2223;
-
 
         //  ############################ WebMVC 相关 AutoConfiguration
 
@@ -593,29 +386,7 @@ public class Application {
         WebClientAutoConfiguration vrebe43g34g;
         EmbeddedServletContainerAutoConfiguration lnoienrboerb34g;
 
-        //  ############################ Initializer -1
-
-        org.apache.catalina.startup.ContextConfig gg245gweqreg34gg;
-        org.apache.catalina.startup.EngineConfig g34go0930g94;
-        org.apache.catalina.startup.HostConfig g3g3049gj0340g9;
-        org.apache.catalina.startup.UserConfig gg0394jg0934g09;
-        /**
-         * 下面的 ServletContainerInitializer 有 上述 xxxConfig 相关 Listener 触发！
-         * */
-
-        //  ############################ Initializer 0
-
-        /**
-         * 类 ServletContainerInitializer 的 子类的 onStartup 方法是一个web应用中，我们的代码可以控制到的最早时间点。
-         * 其 子类 SpringServletContainerInitializer 专门处理各种 WebApplicationInitializer；
-         * 循环地 调起 各个 WebApplicationInitializer 的子类 的 方法 onStartup。
-         *
-         * 简单地说，SpringServletContainerInitializer 负责将 ServletContext 实例化并委托
-         * 给用户定义的 WebApplicationInitializer 实现。
-         * 然后每个 WebApplicationInitializer 负责完成初始化 ServletContext 的实际工作。
-         * */
-
-        //  ############################ ServiceLoader
+        //  ############################ ServiceLoader -2
         /**
          * responsible for loading SpringServletContainerInitializer
          * (implementation of ServletContainerInitializer) from that file
@@ -631,6 +402,42 @@ public class Application {
          * */
         WebappServiceLoader eovenoribnoierb;
 
+        //  ############################ Initializer -1
+        /**
+         * TODO 有个问题：
+         * 接口 ServletContainerInitializer 的 实现类 设置在 某个文本文件中，由 某个 Listener 获取并且实例化。
+         * 这个 Listener 是什么？--- ContextConfig ！
+         *
+         * Tomcat has LifecycleListeners those will listen to lifecycle events like start, stop etc.
+         * org.apache.catalina.startup.ContextConfig is such a startup event listener for a
+         * ServletContext that configures the properties of that ServletContext, and the associated defined servlets.
+         * */
+
+        org.apache.catalina.startup.ContextConfig gg245gweqreg34gg;
+        org.apache.catalina.startup.EngineConfig g34go0930g94;
+        org.apache.catalina.startup.HostConfig g3g3049gj0340g9;
+        org.apache.catalina.startup.UserConfig gg0394jg0934g09;
+        /**
+         * 下面的 ServletContainerInitializer 由 上述 xxxConfig 相关 Listener 触发！
+         * */
+
+        //  ############################ Initializer 0
+        ServletContainerInitializer rthr34oi;
+            WsSci swioeowie;
+            SpringServletContainerInitializer noin340h89034;
+            LogbackServletContainerInitializer aaa34g09340g9j09;
+            MyServletContainerInitializer g3ig039g093k4g0k; //   No Recognized
+
+        /**
+         * 类 ServletContainerInitializer 的 子类的 onStartup 方法是一个web应用中，我们的代码可以控制到的最早时间点。
+         * 其 子类 SpringServletContainerInitializer 专门处理各种 WebApplicationInitializer；
+         * 循环地 调起 各个 WebApplicationInitializer 的子类 的 方法 onStartup。
+         *
+         * 简单地说，SpringServletContainerInitializer 负责将 ServletContext 实例化并委托
+         * 给用户定义的 WebApplicationInitializer 实现。
+         * 然后每个 WebApplicationInitializer 负责完成初始化 ServletContext 的实际工作。
+         * */
+
         /**
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          * 总而言之，可以总结一下：
@@ -641,6 +448,10 @@ public class Application {
          *
          * 5， 接口 ApplicationContextInitializer 相关执行（在 SpringApplication 的 方法run，或者 @EnableAutoConfiguration），
          *     其 方法onStartup 的 参数是 ? extends ConfigurableApplicationContext。
+         * 
+         * 说明一下：
+         *    通常情况下，SpringServletContainerInitializer 不会被 load & call，所以 各个 WebApplicationInitializer 也就不能被call，
+         *    ContextLoaderListener 也不能被 SpringBootServletInitializer call；所以，有其他方式，比如 ServletContextInitializer etc。
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          *
          * 补充，上面的说法 关于 WebApplicationInitializer 和 ContextLoaderListener 完全正确。
@@ -676,24 +487,8 @@ public class Application {
          * 有时候，使用了 WebApplicationInitializer，就不再需要 ContextLoaderListener。
          *
          * 接口/Hook WebApplicationInitializer 有多种子类，比如 AbstractContextLoaderInitializer 可以用来设置 ROOT上下文(Root-Application-Context)，
-         * 而那些 Abstract***ServletInitializer，用来设置 子上下文（servlet-Application-Context），也可以设置 ROOT上下文。
+         * 而那些 Abstract***DispatcheServletInitializer，用来设置 子上下文（servlet-Application-Context），也可以设置 ROOT上下文。
          * */
-
-        /**
-         * TODO 有个问题：
-         * 接口 ServletContainerInitializer 的 实现类 设置在 某个文本文件中，由 某个 Listener 获取并且实例化。
-         * 这个 Listener 是什么？--- ContextConfig ！
-         *
-         * Tomcat has LifecycleListeners those will listen to lifecycle events like start, stop etc.
-         * org.apache.catalina.startup.ContextConfig is such a startup event listener for a
-         * ServletContext that configures the properties of that ServletContext, and the associated defined servlets.
-         * */
-
-        ServletContainerInitializer rthr34oi;
-            WsSci swioeowie;
-            SpringServletContainerInitializer noin340h89034;
-            LogbackServletContainerInitializer aaa34g09340g9j09;
-            MyServletContainerInitializer g3ig039g093k4g0k; //   No Recognized
 
         /**
          * Spring WebApplicationInitializer provides a programatic way to configure the
@@ -728,7 +523,7 @@ public class Application {
          * */
 
         /**
-         * WebApplicationInitializer 与 web.xml 重叠部分
+         * （某个）WebApplicationInitializer 与 web.xml 重叠部分
          *
          <servlet>
            <servlet-name>dispatcher</servlet-name>
@@ -861,7 +656,6 @@ public class Application {
          * SpringBoot 中，默认的 WebApplicationInitializer 似乎并不会被执行；
          * 可以使用 ServletContextInitializer 和 SpringBootServletInitializer 代替，
          * 再 配合使用 FilterRegistrationBean, ServletRegistrationBean 和 ServletListenerRegistrationBean。
-         *
          * */
 
         /**
