@@ -962,6 +962,12 @@ public class Application {
         // TODO 以及 各种 其他 Customizer
 
         /**
+         * TODO 还有一个重要问题没有搞清楚：SpringBoot启动过程中根上下文和子上下文的分解。
+         * SpringBoot 似乎并没有严格区分（属于MVC的）这两个阶段，有可能 在 SpringBoot 中只有一个方法，
+         * 而这个方法属于MVC，两个阶段都在这个方法内；以至于在 SpringBoot 看来，是同一个事情。
+         */ 
+
+        /**
          *
          * Spring Boot Initialization Steps:
          1, SpringApplication.run() creates EmbeddedWebApplicationContext application context;
