@@ -505,6 +505,7 @@ public class Application {
             MyWebApplicationInitializer2 f3gg3498j9g834984ogi3o4gio;    //  No Recognized
 
         /**
+         * 极其重要！
          * 注册Servlet、Filter、Listener的方法，两/四种：
          *
          * 1， （war）注册到 WebApplicationInitializer 的实现类中：
