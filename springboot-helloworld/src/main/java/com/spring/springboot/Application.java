@@ -849,12 +849,13 @@ public class Application {
         ServletListenerRegistrationBean onionoi34343;
         FilterRegistrationBean eroinoi23224;
         ServletRegistrationBean oeqrinboi45981450801;
+        FilterRegistration ffdd34g34g34g;
+        ServletRegistration g340gj09j34g0;
+
 
         ImportBeanDefinitionRegistrar lknlknlk3434;
         ImportSelector g34g34;
         AutoConfigurationImportSelector greon3o4i;
-
-
 
 
         //  ############################ AutoConfiguration 3
@@ -996,9 +997,8 @@ public class Application {
          12,The app is running.
          * */
 
-        /**
-         * 周孝正
-         * https://www.youtube.com/watch?v=OaqKfe58KJY
-         */
+        Registration reg;
+        RegistrationBean regBn;
+        //  TODO 什么区别？
 }
 
