@@ -392,7 +392,7 @@ public class Application {
          * 2, ContextConfig is notified with this context startup event
          * 3, service-loading is delegated to WebappServiceLoader<ServletContainerInitializer>
          * 4, WebappServiceLoader scans in WEB-INF/lib jars for the file
-         *      META-INF/services/javax.servlet.ServletContainerInitializer inorder to load the implementation
+         *      META-INF/services/javax.servlet.ServletContainerInitializer in order to load the implementation
          * 5, Once loaded return to step 3 and, ContextConfig will call implementation's
          *      (here SpringServletContainerInitializer) onStartup method which will do rest of the things.
          * */
