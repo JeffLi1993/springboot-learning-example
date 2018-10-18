@@ -161,14 +161,12 @@ public class Application {
 
     public void fwefwef() {
 
-        SpringBootConfiguration wer;
         EnableAutoConfiguration wrwer23;
 
         ApplicationRunner apprnnr;
 
         EnableScheduling we3r;
         EnableCaching werwer;
-        EnableWebMvc fwefwefwef;
         EnableAutoConfiguration feef242342343ef;
         EnableMBeanExport egwegwegweg;
         EnableScheduling gewrgwegweg;
@@ -237,9 +235,9 @@ public class Application {
         //  4
         SpringBootConfiguration fwefwe5367537357;
 
+        //  5
 //        AutoConfigureWebMvc sfsdff;
         MessageSourceAutoConfiguration ge23454325rgergerg;
-        MessageSourceAutoConfiguration gergerge456245645rg;
         WebMvcAutoConfiguration fewfwefwef;
         GroovyTemplateAutoConfiguration ggwegweg;
         FlywayAutoConfiguration gergergergerg;
@@ -251,13 +249,13 @@ public class Application {
         MongoAutoConfiguration d4gn3oi43o4ngoi34g;
         MongoRepositoriesAutoConfiguration qoerinqeorbnoqerbno23902903;
         DataSourceAutoConfiguration erbeqb2223;
+        CacheAutoConfiguration gerger56u356u356u;
 
         //  5
         ConfigurationWarningsApplicationContextInitializer wevwevwev;
         ContextIdApplicationContextInitializer gwegweg;
         DelegatingApplicationContextInitializer grgrgrg;
         ServerPortInfoApplicationContextInitializer fwefepfpe;
-        CacheAutoConfiguration gerger56u356u356u;
         ApplicationContextInitializer gergerg34g34g34;
         BackgroundPreinitializer gwegwegweg;
         ApplicationContextInitializer fwefwefwef234234;
@@ -265,6 +263,8 @@ public class Application {
         //  6
         AutoConfigurationImportFilter gwefwef;
         AutoConfigurationImportListener fwefwe3513451435;
+
+        //  6
         ServletComponentScan fwefwef2443634613;
         ComponentScan fwefwefwe3214134f;
         ComponentScans fwefwefwefw451345351e;
@@ -340,11 +340,6 @@ public class Application {
             TomcatEmbeddedServletContainer weiuifu23;
             JettyEmbeddedServletContainer gooi43gnoi2323;
 
-        GenericApplicationContext gac;
-            EmbeddedWebApplicationContext eac;
-                AnnotationConfigEmbeddedWebApplicationContext aaa23223;
-                    XmlEmbeddedWebApplicationContext xmleac;
-
         //  end
 
         AnnotationConfigApplicationContext ac121;
@@ -385,6 +380,7 @@ public class Application {
         ServerPropertiesAutoConfiguration gr34go3ini3o4g;
         WebClientAutoConfiguration vrebe43g34g;
         EmbeddedServletContainerAutoConfiguration lnoienrboerb34g;
+        WebMvcAutoConfiguration f3u409gj3094jg;
 
         //  ############################ ServiceLoader -2
         /**
@@ -931,6 +927,9 @@ public class Application {
          *
          * 比如， 使用了 注解@EnableScheduling，就开始满世界找 @Scheduled；如果没有使用，就忽略 @Scheduled。
          * 比如， 使用了 注解@EnableWebMvc，就开始满世界找 MVC 相关注解，比如各种 HandlerXXX，Controller，XXXAdapter之类。
+         * 
+         * 然后呢？@EnableAutoConfiguration 与 其他 @EnableXXX 有什么逻辑区别？
+         * 似乎是一样的逻辑，使用了 注解@EnableAutoConfiguration，就开始满世界找 Auto-Configuration 的相关东西。
          * */
 
         //  ############################ EnableXXX Anno Customize
