@@ -402,11 +402,12 @@ public class Application {
         /**
          * TODO 有个问题：
          * 接口 ServletContainerInitializer 的 实现类 设置在 某个文本文件中，由 某个 Listener 获取并且实例化。
-         * 这个 Listener 是什么？--- ContextConfig ！
+         * 这个 Listener 是什么？--- ContextConfig（上文已经提到）！
          *
          * Tomcat has LifecycleListeners those will listen to lifecycle events like start, stop etc.
          * org.apache.catalina.startup.ContextConfig is such a startup event listener for a
          * ServletContext that configures the properties of that ServletContext, and the associated defined servlets.
+         * 翻译一下，ContextConfig 是一个 监听器，用于 配置 ServletContext 的 properties 并关联 servlet。
          * */
 
         org.apache.catalina.startup.ContextConfig gg245gweqreg34gg;
@@ -414,7 +415,7 @@ public class Application {
         org.apache.catalina.startup.HostConfig g3g3049gj0340g9;
         org.apache.catalina.startup.UserConfig gg0394jg0934g09;
         /**
-         * 下面的 ServletContainerInitializer 由 上述 xxxConfig 相关 Listener 触发！
+         * 下面的 ServletContainerInitializer 由 上述 xxxConfig 相关 Listener 触发（说的就是 ContextConfig）！
          * */
 
         //  ############################ Initializer 0
@@ -478,7 +479,7 @@ public class Application {
          * 
          * 【上面对对错错的说法，全都错误】WebApplicationInitializer 和 ContextLoaderListener 毫无关系，不能相提并论！
          * 可以说 WebApplicationInitializer 能做各种配置，Root上下文、子上下文、Filter 和 Listener 以及其他，还可以搞 ContextLoaderListener；
-         * 而 ContextLoaderListener 只搞 Root上下文。
+         * 而 ContextLoaderListener 只搞 Root上下文（Root上下文 也是起点啊，似乎并不能说只能搞 Root上下文）。
          *
          * 有时候，使用了 WebApplicationInitializer，就不再需要 ContextLoaderListener。
          *
