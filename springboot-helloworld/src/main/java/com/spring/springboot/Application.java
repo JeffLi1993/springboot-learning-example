@@ -727,7 +727,6 @@ public class Application {
             org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer
         */
 
-
     //  ############################ PostProcessor
 
         BeanPostProcessor wepnip23p0g092;
@@ -935,7 +934,7 @@ public class Application {
          * 比如， 使用了 注解@EnableWebMvc，就开始满世界找 MVC 相关注解，比如各种 HandlerXXX，Controller，XXXAdapter之类。
          * 
          * 然后呢？@EnableAutoConfiguration 与 其他 @EnableXXX 有什么逻辑区别？
-         * 似乎是一样的逻辑，使用了 注解@EnableAutoConfiguration，就开始满世界找 Auto-Configuration 的相关东西。
+         * 似乎是一样的逻辑，使用了 注解@EnableAutoConfiguration，就开始满世界找 Auto-Configuration 的相关东西 --- 就是那些 Conditional + Configuration。
          * */
 
         //  ############################ EnableXXX Anno Customize
@@ -952,6 +951,7 @@ public class Application {
          * 注解 Import 可以接受 三种类型的参数（可以被加载的类型）：
          *  ImportSelector 实现类 （ @EnableAutoConfiguration）
          *  Configuration 注解 （其他 @EnableXXX）
+         *  接口XXXX 实现类
          *  ImportBeanDefinitionRegistrar 实现类 （其他。。。）
          * TODO 这里忘了，再研究研究
          * 
