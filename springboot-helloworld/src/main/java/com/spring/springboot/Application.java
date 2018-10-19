@@ -427,7 +427,7 @@ public class Application {
 
         /**
          * 类 ServletContainerInitializer 的 子类的 onStartup 方法是一个web应用中，我们的代码可以控制到的最早时间点。
-         * 其 子类 SpringServletContainerInitializer 专门处理各种 WebApplicationInitializer；
+         * 其 子类 SpringServletContainerInitializer 专门处理各种 WebApplicationInitializer；（也就是说 WebApplicationInitializer 是代码可以控制的起点）
          * 循环地 调起 各个 WebApplicationInitializer 的子类 的 方法 onStartup。
          *
          * 简单地说，SpringServletContainerInitializer 负责将 ServletContext 实例化并委托
@@ -482,6 +482,12 @@ public class Application {
          * 而 ContextLoaderListener 只搞 Root上下文（Root上下文 也是起点啊，似乎并不能说只能搞 Root上下文）。
          *
          * 有时候，使用了 WebApplicationInitializer，就不再需要 ContextLoaderListener。
+         *
+         * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         * 可以这么说，SpringServletContainerInitializer/WebApplicationInitializer 和 ContextLoaderListener 是 同一个“目标”的 不同“起点”。
+         * 当然，“起点”也不止这 2个，还有其他“起点”！
+         * “起点” SpringServletContainerInitializer 需要 WebApplicationInitializer，其他“起点”需要 ServletContextInitializer ！
+         * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          *
          * 接口/Hook WebApplicationInitializer 有多种子类，比如 AbstractContextLoaderInitializer 可以用来设置 ROOT上下文(Root-Application-Context)，
          * 而那些 Abstract***DispatcheServletInitializer，用来设置 子上下文（servlet-Application-Context），也可以设置 ROOT上下文。
