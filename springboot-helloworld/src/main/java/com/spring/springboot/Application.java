@@ -490,7 +490,7 @@ public class Application {
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          *
          * 接口/Hook WebApplicationInitializer 有多种子类，比如 AbstractContextLoaderInitializer 可以用来设置 ROOT上下文(Root-Application-Context)，
-         * 而那些 Abstract***DispatcheServletInitializer，用来设置 子上下文（servlet-Application-Context），也可以设置 ROOT上下文。
+         * 而那些 Abstract***DispatcherServletInitializer，用来设置 子上下文（servlet-Application-Context），也可以设置 ROOT上下文。
          * */
 
         /**
@@ -623,10 +623,11 @@ public class Application {
 
         ServletContextInitializer g30g90394g09;
             RegistrationBean g3gergp;
-            ServletRegistrationBean g340j3094g;
-            ServletListenerRegistrationBean g34gj03j4g09;
-                FilterRegistrationBean g34gj0394g034gk09;
-                DelegatingFilterProxyRegistrationBean g0349gj3094g09;
+                ServletRegistrationBean g340j3094g;
+                ServletListenerRegistrationBean g34gj03j4g09;
+            //  AbstractFilterRegistrationBean rr34g03j4g09j394g;
+                    FilterRegistrationBean g34gj0394g034gk09;
+                    DelegatingFilterProxyRegistrationBean g0349gj3094g09;
 
         /**
          * TODO 搞搞清楚
@@ -643,7 +644,7 @@ public class Application {
          * 而 ROOT-AC 是指 根据配置 加载 全部的 与MVC 无关的 Bean，
          * Servlet-AC 是指 根据配置 加载 与MVC 有关的 Bean。
          *
-         * WebApplicationInitializer VS ApplicationContextInitializer
+         * WebApplicationInitializer VS ApplicationContextInitializer （完全不能相提并论）
          * So to conclude, except for the Initializer suffix, both WebApplicationInitializer and ApplicationContextInitializer serve fairly
          * different purposes. Whereas the WebApplicationInitializer is used by a Servlet Container at startup of the web application and 
          * provides a way for programmatic creating a web application(replacement for a web.xml file), ApplicationContextInitializer provides
@@ -899,8 +900,6 @@ public class Application {
         * FailureAnalysisReporter
         * SpringDataJacksonModules
         * RepositoryFactorySupport
-        * RepositoryFactorySupport
-        * RepositoryFactorySupport
         * TestExecutionListener
         * ContextCustomizerFactory
         *
@@ -944,7 +943,7 @@ public class Application {
         /**
          * 使用 AutoConfiguration 有两种做法
          * 1， 把 @Configuration 的类，加入 *.factories，作为 key EnableAutoConfiguration 的 value；
-         *      这样的话，EnableAutoConfiguration 的 Importer 会 以 EnableAutoConfiguration 为类型 load 这个 类。
+         *     这样的话，EnableAutoConfiguration 的 Importer 会 以 EnableAutoConfiguration 为类型 load 这个 类。
          * 2， 创建一个 注解 @EnableXXX；其定义本身 具有 注解 Import，把 @Configuration 的类 作为参数。
          *
          *
@@ -988,7 +987,7 @@ public class Application {
          5, This process continues recursively. Also, all bean definitions, that are inside these import selectors,
          are read. I.e. it includes beans defined by a method with the @Bean annotation, i.e. beans that require
          the Spring context to call the corresponding method automatically to instantiate them;
-         6, The resfresh() continues and reaches onRefresh(), the createEmbeddedServletContainer() method is called inside;
+         6, The refresh() continues and reaches onRefresh(), the createEmbeddedServletContainer() method is called inside;
          7, Among read bean defitions at the previous step, beans implementing ServletContextInitializer are
          searched for and instantiated. One of them is the bean, defined by the
          DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration#dispatcherServletRegistration()
