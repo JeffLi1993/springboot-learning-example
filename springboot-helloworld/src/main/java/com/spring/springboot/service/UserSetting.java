@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
  * @author Frankie Yang on 2018/1/4.
  */
 @Component
-//通过该注解价值properties文件内的配置
-//通过prefix执行properties配置的前缀
+//通过该注解加入properties文件内的配置
+//通过prefix设置properties配置的前缀
 @ConfigurationProperties(prefix = "user")
 public class UserSetting {
     private String userName;

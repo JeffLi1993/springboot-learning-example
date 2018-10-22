@@ -1003,6 +1003,8 @@ public class Application {
          12,The app is running.
          * */
 
+        ImportAutoConfiguration gj340gj3049jg0394jg9;
+
         Registration reg;
         RegistrationBean regBn;
         //  TODO 什么区别？
