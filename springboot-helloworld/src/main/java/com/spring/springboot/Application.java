@@ -1008,5 +1008,13 @@ public class Application {
         Registration reg;
         RegistrationBean regBn;
         //  TODO 什么区别？
+        
+
+        //	SpringBoot 父子 上下文
+        /***
+         * Spring Boot Uses DispatcherServeletAutoConfig to initialize a default DispatcherServlet. So you need to customize the Default Dispatcher Servlet in the following way : 
+         */
+        SpringApplicationBuilder grjigo3j40gj3094g;
+
 }
 
