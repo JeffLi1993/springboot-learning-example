@@ -1,3 +1,19 @@
+package com.spring.springboot;
+
+import org.springframework.beans.factory.access.BeanFactoryLocator;
+import org.springframework.beans.factory.access.BeanFactoryReference;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.access.ContextSingletonBeanFactoryLocator;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+/**
+ * @author Frankie Yang on 2018/10/23.
+ */
+
 @Configuration
 public class CustomDefaultDispatherServlet {
 
@@ -15,7 +31,7 @@ public class CustomDefaultDispatherServlet {
         BeanFactoryReference parentContextRef = locator.useBeanFactory("sharedContext");
         ApplicationContext parentContext = (ApplicationContext) parentContextRef.getFactory();
         rootContext.setParent(parentContext);
-        rootContext.register(WebConfigurer.class);
+        rootContext.register(WebMvcConfigurer.class);
         servlet.setApplicationContext(rootContext);
         return servlet;
     }
