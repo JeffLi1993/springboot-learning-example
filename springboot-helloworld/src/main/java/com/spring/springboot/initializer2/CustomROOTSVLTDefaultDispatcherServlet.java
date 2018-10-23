@@ -17,6 +17,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class CustomROOTSVLTDefaultDispatcherServlet {
 
+    /***
+     * 这个做法，有没有效果呢？
+     * 看情况，似乎必须 实现 接口WebApplicationInitializer 才可以
+     */
     @Bean
     public DispatcherServlet dispatcherServlet()
     {
