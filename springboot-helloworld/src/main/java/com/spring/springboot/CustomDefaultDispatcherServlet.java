@@ -30,10 +30,13 @@ public class CustomDefaultDispatcherServlet {
         BeanFactoryLocator locator = ContextSingletonBeanFactoryLocator.getInstance("classpath:beanRefContext.xml");
         BeanFactoryReference parentContextRef = locator.useBeanFactory("sharedContext");
         ApplicationContext parentContext = (ApplicationContext) parentContextRef.getFactory();
+
         rootContext.setParent(parentContext);
         rootContext.register(WebMvcConfigurer.class);
+
         servlet.setApplicationContext(rootContext);
         return servlet;
     }
 
 }
+
