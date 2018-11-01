@@ -17,10 +17,7 @@ import org.springframework.aop.framework.AbstractAdvisingBeanPostProcessor;
 import org.springframework.aop.framework.autoproxy.AbstractBeanFactoryAwareAdvisingPostProcessor;
 import org.springframework.beans.factory.config.*;
 import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.SpringApplicationRunListener;
-import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.*;
 import org.springframework.boot.actuate.autoconfigure.EndpointWebMvcChildContextConfiguration;
 import org.springframework.boot.actuate.endpoint.mvc.JolokiaMvcEndpoint;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -54,6 +51,7 @@ import org.springframework.boot.autoconfigure.websocket.TomcatWebSocketContainer
 import org.springframework.boot.autoconfigure.websocket.UndertowWebSocketContainerCustomizer;
 import org.springframework.boot.autoconfigure.websocket.WebSocketContainerCustomizer;
 import org.springframework.boot.builder.ParentContextCloserApplicationListener;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer;
 import org.springframework.boot.context.ContextIdApplicationContextInitializer;
 import org.springframework.boot.context.FileEncodingApplicationListener;
@@ -423,7 +421,8 @@ public class Application {
             WsSci swioeowie;
             SpringServletContainerInitializer noin340h89034;
             LogbackServletContainerInitializer aaa34g09340g9j09;
-            MyServletContainerInitializer g3ig039g093k4g0k; //   No Recognized
+            CustomServletContainerInitializer g3ig039g093k4g0k; //   No Recognized
+            CustomServletContainerInitializer2 ff4g0j340g9j3049g; //   No Recognized
 
         /**
          * 类 ServletContainerInitializer 的 子类的 onStartup 方法是一个web应用中，我们的代码可以控制到的最早时间点。
@@ -972,7 +971,7 @@ public class Application {
          * TODO 还有一个重要问题没有搞清楚：SpringBoot启动过程中根上下文和子上下文的分解。
          * SpringBoot 似乎并没有严格区分（属于MVC的）这两个阶段，有可能 在 SpringBoot 中只有一个方法，
          * 而这个方法属于MVC，两个阶段都在这个方法内；以至于在 SpringBoot 看来，是同一个事情。
-         * Spring Boot 只有 一个 上下文！
+         * Spring Boot 没有 ROOT-Dispatcher 父子结构，默认只有一个 上下文！
          *
          * No-web spring boot应用，context是AnnotationConfigApplicationContext
          * web spring boot应用，context是AnnotationConfigEmbeddedWebApplicationContext
@@ -1014,11 +1013,15 @@ public class Application {
         //  TODO 什么区别？
         
 
-        //	SpringBoot 父子 上下文
         /***
          * Spring Boot Uses DispatcherServeletAutoConfig to initialize a default DispatcherServlet. So you need to customize the Default Dispatcher Servlet in the following way : 
          */
         SpringApplicationBuilder grjigo3j40gj3094g;
+
+
+        CommandLineRunner f4g34g34g9034g93g4g3;
+        ApplicationRunner f34g09j04g9j3094jg09;
+
 
 }
 
