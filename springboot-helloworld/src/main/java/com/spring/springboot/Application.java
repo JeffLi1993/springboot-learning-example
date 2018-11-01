@@ -606,10 +606,10 @@ public class Application {
         /**
          * WebApplicationInitializer is used by a Servlet Container at startup of the web application
          * and provides a way for programmatic creating a web application(replacement for a web.xml file),
-         * （可以说在 MVC 之前）
+         * （可以说在 MVC 之前）wrong !
          * ApplicationContextInitializer provides a hook to configure the Spring application context
          * before it gets fully created
-         * （可以说在 AC 过程中）
+         * （可以说在 AC 过程中）wrong !
          * */
 
 
@@ -972,6 +972,10 @@ public class Application {
          * TODO 还有一个重要问题没有搞清楚：SpringBoot启动过程中根上下文和子上下文的分解。
          * SpringBoot 似乎并没有严格区分（属于MVC的）这两个阶段，有可能 在 SpringBoot 中只有一个方法，
          * 而这个方法属于MVC，两个阶段都在这个方法内；以至于在 SpringBoot 看来，是同一个事情。
+         * Spring Boot 只有 一个 上下文！
+         *
+         * No-web spring boot应用，context是AnnotationConfigApplicationContext
+         * web spring boot应用，context是AnnotationConfigEmbeddedWebApplicationContext
          */ 
 
         /**
