@@ -448,6 +448,13 @@ public class Application {
          * 说明一下：
          *    通常情况下，SpringServletContainerInitializer 不会被 load & call，所以 各个 WebApplicationInitializer 也就不能被call，
          *    ContextLoaderListener 也不能被 SpringBootServletInitializer call；所以，有其他方式，比如 ServletContextInitializer etc。
+         *
+         * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+         *
+         * Important !
+         * Spring Boot Reference Guide 里明确说了，嵌入 的 Servlet 容器，默认不执行 ServletContainerInitializer
+         *（也就没机会执行 WebApplicationInitializer 那一套）；取而代之的，就是 ServletContextInitializer 接口。
+         *
          * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
          *
          * 补充，上面的说法 关于 WebApplicationInitializer 和 ContextLoaderListener 完全正确。
