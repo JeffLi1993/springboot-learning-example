@@ -11,7 +11,7 @@
 ##! For more details on configuring external_url see:
 ##! https://docs.gitlab.com/omnibus/settings/configuration.html#configuring-the-external-url-for-gitlab
 #external_url 'http://gitlab.example.com'
-external_url 'http://gitlab7.frankie.enndata.cn'
+external_url 'http://gitlab8.frankie.enndata.cn'
 
 ## Roles for multi-instance GitLab
 ##! The default is to have no roles enabled, which results in GitLab running as an all-in-one instance.
@@ -155,6 +155,9 @@ external_url 'http://gitlab7.frankie.enndata.cn'
 ### Job Artifacts
 # gitlab_rails['artifacts_enabled'] = true
 # gitlab_rails['artifacts_path'] = "/var/opt/gitlab/gitlab-rails/shared/artifacts"
+####frankie
+gitlab_rails['artifacts_enabled'] = true
+gitlab_rails['artifacts_path'] = "/var/opt/gitlab/gitlab-rails/shared/artifacts"
 ####! Job artifacts Object Store
 ####! Docs: https://docs.gitlab.com/ee/administration/job_artifacts.html#using-object-storage
 # gitlab_rails['artifacts_object_store_enabled'] = false
@@ -353,6 +356,8 @@ external_url 'http://gitlab7.frankie.enndata.cn'
 ### For storing GitLab application uploads, eg. LFS objects, build artifacts
 ###! Docs: https://docs.gitlab.com/ce/development/shared_files.html
 # gitlab_rails['shared_path'] = '/var/opt/gitlab/gitlab-rails/shared'
+###frankie
+gitlab_rails['shared_path'] = '/var/opt/gitlab/gitlab-rails/shared'
 
 ### Wait for file system to be mounted
 ###! Docs: https://docs.gitlab.com/omnibus/settings/configuration.html#only-start-omnibus-gitlab-services-after-a-given-filesystem-is-mounted
@@ -1101,9 +1106,8 @@ external_url 'http://gitlab7.frankie.enndata.cn'
 
 ##! Define to enable GitLab Pages
 # pages_external_url "http://pages.example.com/"
+pages_external_url "http://gitlab8.frankie.enndata.cn/"
 # gitlab_pages['enable'] = false
-##frankie
-pages_external_url "http://gitlab7.frankie.enndata.cn/"
 gitlab_pages['enable'] = true
 
 ##! Configure to expose GitLab Pages on external IP address, serving the HTTP
@@ -1114,8 +1118,6 @@ gitlab_pages['enable'] = true
 
 ##! Configure to enable health check endpoint on GitLab Pages
 # gitlab_pages['status_uri'] = "/@status"
-##frankie
-gitlab_pages['status_uri'] = "/@status"
 
 ##! Configure to use JSON structured logging in GitLab Pages
 # gitlab_pages['log_format'] = "json"
@@ -1134,11 +1136,13 @@ gitlab_pages['status_uri'] = "/@status"
 # gitlab_pages['artifacts_server'] = true
 # gitlab_pages['artifacts_server_url'] = nil # Defaults to external_url + '/api/v4'
 # gitlab_pages['artifacts_server_timeout'] = 10
+###frankie
+gitlab_pages['artifacts_server'] = true
 
 ##! Environments that do not support bind-mounting should set this parameter to
 ##! true. This is incompatible with the artifacts server
 # gitlab_pages['inplace_chroot'] = false
-##frankie Very Important !
+###frankie
 gitlab_pages['inplace_chroot'] = true
 
 ##! Prometheus metrics for Pages docs: https://gitlab.com/gitlab-org/gitlab-pages/#enable-prometheus-metrics
@@ -1385,7 +1389,6 @@ gitlab_pages['inplace_chroot'] = true
 
 
 # gitlab_monitor['enable'] = true
-##frankie
 gitlab_monitor['enable'] = false
 # gitlab_monitor['log_directory'] = "/var/log/gitlab/gitlab-monitor"
 # gitlab_monitor['home'] = "/var/opt/gitlab/gitlab-monitor"
@@ -1396,7 +1399,6 @@ gitlab_monitor['enable'] = false
 
 # To completely disable prometheus, and all of it's exporters, set to false
 # prometheus_monitoring['enable'] = true
-##frankie
 prometheus_monitoring['enable'] = false
 
 ################################################################################
