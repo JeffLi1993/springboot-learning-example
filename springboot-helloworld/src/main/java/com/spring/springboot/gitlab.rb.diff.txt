@@ -1,0 +1,25 @@
+
+[root@gitlab7 gitlab]# diff gitlab.rb gitlab.rb.bk 
+13,14c13
+< #external_url 'http://gitlab.example.com'
+< external_url 'http://gitlab7.frankie.enndata.cn'
+---
+> external_url 'http://gitlab.example.com'
+1105,1107d1103
+< ##frankie
+< pages_external_url "http://gitlab7.frankie.enndata.cn/"
+< gitlab_pages['enable'] = true
+1117,1118d1112
+< ##frankie
+< gitlab_pages['status_uri'] = "/@status"
+1141,1142d1134
+< ##frankie Very Important !
+< gitlab_pages['inplace_chroot'] = true
+1388,1389d1379
+< ##frankie
+< gitlab_monitor['enable'] = false
+1399,1400d1388
+< ##frankie
+< prometheus_monitoring['enable'] = false
+[root@gitlab7 gitlab]# 
+
