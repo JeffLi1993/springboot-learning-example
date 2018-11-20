@@ -293,10 +293,10 @@ public class Application {
         //  ############################ WebMVC
         EnableWebMvc wefwefwef430143901490;
         WebMvcConfigurer vfdvf122323;
-        WebMvcConfigurerAdapter erobeqribnoiqerbqerb;
+            WebMvcConfigurerAdapter erobeqribnoiqerbqerb;
         WebMvcConfigurationSupport vv2390923confi;
-        DelegatingWebMvcConfiguration greogioeirg;
-        WebMvcAutoConfiguration.EnableWebMvcConfiguration rogioerigerg;
+            DelegatingWebMvcConfiguration greogioeirg;
+                WebMvcAutoConfiguration.EnableWebMvcConfiguration rogioerigerg;
         WebServlet df;
         WebListener egerg;
         WebFilter fwef23;
@@ -857,9 +857,17 @@ public class Application {
          * 如果 需要修改配置，则 必须 实现 WebMvcConfigurer (extends WebMvcConfigurerAdapter) 并且 有 @EnableWebMvc。
          * 如果 没有 WebMvcConfigurer，则 使用 WebMvcConfigurationSupport（参考注解条件，情况12 原理）；
          * 如果 有 @EnableWebMvc，则 使用 WebMvcConfigurationSupport（参考注解条件，情况5 原理）；
-         * 另外，配置 WebMvcAutoConfiguration 内部有逻辑，可能会 导入 WebMvcConfigurer（情况4 原理）
+         * 另外，配置 WebMvcAutoConfiguration 内部有逻辑(就是 DelegatingWebMvcConfiguration)，可能会 导入 WebMvcConfigurer（情况4 原理）
          * 情况3 的原理 ？
+         *
+         * @EnableWebMvc + extends WebMvcConfigurer，在扩展的类中重写父类的方法即可，
+         *      这种方式会屏蔽springboot的@EnableAutoConfiguration中的设置 （情况4）
+         * extends WebMvcConfigurationSupport，在扩展的类中重写父类的方法即可，
+         *      这种方式会屏蔽springboot的@EnableAutoConfiguration中的设置 （情况12）
+         * extends WebMvcConfigurer，在扩展的类中重写父类的方法即可，
+         *      这种方式依旧使用springboot的@EnableAutoConfiguration中的设置 （情况3）
          * */
+
 
         /*
         * https://www.youtube.com/watch?v=uDl1qlJWE7A
