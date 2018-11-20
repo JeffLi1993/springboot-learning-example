@@ -868,8 +868,17 @@ public class Application {
          *      这种方式会屏蔽springboot的@EnableAutoConfiguration中的设置 （情况12）
          * extends WebMvcConfigurer，在扩展的类中重写父类的方法即可，
          *      这种方式依旧使用springboot的@EnableAutoConfiguration中的设置 （情况3）
+         *
+         * Spring Boot Referenc 原文（情况3）:
+         * If you want to keep Spring Boot MVC features and you want to add additional MVC configuration
+         * (interceptors, formatters, view controllers, and other features), you can add your own @Configuration 
+         * class of type WebMvcConfigurer but without @EnableWebMvc. If you wish to provide custom instances of
+         * RequestMappingHandlerMapping, RequestMappingHandlerAdapter, or ExceptionHandlerExceptionResolver, you
+         * can declare a WebMvcRegistrationsAdapter instance to provide such components.
+         * TODO WebMvcRegistrationsAdapter 是什么东西？
          * */
 
+        WebMvcRegistrationsAdapter g340g9j340g9;
 
         /*
         * https://www.youtube.com/watch?v=uDl1qlJWE7A
