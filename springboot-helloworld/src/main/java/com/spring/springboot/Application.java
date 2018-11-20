@@ -850,6 +850,8 @@ public class Application {
          * related customization with. Our extended WebMvcConfigurerAdapter methods are
          * called back from WebMvcConfigurationSupport during configuration stage.
          * 
+         * WebMvcConfigurer 原理：通过 WebMvcAutoConfiguration 中的 DelegatingWebMvcConfiguration 的子类 体现作用。
+         *
          * 注解 EnableWebMvc 会 导入 DelegatingWebMvcConfiguration extends WebMvcConfigurationSupport；
          * autocfg 会 导入 WebMvcAutoConfiguration，而 这个 配置 
          *                   依赖 WebMvcConfigurer 并且 排斥 WebMvcConfigurationSupport；
@@ -858,8 +860,8 @@ public class Application {
          * 如果 没有 WebMvcConfigurer，则 使用 WebMvcConfigurationSupport（参考注解条件，情况12 原理）；
          * 如果 有 @EnableWebMvc，则 使用 WebMvcConfigurationSupport（参考注解条件，情况5 原理）；
          * 另外，配置 WebMvcAutoConfiguration 内部有逻辑(就是 DelegatingWebMvcConfiguration)，可能会 导入 WebMvcConfigurer（情况4 原理）
-         * 情况3 的原理 ？
-         *
+         * TODO 情况3 的原理，对情况3的理解需要说明，没有覆盖并不是完全不起作用，而是有所补充；补充部分，就是 WebMvcConfigurer 的实现。
+         * 
          * @EnableWebMvc + extends WebMvcConfigurer，在扩展的类中重写父类的方法即可，
          *      这种方式会屏蔽springboot的@EnableAutoConfiguration中的设置 （情况4）
          * extends WebMvcConfigurationSupport，在扩展的类中重写父类的方法即可，
