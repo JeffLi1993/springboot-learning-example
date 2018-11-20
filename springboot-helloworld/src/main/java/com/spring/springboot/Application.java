@@ -839,7 +839,7 @@ public class Application {
          * 2， extends DelegatingWebMvcConfiguration        ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          * 3， implements WebMvcConfigurer                  ：不会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          * 4， implements WebMvcConfigurer + @EnableWebMvc  ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
-         * 5， @EnableWebMvc                                ：直接使用@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * 5， @EnableWebMvc                                ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          *
          * 第 4 种情况适用于，想保留 Spring-Boot 默认 MVC 配置 并仅想 补充一些 其他配置，可以只 继承 WebMvcConfigurer；
          * 同时，最好不使用使用 注解@Configuration，而应该使用 @Component。
@@ -853,10 +853,12 @@ public class Application {
          * 注解 EnableWebMvc 会 导入 DelegatingWebMvcConfiguration extends WebMvcConfigurationSupport；
          * autocfg 会 导入 WebMvcAutoConfiguration，而 这个 配置 
          *                   依赖 WebMvcConfigurer 并且 排斥 WebMvcConfigurationSupport；
-         * 所以 如果有 @EnableWebMvc（或者），则 WebMvcAutoConfiguration 不生效；
+         * 所以 如果有 @EnableWebMvc（或者），则 WebMvcAutoConfiguration 不生效（情况5 原理）；
          * 如果 需要修改配置，则 必须 实现 WebMvcConfigurer (extends WebMvcConfigurerAdapter) 并且 有 @EnableWebMvc。
-         * 如果 没有 WebMvcConfigurer，则 使用 WebMvcConfigurationSupport（参考注解条件）；
-         * 如果 有 @EnableWebMvc，则 使用 使用 WebMvcConfigurationSupport（参考注解条件）；
+         * 如果 没有 WebMvcConfigurer，则 使用 WebMvcConfigurationSupport（参考注解条件，情况12 原理）；
+         * 如果 有 @EnableWebMvc，则 使用 WebMvcConfigurationSupport（参考注解条件，情况5 原理）；
+         * 另外，配置 WebMvcAutoConfiguration 内部有逻辑，可能会 导入 WebMvcConfigurer（情况4 原理）
+         * 情况3 的原理 ？
          * */
 
         /*
