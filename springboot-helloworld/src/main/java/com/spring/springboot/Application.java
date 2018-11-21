@@ -88,6 +88,7 @@ import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.support.SpringFactoriesLoader;
+import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.scheduling.annotation.AsyncAnnotationBeanPostProcessor;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -839,7 +840,7 @@ public class Application {
          * 2， extends DelegatingWebMvcConfiguration        ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          * 3， implements WebMvcConfigurer                  ：不会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          * 4， implements WebMvcConfigurer + @EnableWebMvc  ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
-         * 5， @EnableWebMvc                                ：会覆盖@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
+         * 5， @EnableWebMvc                                ：会补充@EnableAutoConfiguration关于WebMvcAutoConfiguration的配置
          *
          * 第 4 种情况适用于，想保留 Spring-Boot 默认 MVC 配置 并仅想 补充一些 其他配置，可以只 继承 WebMvcConfigurer；
          * 同时，最好不使用使用 注解@Configuration，而应该使用 @Component。
@@ -961,6 +962,10 @@ public class Application {
         EnableMBeanExport enMbn;
         EnableOAuth2Sso enOA;
         EnableConfigurationProperties enCfgPrp;
+
+        EnableSpringDataWebSupport gergh0934jg0394jg09;
+
+
 
         /**
          * Enable 就是 "识别"功能 的开关；打开开关，就开始识别，关上开关，就不再识别。
