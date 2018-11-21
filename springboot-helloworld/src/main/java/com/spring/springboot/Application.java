@@ -34,6 +34,7 @@ import org.springframework.boot.autoconfigure.data.jpa.EntityManagerFactoryDepen
 import org.springframework.boot.autoconfigure.data.mongo.MongoClientDependsOnBeanFactoryPostProcessor;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration;
+import org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration;
 import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
 import org.springframework.boot.autoconfigure.freemarker.FreeMarkerTemplateAvailabilityProvider;
 import org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration;
@@ -318,7 +319,11 @@ public class Application {
         ApplicationContext ac;
         RequestMapping reqMap;
 
-        EnableAutoConfiguration foweio23;
+        //  原理相似
+        EnableWebMvc ff32g34g;
+        WebMvcAutoConfiguration f304g9j309j4g0934g;
+        EnableSpringDataWebSupport foweio23;
+        SpringDataWebAutoConfiguration g30gj3409gj0394g;
 
         HttpMessageConverter wewwe;
         ServletRegistrationBean wqqwq232323;
