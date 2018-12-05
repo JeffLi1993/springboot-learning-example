@@ -405,7 +405,7 @@ public class Application {
         //  ############################ Initializer -1
         /**
          * TODO 有个问题：
-         * 接口 ServletContainerInitializer 的 实现类 设置在 某个文本文件中，由 某个 Listener 获取并且实例化。
+         * 接口 ServletContainerInitializer 的 实现类 设置在 某个文本文件（javax.servlet.ServletContainerInitializer）中，由 某个 Listener 获取并且实例化。
          * 这个 Listener 是什么？--- ContextConfig（上文已经提到）！
          *
          * Tomcat has LifecycleListeners those will listen to lifecycle events like start, stop etc.
