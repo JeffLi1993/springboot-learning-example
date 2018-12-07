@@ -44,6 +44,8 @@ import org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration;
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.SecurityFilterAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 import org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers;
 import org.springframework.boot.autoconfigure.web.*;
@@ -250,6 +252,8 @@ public class Application {
         MongoRepositoriesAutoConfiguration qoerinqeorbnoqerbno23902903;
         DataSourceAutoConfiguration erbeqb2223;
         CacheAutoConfiguration gerger56u356u356u;
+        SecurityAutoConfiguration dff3rgj0934jg0934jg;
+        SecurityFilterAutoConfiguration fg04g3049gn0394jg09;
 
         //  5
         ConfigurationWarningsApplicationContextInitializer wevwevwev;
@@ -270,19 +274,6 @@ public class Application {
         ComponentScans fwefwefwefw451345351e;
 
         //  7
-        ConfigurableEmbeddedServletContainer gerg345354345;
-            AbstractConfigurableEmbeddedServletContainer reer4545;
-                EmbeddedServletContainerFactory r23r23r2333452345r;
-                    AbstractEmbeddedServletContainerFactory fwefwef0203f;
-                        TomcatEmbeddedServletContainerFactory gwg4343t134twegweg;
-                        UndertowEmbeddedServletContainerFactory ggergeqrge314t143tqrg;
-                        JettyEmbeddedServletContainerFactory fwefqg34g341g;
-
-        EmbeddedServletContainer fwef123123wef;
-            JettyEmbeddedServletContainer r23r23r23r;
-            TomcatEmbeddedServletContainer gqgerg43g34g;
-            UndertowEmbeddedServletContainer gergergo090qergqrg;
-
         DispatcherServlet ds;
 
         AbstractApplicationContext fwe090we0fw0ef;
@@ -328,23 +319,6 @@ public class Application {
         HttpMessageConverter wewwe;
         ServletRegistrationBean wqqwq232323;
 
-        //  start
-        EmbeddedServletContainerCustomizer fwefwe2323;
-
-        EmbeddedServletContainerFactory wewewe23232;
-            ConfigurableEmbeddedServletContainer conownow;
-                AbstractConfigurableEmbeddedServletContainer fwf23f23;
-                    AbstractEmbeddedServletContainerFactory wewe2322323;
-                        TomcatEmbeddedServletContainerFactory tomcatfs;
-                        UndertowEmbeddedServletContainerFactory undertowfs;
-                        JettyEmbeddedServletContainerFactory jettyfs;
-
-        EmbeddedServletContainer cont;
-            UndertowEmbeddedServletContainer wewe23f23f;
-            TomcatEmbeddedServletContainer weiuifu23;
-            JettyEmbeddedServletContainer gooi43gnoi2323;
-
-        //  end
 
         AnnotationConfigApplicationContext ac121;
         AnnotationConfigEmbeddedWebApplicationContext eac11231;
@@ -626,12 +600,6 @@ public class Application {
 
 
         EmbeddedServletContainerAutoConfiguration g43g34;
-
-        EmbeddedServletContainerFactory g30g93094g0934;
-            AbstractEmbeddedServletContainerFactory g34g03409gk3049gk09;
-                JettyEmbeddedServletContainerFactory g34j0394g0349gk09;
-                TomcatEmbeddedServletContainerFactory g30g304gk09;
-                UndertowEmbeddedServletContainerFactory g3049gk0394kg09;
 
         ServletContextInitializer g30g90394g09;
             RegistrationBean g3gergp;
@@ -1010,6 +978,21 @@ public class Application {
                 TomcatWebSocketContainerCustomizer gg3409gj093;
                 UndertowWebSocketContainerCustomizer gj0394jg0394jg;
                 JettyWebSocketContainerCustomizer fg0943jg0394g;
+
+
+        EmbeddedServletContainerFactory wewewe23232;
+            ConfigurableEmbeddedServletContainer conownow;
+                AbstractConfigurableEmbeddedServletContainer fwf23f23;
+                    AbstractEmbeddedServletContainerFactory wewe2322323;
+                        TomcatEmbeddedServletContainerFactory tomcatfs;
+                        UndertowEmbeddedServletContainerFactory undertowfs;
+                        JettyEmbeddedServletContainerFactory jettyfs;
+
+        EmbeddedServletContainer cont;
+            UndertowEmbeddedServletContainer wewe23f23f;
+            TomcatEmbeddedServletContainer weiuifu23;
+            JettyEmbeddedServletContainer gooi43gnoi2323;
+
 
         // TODO 以及 各种 其他 Customizer
 
