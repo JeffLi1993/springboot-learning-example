@@ -162,9 +162,6 @@ public class Application {
 
 
     public void fwefwef() {
-
-        EnableAutoConfiguration wrwer23;
-
         ApplicationRunner apprnnr;
 
         EnableScheduling we3r;
