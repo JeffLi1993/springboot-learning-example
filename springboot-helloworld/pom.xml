@@ -80,5 +80,10 @@
             <version>3.6.0</version>
         </dependency>
 
+        <!--
+            https://github.com/andypeker/springboot-learning-example.git
+            https://gitee.com/franklinyang/springboot-learning-example.git
+        -->
+
     </dependencies>
 </project>

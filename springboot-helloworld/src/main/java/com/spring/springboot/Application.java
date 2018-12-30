@@ -10,6 +10,7 @@ import com.spring.springboot.scListener.MyListener;
 import com.spring.springboot.scListener.MyServletContextListener;
 import com.spring.springboot.autocfg.HelloAutoConfiguration;
 import org.apache.catalina.startup.ContextConfig;
+import org.apache.catalina.startup.Tomcat;
 import org.apache.catalina.startup.WebappServiceLoader;
 import org.apache.tomcat.websocket.server.WsContextListener;
 import org.apache.tomcat.websocket.server.WsSci;
@@ -129,12 +130,11 @@ import java.util.ServiceLoader;
  */
 // Spring Boot 应用的标识
 //@SpringBootApplication
-//@Configuration
-//@ComponentScan
+@Configuration
+@ComponentScan
 //@EnableAutoConfiguration
-//@EnableAutoConfiguration(exclude = Tomcat.class)
-@SpringBootApplication(exclude=
-        {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+@EnableAutoConfiguration(exclude = {/*Tomcat.class, */DataSourceAutoConfiguration.class})
+//        {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class}
 public class Application {
 
     public static void main(String[] args) {
