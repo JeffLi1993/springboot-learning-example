@@ -44,6 +44,7 @@ import org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration;
 import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.SecurityFilterAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
@@ -129,9 +130,11 @@ import java.util.ServiceLoader;
 // Spring Boot 应用的标识
 //@SpringBootApplication
 //@Configuration
-@ComponentScan
-@EnableAutoConfiguration
+//@ComponentScan
+//@EnableAutoConfiguration
 //@EnableAutoConfiguration(exclude = Tomcat.class)
+@SpringBootApplication(exclude=
+        {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 public class Application {
 
     public static void main(String[] args) {

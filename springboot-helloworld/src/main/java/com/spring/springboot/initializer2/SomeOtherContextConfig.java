@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ImportResource;
  */
 @Configuration
 @Import(RootApplicationConfig.class)
-@ImportResource("classpath:basicConfigForPropertiesTwo.xml")
+//@ImportResource("classpath:basicConfigForPropertiesTwo.xml")
 public class SomeOtherContextConfig {
 
     /**

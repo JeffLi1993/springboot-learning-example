@@ -1,5 +1,6 @@
 package com.spring.springboot.service2;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,20 +15,3 @@ public class GreeterService {
     }
 }
 
-class Greeting {
-
-    private String message;
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-}

@@ -1,4 +1,4 @@
-package com.spring.springboot;
+package com.spring.springboot.initializer2;
 
 import org.springframework.beans.factory.access.BeanFactoryLocator;
 import org.springframework.beans.factory.access.BeanFactoryReference;
@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @author Frankie Yang on 2018/10/23.
  */
 
-@Configuration
+//@Configuration
 public class CustomROOTSVLTDefaultDispatcherServlet {
 
     /***
