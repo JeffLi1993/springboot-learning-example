@@ -1,6 +1,5 @@
-package com.spring.springboot.initializer2;
+package com.spring.springboot.initializer1;
 
-import com.spring.springboot.initializer2.SecureWebAppConfig;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -49,7 +48,7 @@ public class CfgSvltACWebApplicationInitializer extends AbstractAnnotationConfig
          </servlet-class>
          <init-param>
              <param-name>contextConfigLocation</param-name>
-             <param-value>com.spring.springboot.initializer2.NormalWebAppConfig</param-value>
+             <param-value>com.spring.springboot.initializer1.NormalWebAppConfig</param-value>
          </init-param>
          <load-on-startup>1</load-on-startup>
      </servlet>

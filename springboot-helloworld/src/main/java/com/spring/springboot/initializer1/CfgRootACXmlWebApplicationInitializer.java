@@ -1,8 +1,7 @@
-package com.spring.springboot.initializer2;
+package com.spring.springboot.initializer1;
 
 import org.springframework.core.annotation.Order;
 import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.AbstractContextLoaderInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 

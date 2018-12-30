@@ -1,13 +1,9 @@
-package com.spring.springboot.initializer;
+package com.spring.springboot.initializer1;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
-import org.springframework.stereotype.Component;
 import org.springframework.web.WebApplicationInitializer;
 
 import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 
 /**
  * @author Frankie Yang on 2018/8/23.

@@ -1,8 +1,7 @@
-package com.spring.springboot.initializer2;
+package com.spring.springboot.initializer1;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.ImportResource;
 
 /**
  * @author Frankie Yang on 2018/9/20.

@@ -1,4 +1,4 @@
-package com.spring.springboot.initializer2;
+package com.spring.springboot.initializer1;
 
 import org.springframework.core.annotation.Order;
 import org.springframework.web.WebApplicationInitializer;

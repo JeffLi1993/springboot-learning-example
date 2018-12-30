@@ -1,4 +1,4 @@
-package com.spring.springboot.initializer2;
+package com.spring.springboot.initializer1;
 
 import org.springframework.core.annotation.Order;
 import org.springframework.web.context.AbstractContextLoaderInitializer;
@@ -30,7 +30,7 @@ public class CfgRootACWebApplicationInitializer extends AbstractContextLoaderIni
      </listener>
      <context-param>
          <param-name>contextConfigLocation</param-name>
-         <param-value>com.spring.springboot.initializer2.RootApplicationConfig</param-value>
+         <param-value>com.spring.springboot.initializer1.RootApplicationConfig</param-value>
      </context-param>
      */
 }

@@ -1,9 +1,8 @@
-package com.spring.springboot.initializer2;
+package com.spring.springboot.initializer1;
 
 import org.springframework.core.annotation.Order;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import org.springframework.web.context.support.XmlWebApplicationContext;
 import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
 
 /**
@@ -70,7 +69,7 @@ public class CfgSvltACWebApplicationInitializer2 extends AbstractDispatcherServl
          </servlet-class>
          <init-param>
              <param-name>contextConfigLocation</param-name>
-             <param-value>com.spring.springboot.initializer2.SecureWebAppConfig</param-value>
+             <param-value>com.spring.springboot.initializer1.SecureWebAppConfig</param-value>
          </init-param>
          <load-on-startup>1</load-on-startup>
      </servlet>

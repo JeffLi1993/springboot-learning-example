@@ -1,4 +1,4 @@
-package com.spring.springboot.initializer;
+package com.spring.springboot.initializer2;
 
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
