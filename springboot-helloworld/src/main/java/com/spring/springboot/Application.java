@@ -229,8 +229,6 @@ public class Application {
         //  ############################ Loader
         ServiceLoader svcLdr;
         ClassLoader clsLdr;
-        SpringFactoriesLoader spFacLdr;
-
         //  4
         SpringBootConfiguration fwefwe5367537357;
 
