@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>springboot-mybatis-annotation</name>
-	<description>Springboot-mybatis :: 整合Mybatis Annotation Demo</description>
+	<description>Springboot-mybatis :: 整合 Mybatis Annotation 案例</description>
 
 	<!-- Spring Boot 启动父依赖 -->
 	<parent>
@@ -24,7 +24,6 @@
 	</properties>
 
 	<dependencies>
-
 		<!-- Spring Boot Web 依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

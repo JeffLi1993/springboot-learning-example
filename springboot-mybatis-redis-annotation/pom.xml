@@ -4,27 +4,35 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>springboot</groupId>
-    <artifactId>springboot-freemarker</artifactId>
+    <artifactId>springboot-mybatis-redis-annotation</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-freemarker ::  整合 FreeMarker 案例</name>
+    <name>springboot-mybatis-redis-annotation :: 注解实现整合 Redis 作为缓存</name>
 
     <!-- Spring Boot 启动父依赖 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.4.RELEASE</version>
+        <version>1.5.3.RELEASE</version>
     </parent>
 
     <properties>
         <mybatis-spring-boot>1.2.0</mybatis-spring-boot>
         <mysql-connector>5.1.39</mysql-connector>
+        <fastjson-version>1.2.32</fastjson-version>
     </properties>
 
     <dependencies>
-        <!-- Spring Boot Freemarker 依赖 -->
+
+        <!-- Spring Boot Data Cache 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-freemarker</artifactId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Data Redis 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
         <!-- Spring Boot Web 依赖 -->
@@ -38,20 +46,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-
-        <!-- Spring Boot Mybatis 依赖 -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${mybatis-spring-boot}</version>
-        </dependency>
-
-        <!-- MySQL 连接驱动依赖 -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector}</version>
         </dependency>
 
         <!-- Junit -->

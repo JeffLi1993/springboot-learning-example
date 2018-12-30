@@ -34,6 +34,12 @@
 		<!-- 基础 – 数据缓存篇 -->
 		<!-- Spring Boot 整合 Redis 实现缓存 -->
 		<module>springboot-mybatis-redis</module>
+		<!-- Spring Boot 注解实现整合 Redis 实现缓存 -->
+		<module>springboot-mybatis-redis-annotation</module>
+
+		<!-- 基础 – 应用篇 -->
+		<!-- Spring Boot Actuator 监控
+		<module>springboot-actuator</module>-->
 
 		<!-- 其他篇 -->
 		<!-- Spring Boot 整合 Dubbo/ZooKeeper 详解 SOA 案例 -->
@@ -41,6 +47,10 @@
 		<module>springboot-dubbo-client</module>
 		<!-- Spring Boot 整合 Elasticsearch -->
 		<module>springboot-elasticsearch</module>
+
+		<!-- Spring Data ES 篇 -->
+		<module>spring-data-elasticsearch-crud</module>
+		<module>spring-data-elasticsearch-query</module>
 
 	</modules>
 
