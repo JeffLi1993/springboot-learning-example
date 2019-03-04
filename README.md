@@ -8,7 +8,7 @@ spring boot 实践学习案例，是 spring boot 初学者及核心技术巩固�
         <tr>
           <td align="center" valign="middle">
             <a href="https://e.coding.net/?utm_source=JeffLi" target="_blank">
-              <img src="http://www.bysocket.com/wp-content/uploads/2019/03/911551666328_.pic_hd.jpg">
+              <img width="300" src="http://www.bysocket.com/wp-content/uploads/2019/03/911551666328_.pic_hd.jpg">
             </a>
           </td>
           </tr>
