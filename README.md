@@ -2,7 +2,6 @@
 spring boot 实践学习案例，是 spring boot 初学者及核心技术巩固的最佳实践。
 
 # 赞助商，真的好
-<h2 align="center">Special Sponsors</h2>
 <table>
       <tbody>
         <tr>
