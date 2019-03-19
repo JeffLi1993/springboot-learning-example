@@ -73,13 +73,14 @@
     <!-- 第 5 章《数据存储》 -->
     <module>chapter-5-spring-boot-data-jpa</module>
     <!-- 第 6 章《数据缓存》 -->
-    <module>chapter-6-spring-boot-cache-redis</module>
+    <!--<module>chapter-6-spring-boot-cache-redis</module>-->
 
 		<!-- 第四章表单校验案例 -->
 		<module>chapter-4-spring-boot-validating-form-input</module>
 		<!-- 第五章数据分页排序案例 -->
 		<module>chapter-5-spring-boot-paging-sorting</module>
 
+		<module>springboot-hbase</module>
 	</modules>
 
 </project>
