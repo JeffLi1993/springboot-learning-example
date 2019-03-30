@@ -1,6 +1,7 @@
 # springboot-learning-example
 spring boot 实践学习案例，是 spring boot 初学者及核心技术巩固的最佳实践。
 
+如果您对文字类教程不感冒或者想要通过综合案例学习Spring，那么给您推荐这个价格最良心的视频课程：["玩转Spring全家桶"](https://mp.weixin.qq.com/s/fLhSzWrzJUgLhb15Zgdi5g)
 # 赞助商，真的好
 <table>
       <tbody>
