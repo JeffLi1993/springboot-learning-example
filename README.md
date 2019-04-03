@@ -79,8 +79,10 @@
 - Spring Boot 整合 Shiro
 - Spring Boot 整合 Spring Session
  
-#### 『 提升 – 消息服务篇 』
+#### 『 提升 – 中间件篇 』
+- [Spring Boot 2.x ：通过 spring-boot-starter-hbase 集成 HBase](https://www.bysocket.com/archives/2162)
 - Spring Boot 整合 RabbitMQ
+- Spring Boot 整合 Quartz
 
 #### 『 提升 – 源码篇 』
 - Spring Boot 启动原理解析
@@ -92,11 +94,10 @@
 - [深入浅出 spring-data-elasticsearch – 基本案例详解（三）](http://www.bysocket.com/?p=1899)
 - [深入浅出 spring-data-elasticsearch – 实战案例详解（四）](http://www.bysocket.com/?p=1902)
 
-#### 『 中间件篇 』
+#### 『 Dubbo 篇 』
 -  [Spring Boot 整合 Dubbo/ZooKeeper 详解 SOA 案例](http://www.bysocket.com/?p=1681)
 -  [Spring Boot 中如何使用 Dubbo Activate 扩展点](http://www.bysocket.com/?p=1782)
 -  [Spring Boot Dubbo applications.properties 配置清单](http://www.bysocket.com/?p=1805)
-- Spring Boot 整合 Quartz
 
 ### 三、最后推荐
 
