@@ -25,7 +25,7 @@
 	- [Gitee（springboot-learning-example）](https://gitee.com/jeff1993/springboot-learning-example "Gitee（springboot-learning-example）")
 3. 帮忙分享该系列文章链接给更多的朋友
 
-> 如果您对文字类教程不感冒或者想要通过综合案例学习Spring，那么给您推荐这个我觉得目前内容与价格最良心的视频课程：[“玩转Spring全家桶”](https://time.geekbang.org/course/intro/156?code=zqaEuXYpWbKaPeBaJc8GVoYCUHvoGhTlQQ7QZYoWWdI%3D&utm_term=SPoster "“玩转Spring全家桶”")
+> 如果您对文字类教程不感冒或者想要通过综合案例学习Spring，那么给您推荐这个我觉得目前内容与价格最良心的视频课程：[“玩转Spring全家桶”](https://time.geekbang.org/course/intro/156?code=zqaEuXYpWbKaPeBaJc8GVoYCUHvoGhTlQQ7QZYoWWdI%3D&utm_term=zeusDUJ0V&utm_source=website&utm_medium=bysocket "“玩转Spring全家桶”")
 
 ### 二、系列文章目录
 
