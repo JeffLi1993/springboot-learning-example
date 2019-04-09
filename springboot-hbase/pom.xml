@@ -4,29 +4,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>springboot</groupId>
-    <artifactId>springboot-dubbo-server</artifactId>
+    <artifactId>springboot-hbase</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-dubbo 服务端:: 整合 Dubbo/ZooKeeper 详解 SOA 案例</name>
+    <name>springboot-hbase :: 集成 HBase</name>
 
     <!-- Spring Boot 启动父依赖 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.3.RELEASE</version>
+        <version>1.5.6.RELEASE</version>
     </parent>
 
     <properties>
-        <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
+        <hbase-spring-boot>1.0.0.RELEASE</hbase-spring-boot>
+        <mysql-connector>5.1.39</mysql-connector>
     </properties>
 
     <dependencies>
-
-        <!-- Spring Boot Dubbo 依赖 -->
-        <dependency>
-            <groupId>io.dubbo.springboot</groupId>
-            <artifactId>spring-boot-starter-dubbo</artifactId>
-            <version>${dubbo-spring-boot}</version>
-        </dependency>
 
         <!-- Spring Boot Web 依赖 -->
         <dependency>
@@ -39,6 +33,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <!-- Spring Boot HBase 依赖 -->
+        <dependency>
+            <groupId>com.spring4all</groupId>
+            <artifactId>spring-boot-starter-hbase</artifactId>
+            <version>${hbase-spring-boot}</version>
         </dependency>
 
         <!-- Junit -->
