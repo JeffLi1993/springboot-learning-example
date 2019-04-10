@@ -6,7 +6,7 @@
   <groupId>springboot</groupId>
   <artifactId>springboot-webflux-1-quickstart</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>springboot-webflux-1-quickstart :: Spring Boot WebFlux 快速入门</name>
+  <name>springboot-webflux-1-quickstart</name>
 
   <parent>
     <groupId>org.springframework.boot</groupId>

@@ -6,7 +6,7 @@
     <groupId>springboot</groupId>
     <artifactId>springboot-hbase</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-hbase :: 集成 HBase</name>
+    <name>springboot-hbase</name>
 
     <!-- Spring Boot 启动父依赖 -->
     <parent>
@@ -17,7 +17,6 @@
 
     <properties>
         <hbase-spring-boot>1.0.0.RELEASE</hbase-spring-boot>
-        <mysql-connector>5.1.39</mysql-connector>
     </properties>
 
     <dependencies>

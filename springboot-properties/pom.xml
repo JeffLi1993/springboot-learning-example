@@ -6,7 +6,7 @@
     <groupId>springboot</groupId>
     <artifactId>springboot-properties</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-properties :: Spring boot 配置文件</name>
+    <name>springboot-properties</name>
 
     <!-- Spring Boot 启动父依赖 -->
     <parent>

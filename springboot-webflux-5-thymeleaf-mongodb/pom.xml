@@ -6,7 +6,7 @@
   <groupId>springboot</groupId>
   <artifactId>springboot-webflux-5-thymeleaf-mongodb</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>springboot-webflux-5-thymeleaf-mongodb :: Spring Boot WebFlux 中 Thymeleaf 和 Mongodb 实践</name>
+  <name>springboot-webflux-5-thymeleaf-mongodb</name>
 
   <!-- Spring Boot 启动父依赖 -->
   <parent>

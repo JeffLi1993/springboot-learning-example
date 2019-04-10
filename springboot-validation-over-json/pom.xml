@@ -6,7 +6,7 @@
     <groupId>springboot</groupId>
     <artifactId>springboot-validation-over-json</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-validation-over-json :: Validation with http over json Demo</name>
+    <name>springboot-validation-over-json</name>
 
     <!-- Spring Boot 启动父依赖 -->
     <parent>

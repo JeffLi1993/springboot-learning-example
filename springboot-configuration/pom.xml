@@ -6,7 +6,7 @@
     <groupId>springboot</groupId>
     <artifactId>springboot-configuration</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-configuration :: 配置 Demo</name>
+    <name>springboot-configuration</name>
 
     <!-- Spring Boot 启动父依赖 -->
     <parent>

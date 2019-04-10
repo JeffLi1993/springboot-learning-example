@@ -6,7 +6,7 @@
   <groupId>springboot</groupId>
   <artifactId>springboot-webflux-6-redis</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>springboot-webflux-6-redis :: Spring Boot WebFlux 整合 Redis</name>
+  <name>springboot-webflux-6-redis</name>
 
   <!-- Spring Boot 启动父依赖 -->
   <parent>

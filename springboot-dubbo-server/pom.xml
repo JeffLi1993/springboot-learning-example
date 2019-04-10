@@ -6,7 +6,6 @@
     <groupId>springboot</groupId>
     <artifactId>springboot-dubbo-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-dubbo 服务端:: 整合 Dubbo/ZooKeeper 详解 SOA 案例</name>
 
     <!-- Spring Boot 启动父依赖 -->
     <parent>

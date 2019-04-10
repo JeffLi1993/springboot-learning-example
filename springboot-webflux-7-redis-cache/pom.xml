@@ -6,7 +6,7 @@
   <groupId>springboot</groupId>
   <artifactId>springboot-webflux-7-redis-cache</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>springboot-webflux-7-redis-cache :: Spring Boot WebFlux 整合 Redis 实现缓存</name>
+  <name>springboot-webflux-7-redis-cache</name>
 
   <!-- Spring Boot 启动父依赖 -->
   <parent>

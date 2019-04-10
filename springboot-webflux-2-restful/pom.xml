@@ -6,7 +6,7 @@
     <groupId>springboot</groupId>
     <artifactId>springboot-webflux-2-restful</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-webflux-2-restful :: Spring Boot WebFlux 实现 Restful 服务</name>
+    <name>springboot-webflux-2-restful</name>
 
     <!-- Spring Boot 启动父依赖 -->
     <parent>

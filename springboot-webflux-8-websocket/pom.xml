@@ -6,7 +6,7 @@
   <groupId>springboot</groupId>
   <artifactId>springboot-webflux-8-websocket</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>springboot-webflux-8-websocket :: Spring Boot WebFlux 中 WebSocket 实现通信</name>
+  <name>springboot-webflux-8-websocket</name>
 
   <parent>
     <groupId>org.springframework.boot</groupId>

@@ -6,7 +6,7 @@
     <groupId>springboot</groupId>
     <artifactId>springboot-mybatis-redis-annotation</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-mybatis-redis-annotation :: 注解实现整合 Redis 作为缓存</name>
+    <name>springboot-mybatis-redis-annotation</name>
 
     <!-- Spring Boot 启动父依赖 -->
     <parent>
