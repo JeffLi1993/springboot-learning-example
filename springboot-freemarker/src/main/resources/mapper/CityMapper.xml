@@ -8,8 +8,6 @@
 		<result column="description" property="description" />
 	</resultMap>
 
-	<parameterMap id="City" type="org.spring.springboot.domain.City"/>
-
 	<sql id="Base_Column_List">
 		id, province_id, city_name, description
 	</sql>
@@ -27,14 +25,14 @@
 		from city
 	</select>
 
-	<insert id="saveCity" parameterMap="City" useGeneratedKeys="true" keyProperty="id">
+	<insert id="saveCity" parameterType="City" useGeneratedKeys="true" keyProperty="id">
 		insert into
 			city(id,province_id,city_name,description)
 		values
 			(#{id},#{provinceId},#{cityName},#{description})
 	</insert>
 
-	<update id="updateCity" parameterMap="City">
+	<update id="updateCity" parameterType="City">
 		update
 			city
 		set
