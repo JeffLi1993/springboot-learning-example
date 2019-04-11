@@ -9,6 +9,8 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<!-- WebFlux 异常处理 -->
+		<module>2-x-spring-boot-webflux-handling-errors</module>
 
 		<!-- 第 1 章《Spring Boot 入门》 -->
 		<module>chapter-1-spring-boot-quickstart</module>
