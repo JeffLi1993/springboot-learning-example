@@ -60,4 +60,23 @@ public class Book implements Serializable {
     public void setIntroduction(String introduction) {
         this.introduction = introduction;
     }
+
+    public Book(Long id, String name, String writer, String introduction) {
+        this.id = id;
+        this.name = name;
+        this.writer = writer;
+        this.introduction = introduction;
+    }
+
+    public Book(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Book(String name) {
+        this.name = name;
+    }
+
+    public Book() {
+    }
 }
