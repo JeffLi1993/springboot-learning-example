@@ -1,85 +1,81 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<name>springboot :: Examples</name>
+	<name>springboot-learning-example</name>
 
 	<groupId>springboot</groupId>
-	<artifactId>springboot</artifactId>
+	<artifactId>springboot-learning-example</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<modules>
-    <!-- Spring Boot 2.0 WebFlux-->
+		<!-- WebFlux 异常处理 -->
+		<module>2-x-spring-boot-webflux-handling-errors</module>
 
-    <!-- Spring Boot WebFlux 快速入门 -->
-    <module>springboot-webflux-1-quickstart</module>
+		<!-- 第 1 章《Spring Boot 入门》 -->
+		<module>chapter-1-spring-boot-quickstart</module>
+		<!-- 第 2 章《配置》 -->
+		<module>chapter-2-spring-boot-config</module>
+		<!-- 第 3 章《Web 开发》 -->
+		<module>chapter-3-spring-boot-web</module>
+		<!-- 第 4 章《模板引擎》 -->
+		<module>chapter-4-spring-boot-web-thymeleaf</module>
+		<!-- 第 5 章《数据存储》 -->
+		<module>chapter-5-spring-boot-data-jpa</module>
+		<!-- 第 4 章表单校验案例 -->
+		<module>chapter-4-spring-boot-validating-form-input</module>
+		<!-- 第 4 章数据分页排序案例 -->
+		<module>chapter-5-spring-boot-paging-sorting</module>
 
-    <!-- Spring Boot WebFlux 实现 Restful 服务，基于 HTTP / JSON 传输 -->
-    <module>springboot-webflux-2-restful</module>
+		<!-- Spring Data ES 篇 -->
+		<module>spring-data-elasticsearch-crud</module>
+		<module>spring-data-elasticsearch-query</module>
 
-		<!-- 基础 – 入门篇 -->
-		<!-- Spring Boot 之 HelloWorld 详解 -->
-		<module>springboot-helloworld</module>
 		<!-- Spring Boot 之配置文件详解 -->
-		<module>springboot-properties</module>
-		<!-- Spring Boot 之配置注解使用 -->
 		<module>springboot-configuration</module>
 
-		<!-- 基础 - Web 业务开发篇 -->
-		<!-- Spring Boot 实现 Restful 服务，基于 HTTP / JSON 传输 -->
-		<module>springboot-restful</module>
+		<!-- Spring Boot 整合 Dubbo/ZooKeeper 详解 SOA 案例 -->
+		<module>springboot-dubbo-server</module>
+		<module>springboot-dubbo-client</module>
+
+		<!-- Spring Boot 整合 Elasticsearch -->
+		<module>springboot-elasticsearch</module>
+
 		<!-- Spring Boot 集成 FreeMarker -->
 		<module>springboot-freemarker</module>
-		<!-- Spring Boot HTTP over JSON 的错误码异常处理 -->
-		<module>springboot-validation-over-json</module>
 
-		<!-- 基础 – 数据存储篇 -->
+		<!-- Spring Boot 整合 HBase -->
+		<module>springboot-hbase</module>
+
+		<!-- Spring Boot 之 HelloWorld 详解 -->
+		<module>springboot-helloworld</module>
+
+		<!-- 数据缓存篇 -->
 		<!-- Spring Boot 整合 Mybatis 的完整 Web 案例 -->
 		<module>springboot-mybatis</module>
 		<!-- Spring Boot 整合 Mybatis Annotation 注解案例 -->
 		<module>springboot-mybatis-annotation</module>
 		<!-- Spring Boot 整合 Mybatis 实现 Druid 多数据源配置 -->
 		<module>springboot-mybatis-mutil-datasource</module>
-
-		<!-- 基础 – 数据缓存篇 -->
 		<!-- Spring Boot 整合 Redis 实现缓存 -->
 		<module>springboot-mybatis-redis</module>
 		<!-- Spring Boot 注解实现整合 Redis 实现缓存 -->
 		<module>springboot-mybatis-redis-annotation</module>
 
-		<!-- 基础 – 应用篇 -->
-		<!-- Spring Boot Actuator 监控
-		<module>springboot-actuator</module>-->
+		<!-- Spring Boot 实现 Restful 服务，基于 HTTP / JSON 传输 -->
+		<module>springboot-restful</module>
 
-		<!-- 其他篇 -->
-		<!-- Spring Boot 整合 Dubbo/ZooKeeper 详解 SOA 案例 -->
-		<module>springboot-dubbo-server</module>
-		<module>springboot-dubbo-client</module>
-		<!-- Spring Boot 整合 Elasticsearch -->
-		<module>springboot-elasticsearch</module>
+		<!-- Spring Boot 之配置文件详解 -->
+		<module>springboot-properties</module>
 
-		<!-- Spring Data ES 篇 -->
-		<module>spring-data-elasticsearch-crud</module>
-		<module>spring-data-elasticsearch-query</module>
+		<!-- Spring Boot HTTP over JSON 的错误码异常处理 -->
+		<module>springboot-validation-over-json</module>
 
-    <!-- 第 1 章《Spring Boot 入门》 -->
-    <module>chapter-1-spring-boot-quickstart</module>
-    <!-- 第 2 章《配置》 -->
-    <module>chapter-2-spring-boot-config</module>
-    <!-- 第 3 章《Web 开发》 -->
-    <module>chapter-3-spring-boot-web</module>
-    <!-- 第 4 章《模板引擎》 -->
-    <module>chapter-4-spring-boot-web-thymeleaf</module>
-    <!-- 第 5 章《数据存储》 -->
-    <module>chapter-5-spring-boot-data-jpa</module>
-    <!-- 第 6 章《数据缓存》 -->
-    <module>chapter-6-spring-boot-cache-redis</module>
-
-		<!-- 第四章表单校验案例 -->
-		<module>chapter-4-spring-boot-validating-form-input</module>
-		<!-- 第五章数据分页排序案例 -->
-		<module>chapter-5-spring-boot-paging-sorting</module>
-
+		<!-- Spring Boot 2.0 WebFlux -->
+    <!-- Spring Boot WebFlux 快速入门 -->
+    <module>springboot-webflux-1-quickstart</module>
+    <!-- Spring Boot WebFlux 实现 Restful 服务，基于 HTTP / JSON 传输 -->
+    <module>springboot-webflux-2-restful</module>
 	</modules>
 
 </project>

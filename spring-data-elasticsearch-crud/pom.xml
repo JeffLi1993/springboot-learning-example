@@ -6,7 +6,7 @@
     <groupId>springboot</groupId>
     <artifactId>spring-data-elasticsearch-crud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-data-elasticsearch-crud :: spring-data-elasticsearch - 基本案例 </name>
+    <name>spring-data-elasticsearch-crud</name>
 
     <!-- Spring Boot 启动父依赖 -->
     <parent>

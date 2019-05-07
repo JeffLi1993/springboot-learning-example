@@ -42,4 +42,18 @@ public interface BookService {
      * @param id 编号
      */
     Book findById(Long id);
+
+    /**
+     * 查找书是否存在
+     * @param book
+     * @return
+     */
+    boolean exists(Book book);
+
+    /**
+     * 根据书名获取书籍
+     * @param name
+     * @return
+     */
+    Book findByName(String name);
 }

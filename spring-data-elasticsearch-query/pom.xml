@@ -6,7 +6,7 @@
     <groupId>springboot</groupId>
     <artifactId>spring-data-elasticsearch-query</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-data-elasticsearch-query :: spring-data-elasticsearch - 实战案例详解 </name>
+    <name>spring-data-elasticsearch-query</name>
 
     <!-- Spring Boot 启动父依赖 -->
     <parent>

@@ -2,8 +2,14 @@ package demo.springboot.web;
 
 import demo.springboot.domain.Book;
 import demo.springboot.service.BookService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 
@@ -15,6 +21,10 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/book")
 public class BookController {
+
+
+    private final Logger LOG = LoggerFactory.getLogger(BookController.class);
+
 
     @Autowired
     BookService bookService;
@@ -43,8 +53,20 @@ public class BookController {
      * 通过 @RequestBody 绑定实体参数，也通过 @RequestParam 传递参数
      */
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public Book postBook(@RequestBody Book book) {
-        return bookService.insertByBook(book);
+    public ResponseEntity<Void> postBook(@RequestBody Book book, UriComponentsBuilder ucBuilder) {
+
+        LOG.info("creating new book: {}", book);
+
+        if (book.getName().equals("conflict")){
+            LOG.info("a book with name " + book.getName() + " already exists");
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+        }
+
+        bookService.insertByBook(book);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setLocation(ucBuilder.path("/book/{id}").buildAndExpand(book.getId()).toUri());
+        return new ResponseEntity<>(headers, HttpStatus.CREATED);
     }
 
     /**
