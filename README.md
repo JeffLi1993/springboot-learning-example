@@ -30,6 +30,7 @@
 ### 二、系列文章目录
 
 #### 『 Spring Boot 2 快速教程 』
+- [Spring Boot 2 快速教程：WebFlux 集成 Mongodb（四）](https://www.bysocket.com/archives/2342/spring-boot-2-%E5%BF%AB%E9%80%9F%E6%95%99%E7%A8%8B%EF%BC%9Awebflux-%E9%9B%86%E6%88%90-mongodb%EF%BC%88%E5%9B%9B%EF%BC%89)
 - [Spring Boot 2 快速教程：WebFlux Restful CRUD 实践（三）](https://www.bysocket.com/archives/2328/spring-boot-2-%E5%BF%AB%E9%80%9F%E6%95%99%E7%A8%8B%EF%BC%9Awebflux-restful-crud-%E5%AE%9E%E8%B7%B5%EF%BC%88%E4%B8%89%EF%BC%89)
 - [Spring Boot 2 快速教程：WebFlux 快速入门（二）](https://www.bysocket.com/archives/2306/spring-boot-2-%E5%BF%AB%E9%80%9F%E6%95%99%E7%A8%8B%EF%BC%9Awebflux-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%EF%BC%88%E4%BA%8C%EF%BC%89)
 - [Spring Boot 2 快速教程：WebFlux REST API 全局异常处理 Error Handling](https://www.bysocket.com/archives/2272/spring-boot-2-x-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%EF%BC%9Awebflux-rest-api-%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86-error-handling)
