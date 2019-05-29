@@ -30,6 +30,7 @@
 ### 二、系列文章目录
 
 #### 『 Spring Boot 2 快速教程 』
+- [Spring Boot 2 快速教程：WebFlux 集成 Thymeleaf（五）](https://www.bysocket.com/springboot/2358.html)
 - [Spring Boot 2 快速教程：WebFlux 集成 Mongodb（四）](https://www.bysocket.com/springboot/2342.html)
 - [Spring Boot 2 快速教程：WebFlux Restful CRUD 实践（三）](https://www.bysocket.com/technique/2328.html)
 - [Spring Boot 2 快速教程：WebFlux 快速入门（二）](https://www.bysocket.com/technique/2306.html)
