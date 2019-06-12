@@ -29,15 +29,19 @@
 
 ### 二、系列文章目录
 
-#### 『 Spring Boot 2.x 系列教程篇 』
-- [Spring Boot 2.x 系列教程：WebFlux REST API 全局异常处理 Error Handling](https://www.bysocket.com/archives/2272/spring-boot-2-x-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%EF%BC%9Awebflux-rest-api-%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86-error-handling)
-- [Spring Boot 2.x 系列教程：WebFlux 系列教程大纲（一）](https://www.bysocket.com/archives/2290/spring-boot-2-x-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%EF%BC%9Awebflux-%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%E5%A4%A7%E7%BA%B2%EF%BC%88%E4%B8%80%EF%BC%89)
+#### 『 Spring Boot 2 快速教程 』
+- [Spring Boot 2 快速教程：WebFlux 集成 Thymeleaf（五）](https://www.bysocket.com/springboot/2358.html)
+- [Spring Boot 2 快速教程：WebFlux 集成 Mongodb（四）](https://www.bysocket.com/springboot/2342.html)
+- [Spring Boot 2 快速教程：WebFlux Restful CRUD 实践（三）](https://www.bysocket.com/technique/2328.html)
+- [Spring Boot 2 快速教程：WebFlux 快速入门（二）](https://www.bysocket.com/technique/2306.html)
+- [Spring Boot 2 快速教程：WebFlux REST API 全局异常处理 Error Handling](https://www.bysocket.com/technique/2272.html)
+- [Spring Boot 2 快速教程：WebFlux 系列教程大纲（一）](https://www.bysocket.com/technique/2290.html)
 
 #### 『 基础 - 入门篇 』
-- [Spring Boot 2.0 配置图文教程](https://www.bysocket.com/archives/2135)
-- [Spring Boot 2.0 的快速入门（图文教程）](https://www.bysocket.com/archives/2119)
+- [Spring Boot 2.0 配置图文教程](https://www.bysocket.com/technique/2135.html)
+- [Spring Boot 2.0 的快速入门（图文教程）](https://www.bysocket.com/technique/2119.html)
 - [Spring Boot 之 HelloWorld 详解](http://www.bysocket.com/?p=1124)
-- [Spring Boot 之配置文件详解](http://www.bysocket.com/?p=1786)
+-  [Spring Boot 之配置文件详解](http://www.bysocket.com/?p=1786)
 
 #### 『 基础 - Web 业务开发篇 』
 - [Spring Boot Web 开发注解篇](http://www.bysocket.com/?p=1929)
@@ -84,7 +88,7 @@
 - Spring Boot 整合 Spring Session
  
 #### 『 提升 – 中间件篇 』
-- [Spring Boot 2.x ：通过 spring-boot-starter-hbase 集成 HBase](https://www.bysocket.com/archives/2162)
+- [Spring Boot 2.x ：通过 spring-boot-starter-hbase 集成 HBase](https://www.bysocket.com/technique/2162.html)
 - Spring Boot 整合 RabbitMQ
 - Spring Boot 整合 Quartz
 

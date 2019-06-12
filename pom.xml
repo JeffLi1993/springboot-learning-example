@@ -76,6 +76,11 @@
     <module>springboot-webflux-1-quickstart</module>
     <!-- Spring Boot WebFlux 实现 Restful 服务，基于 HTTP / JSON 传输 -->
     <module>springboot-webflux-2-restful</module>
+    <module>springboot-webflux-3-mongodb</module>
+    <module>springboot-webflux-4-thymeleaf</module>
+    <module>springboot-webflux-5-thymeleaf-mongodb</module>
+		<module>springboot-webflux-6-redis</module>
+		<module>springboot-webflux-7-redis-cache</module>
 	</modules>
 
 </project>
