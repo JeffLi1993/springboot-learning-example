@@ -11,6 +11,8 @@
 	<modules>
 		<!-- WebFlux 异常处理 -->
 		<module>2-x-spring-boot-webflux-handling-errors</module>
+		<!-- 动态运行 groovy 脚本 --> 
+    	<module>2-x-spring-boot-groovy</module>
 
 		<!-- 第 1 章《Spring Boot 入门》 -->
 		<module>chapter-1-spring-boot-quickstart</module>
@@ -82,5 +84,4 @@
 		<module>springboot-webflux-6-redis</module>
 		<module>springboot-webflux-7-redis-cache</module>
 	</modules>
-
 </project>
