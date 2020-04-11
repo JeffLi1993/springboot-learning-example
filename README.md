@@ -3,7 +3,13 @@
 <div style="text-align: center;margin: 10px;color:red">
     点击立即领取，<a  href="https://mp.weixin.qq.com/s/9pzPLI8MHQThWauHUKos6A" target="_blank">
 《1000G 免费精选技术学习资料》
-</a>（限时 1 小时内领取！）
+</a>（限时 1 小时内领取！）<br/>
+	点击立即领取，<a  href="https://mp.weixin.qq.com/s/9pzPLI8MHQThWauHUKos6A" target="_blank">
+《1000G 免费精选技术学习资料》
+</a>（限时 1 小时内领取！）<br/>
+	点击立即领取，<a  href="https://mp.weixin.qq.com/s/9pzPLI8MHQThWauHUKos6A" target="_blank">
+《1000G 免费精选技术学习资料》
+</a>（限时 1 小时内领取！）<br/>
 </div>
 
 
