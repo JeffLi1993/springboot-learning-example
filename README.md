@@ -1,21 +1,13 @@
-### 欢迎加入小马哥 Java 星球
+### 推荐学习！！强烈推荐！
 
-深入探讨 Java 相关技术，包括行业动态，架构设计，设计模式，框架使用，源码分析等。
-欢迎加入「小马哥 Java 星球」，希望大家多在星球里沟通，让我们探讨技术，把握趋势，共同进步。
-<table>
-      <tbody>
-            <tr>
-          <td align="center" valign="middle">
-              <img width="300" src="https://imgkr.cn-bj.ufileos.com/cafaa797-baeb-4d6a-bf08-86d7b01f51b5.jpeg">
-          </td>
-        </tr>
-      </tbody>
-      
-</table>
-
+<div style="text-align: center;margin: 10px;color:red">
+    点击领取学习，<br/><a  href="https://mp.weixin.qq.com/s/9pzPLI8MHQThWauHUKos6A" target="_blank">
+《1000G 免费精选技术学习资料》
+</a><br/>（限时 1 小时内领取！）
+</div>
 **Spring Boot 2.x 系列教程**，spring boot 实践学习案例，是初学者及核心技术巩固的最佳实践。
 
-### 一、支持泥瓦匠（强烈推荐：[博客一文多发平台](https://openwrite.cn) ）
+### 一、支持泥瓦匠（[博客群发平台](https://openwrite.cn) ）
 1. 拿起微信，关注公众号：「泥瓦匠BYSocket 」。添加我微信：bysocket01，加入纯技术交流群，成长技术
 2. 给教程的开源代码仓库点个 **Star** 吧
 	- [GitHub（springboot-learning-example）](https://github.com/JeffLi1993/springboot-learning-example "GitHub（springboot-learning-example）")
