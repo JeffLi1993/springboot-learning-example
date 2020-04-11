@@ -6,9 +6,12 @@
 </a>（限时 1 小时内领取！）
 </div>
 
-**Spring Boot 2.x 系列教程**，spring boot 实践学习案例，是初学者及核心技术巩固的最佳实践。
 
 ### 一、支持泥瓦匠（[博客群发平台](https://openwrite.cn) ）
+
+**Spring Boot 2.x 系列教程**，spring boot 实践学习案例，是初学者及核心技术巩固的最佳实践。
+
+
 1. 拿起微信，关注公众号：「泥瓦匠BYSocket 」。添加我微信：bysocket01，加入纯技术交流群，成长技术
 2. 给教程的开源代码仓库点个 **Star** 吧
 	- [GitHub（springboot-learning-example）](https://github.com/JeffLi1993/springboot-learning-example "GitHub（springboot-learning-example）")
