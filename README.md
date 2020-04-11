@@ -1,10 +1,11 @@
-### 推荐学习！！强烈推荐！
+### 推荐学习资料！！强烈推荐！
 
 <div style="text-align: center;margin: 10px;color:red">
-    点击领取学习，<br/><a  href="https://mp.weixin.qq.com/s/9pzPLI8MHQThWauHUKos6A" target="_blank">
+    点击立即领取，<a  href="https://mp.weixin.qq.com/s/9pzPLI8MHQThWauHUKos6A" target="_blank">
 《1000G 免费精选技术学习资料》
-</a><br/>（限时 1 小时内领取！）
+</a>（限时 1 小时内领取！）
 </div>
+
 **Spring Boot 2.x 系列教程**，spring boot 实践学习案例，是初学者及核心技术巩固的最佳实践。
 
 ### 一、支持泥瓦匠（[博客群发平台](https://openwrite.cn) ）
