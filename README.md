@@ -1,8 +1,14 @@
 ## 推荐学习资料！！强烈推荐！
 
 <div style="text-align: center;margin: 10px;">
-	<a  href="https://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=100014539&idx=1&sn=16e0a5dd6abc223a8b72e557e58a0594&chksm=1bd354532ca4dd450447b3e0ecbd3ff2598af225b62fb1f02b360b860778154c5ffdd3e6d341#rd" target="_blank">
-<img src="/JeffLi1993/springboot-learning-example/blob/2df04bc75bdd4d87334c87e323b70f0825bde18e/long.png" />
+	<a  href="https://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=100014539&idx=1&sn=16e0a5dd6abc223a8b72e557e58a0594&chksm=1bd354532ca4dd450447b3e0ecbd3ff2598af225b62fb1f02b360b860778154c5ffdd3e6d341#rd" target="_blank">《告别架构师后，成为自由开发者的第 100 天 - 程序猿DD》
+
+</a><br/>
+<a  href="https://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=100014539&idx=1&sn=16e0a5dd6abc223a8b72e557e58a0594&chksm=1bd354532ca4dd450447b3e0ecbd3ff2598af225b62fb1f02b360b860778154c5ffdd3e6d341#rd" target="_blank">《告别架构师后，成为自由开发者的第 100 天 - 程序猿DD》
+
+</a><br/>
+<a  href="https://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=100014539&idx=1&sn=16e0a5dd6abc223a8b72e557e58a0594&chksm=1bd354532ca4dd450447b3e0ecbd3ff2598af225b62fb1f02b360b860778154c5ffdd3e6d341#rd" target="_blank">《告别架构师后，成为自由开发者的第 100 天 - 程序猿DD》
+
 </a><br/>
 </div>
 
