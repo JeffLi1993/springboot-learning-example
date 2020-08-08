@@ -1,13 +1,13 @@
 ## 推荐学习资料！！强烈推荐！
 
+<div style="text-align: center;margin: 10px;">
+	<a  href="https://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=100014539&idx=1&sn=16e0a5dd6abc223a8b72e557e58a0594&chksm=1bd354532ca4dd450447b3e0ecbd3ff2598af225b62fb1f02b360b860778154c5ffdd3e6d341#rd" target="_blank">
+<img src="https://www.bysocket.com/wp-content/uploads/2020/08/long.png" />
+</a><br/>
+</div>
+
 <div style="text-align: center;margin: 10px;color:red">
     点击立即领取，<a  href="https://mp.weixin.qq.com/s/9pzPLI8MHQThWauHUKos6A" target="_blank">
-《1000G 免费精选技术学习资料》
-</a>（限时 1 小时内领取！）<br/>
-	点击立即领取，<a  href="https://mp.weixin.qq.com/s/9pzPLI8MHQThWauHUKos6A" target="_blank">
-《1000G 免费精选技术学习资料》
-</a>（限时 1 小时内领取！）<br/>
-	点击立即领取，<a  href="https://mp.weixin.qq.com/s/9pzPLI8MHQThWauHUKos6A" target="_blank">
 《1000G 免费精选技术学习资料》
 </a>（限时 1 小时内领取！）<br/>
 </div>
