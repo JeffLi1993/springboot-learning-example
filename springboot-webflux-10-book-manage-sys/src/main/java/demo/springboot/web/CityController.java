@@ -33,12 +33,6 @@ public class CityController {
         return CITY_LIST_PATH_NAME;
     }
 
-    @RequestMapping(value = "/city2", method = RequestMethod.GET)
-    @ResponseBody
-    public Flux<City> getCityList2() {
-        return cityService.findAll();
-    }
-
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public String createCityForm(final Model model) {
         model.addAttribute("city", new City());
