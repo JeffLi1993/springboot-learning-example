@@ -1,25 +1,10 @@
-## 推荐学习资料！！强烈推荐！
+推荐工具：
 
-<div style="text-align: center;margin: 10px;">
-	<a  href="https://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=100014539&idx=1&sn=16e0a5dd6abc223a8b72e557e58a0594&chksm=1bd354532ca4dd450447b3e0ecbd3ff2598af225b62fb1f02b360b860778154c5ffdd3e6d341#rd" target="_blank">《告别架构师后，成为自由开发者的第 100 天 - 程序猿DD》
+[微信公众号 Markdown 编辑器 - OpenWrite](https://md.openwrite.cn/)：Markdown 微信编辑器是一款专业强大的微信公众平台在线编辑排版工具，提供手机预览功能，让用户在微信图文 、文章、内容排版、文本编辑、素材编辑上更加方便。 - [更多介绍](https://openwrite.cn/product-markdown)
 
-</a><br/>
-<a  href="https://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=100014539&idx=1&sn=16e0a5dd6abc223a8b72e557e58a0594&chksm=1bd354532ca4dd450447b3e0ecbd3ff2598af225b62fb1f02b360b860778154c5ffdd3e6d341#rd" target="_blank">《告别架构师后，成为自由开发者的第 100 天 - 程序猿DD》
+[博客群发平台](https://openwrite.cn)
 
-</a><br/>
-<a  href="https://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=100014539&idx=1&sn=16e0a5dd6abc223a8b72e557e58a0594&chksm=1bd354532ca4dd450447b3e0ecbd3ff2598af225b62fb1f02b360b860778154c5ffdd3e6d341#rd" target="_blank">《告别架构师后，成为自由开发者的第 100 天 - 程序猿DD》
-
-</a><br/>
-</div>
-
-<div style="text-align: center;margin: 10px;color:red">
-    点击立即领取，<a  href="https://mp.weixin.qq.com/s/9pzPLI8MHQThWauHUKos6A" target="_blank">
-《1000G 免费精选技术学习资料》
-</a>（限时 1 小时内领取！）<br/>
-</div>
-
-
-### 一、支持泥瓦匠（[博客群发平台](https://openwrite.cn) ）
+### 一、支持泥瓦匠
 
 **Spring Boot 2.x 系列教程**，spring boot 实践学习案例，是初学者及核心技术巩固的最佳实践。
 
