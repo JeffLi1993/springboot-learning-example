@@ -17,7 +17,7 @@
 
     <properties>
         <mybatis-spring-boot>1.2.0</mybatis-spring-boot>
-        <mysql-connector>5.1.39</mysql-connector>
+        <mysql-connector>8.0.16</mysql-connector>
         <spring-boot-starter-redis-version>1.3.2.RELEASE</spring-boot-starter-redis-version>
     </properties>
 
