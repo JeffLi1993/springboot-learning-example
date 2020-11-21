@@ -39,6 +39,9 @@ public class BookComponent {
     public String getWriter() {
         return writer;
     }
+    public void test(){
+        System.out.println("test123");
+    }
 
     public void setWriter(String writer) {
         this.writer = writer;
