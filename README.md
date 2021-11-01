@@ -1,21 +1,14 @@
-推荐工具：
-
-[微信公众号 Markdown 编辑器 - OpenWrite](https://md.openwrite.cn/)：Markdown 微信编辑器是一款专业强大的微信公众平台在线编辑排版工具，提供手机预览功能，让用户在微信图文 、文章、内容排版、文本编辑、素材编辑上更加方便。 - [更多介绍](https://openwrite.cn/product-markdown)
-
-[博客群发平台](https://openwrite.cn)
-
 ### 一、支持泥瓦匠
+
+关注泥瓦匠个人博客的更新：[我的博客](https://www.bysocket.com "我的博客") - 分享学习可落地的技术博文
 
 **Spring Boot 2.x 系列教程**，spring boot 实践学习案例，是初学者及核心技术巩固的最佳实践。
 
-
-1. 拿起微信，关注公众号：「泥瓦匠BYSocket 」。添加我微信：bysocket01，加入纯技术交流群，成长技术
+1. 拿起微信，关注公众号：「程序员泥瓦匠 」
 2. 给教程的开源代码仓库点个 **Star** 吧
 	- [GitHub（springboot-learning-example）](https://github.com/JeffLi1993/springboot-learning-example "GitHub（springboot-learning-example）")
 	- [Gitee（springboot-learning-example）](https://gitee.com/jeff1993/springboot-learning-example "Gitee（springboot-learning-example）")
 3. 帮忙分享该系列文章链接给更多的朋友
-
-> 如果您对文字类教程不感冒或者想要通过综合案例学习Spring，那么给您推荐这个我觉得目前内容与价格最良心的视频课程：[“玩转Spring全家桶”](https://time.geekbang.org/course/intro/156?code=zqaEuXYpWbKaPeBaJc8GVoYCUHvoGhTlQQ7QZYoWWdI%3D&utm_term=zeusDUJ0V&utm_source=website&utm_medium=bysocket "“玩转Spring全家桶”")
 
 ### 二、系列文章目录
 
@@ -99,12 +92,11 @@
 
 ### 三、最后推荐
 
-- [我的博客](http://www.bysocket.com "我的博客")：分享学习可落地的技术博文
+- [我的博客](https://www.bysocket.com "我的博客")：分享学习可落地的技术博文
 - [我的GitHub](https://github.com/JeffLi1993 "我的GitHub")：Follow 下呗
 - [我的Gitee](https://gitee.com/jeff1993 "我的Gitee")：Follow 下呗
 - [Spring问答社区](http://www.spring4all.com/ "Spring问答社区")：如果您有什么问题，可以去这里发帖
 
 ### 四、我的公号
-关注微信公众号，领取 Java 精选干货学习资料
 
 <img width="300" src="http://www.bysocket.com/wp-content/uploads/2017/01/qrcode_for_gh_cd421e7eb7d6_430.jpg">
