@@ -99,4 +99,4 @@
 
 ### 四、我的公号
 
-<img width="300" src="http://www.bysocket.com/wp-content/uploads/2017/01/qrcode_for_gh_cd421e7eb7d6_430.jpg">
+<img width="300" src="https://www.bysocket.com/images/qrcode.jpeg">
