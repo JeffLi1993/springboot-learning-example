@@ -1,36 +1,17 @@
-## 推荐学习资料！！强烈推荐！
-
-<div style="text-align: center;margin: 10px;">
-	<a  href="https://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=100014539&idx=1&sn=16e0a5dd6abc223a8b72e557e58a0594&chksm=1bd354532ca4dd450447b3e0ecbd3ff2598af225b62fb1f02b360b860778154c5ffdd3e6d341#rd" target="_blank">《告别架构师后，成为自由开发者的第 100 天 - 程序猿DD》
-
-</a><br/>
-<a  href="https://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=100014539&idx=1&sn=16e0a5dd6abc223a8b72e557e58a0594&chksm=1bd354532ca4dd450447b3e0ecbd3ff2598af225b62fb1f02b360b860778154c5ffdd3e6d341#rd" target="_blank">《告别架构师后，成为自由开发者的第 100 天 - 程序猿DD》
-
-</a><br/>
-<a  href="https://mp.weixin.qq.com/s?__biz=MzAxODcyNjEzNQ==&mid=100014539&idx=1&sn=16e0a5dd6abc223a8b72e557e58a0594&chksm=1bd354532ca4dd450447b3e0ecbd3ff2598af225b62fb1f02b360b860778154c5ffdd3e6d341#rd" target="_blank">《告别架构师后，成为自由开发者的第 100 天 - 程序猿DD》
-
-</a><br/>
-</div>
-
-<div style="text-align: center;margin: 10px;color:red">
-    点击立即领取，<a  href="https://mp.weixin.qq.com/s/9pzPLI8MHQThWauHUKos6A" target="_blank">
-《1000G 免费精选技术学习资料》
-</a>（限时 1 小时内领取！）<br/>
-</div>
+[![Star History Chart](https://api.star-history.com/svg?repos=JeffLi1993/springboot-learning-example&type=Date)](https://star-history.com/#JeffLi1993/springboot-learning-example&Date)
 
 
-### 一、支持泥瓦匠（[博客群发平台](https://openwrite.cn) ）
+### 一、支持泥瓦匠
+
+关注泥瓦匠个人博客的更新：[我的博客](https://www.bysocket.com "我的博客") - 分享学习可落地的技术博文
 
 **Spring Boot 2.x 系列教程**，spring boot 实践学习案例，是初学者及核心技术巩固的最佳实践。
 
-
-1. 拿起微信，关注公众号：「泥瓦匠BYSocket 」。添加我微信：bysocket01，加入纯技术交流群，成长技术
+1. 拿起微信，关注公众号：「程序员泥瓦匠 」
 2. 给教程的开源代码仓库点个 **Star** 吧
 	- [GitHub（springboot-learning-example）](https://github.com/JeffLi1993/springboot-learning-example "GitHub（springboot-learning-example）")
 	- [Gitee（springboot-learning-example）](https://gitee.com/jeff1993/springboot-learning-example "Gitee（springboot-learning-example）")
 3. 帮忙分享该系列文章链接给更多的朋友
-
-> 如果您对文字类教程不感冒或者想要通过综合案例学习Spring，那么给您推荐这个我觉得目前内容与价格最良心的视频课程：[“玩转Spring全家桶”](https://time.geekbang.org/course/intro/156?code=zqaEuXYpWbKaPeBaJc8GVoYCUHvoGhTlQQ7QZYoWWdI%3D&utm_term=zeusDUJ0V&utm_source=website&utm_medium=bysocket "“玩转Spring全家桶”")
 
 ### 二、系列文章目录
 
@@ -114,12 +95,11 @@
 
 ### 三、最后推荐
 
-- [我的博客](http://www.bysocket.com "我的博客")：分享学习可落地的技术博文
+- [我的博客](https://www.bysocket.com "我的博客")：分享学习可落地的技术博文
 - [我的GitHub](https://github.com/JeffLi1993 "我的GitHub")：Follow 下呗
 - [我的Gitee](https://gitee.com/jeff1993 "我的Gitee")：Follow 下呗
 - [Spring问答社区](http://www.spring4all.com/ "Spring问答社区")：如果您有什么问题，可以去这里发帖
 
 ### 四、我的公号
-关注微信公众号，领取 Java 精选干货学习资料
 
-<img width="300" src="http://www.bysocket.com/wp-content/uploads/2017/01/qrcode_for_gh_cd421e7eb7d6_430.jpg">
+<img width="300" src="https://www.bysocket.com/images/qrcode.jpeg">
