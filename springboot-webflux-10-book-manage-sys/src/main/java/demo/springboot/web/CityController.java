@@ -5,10 +5,8 @@ import demo.springboot.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.awt.print.Book;
@@ -43,9 +41,8 @@ public class CityController {
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public String postCity(@ModelAttribute City city) {
-        cityService.insertByCity(city);
-        return REDIRECT_TO_CITY_URL;
+    public Mono<String> postCity(@ModelAttribute City city) {
+        return cityService.insertByCity(city).then(Mono.create(monoSink -> monoSink.success(REDIRECT_TO_CITY_URL)));
     }
 
     @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
@@ -63,9 +60,8 @@ public class CityController {
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
-    public String deleteCity(@PathVariable Long id) {
-        cityService.delete(id);
-        return CITY_LIST_PATH_NAME;
+    public Mono<String> deleteCity(@PathVariable Long id) {
+        return cityService.delete(id).then(Mono.create(monoSink -> monoSink.success(REDIRECT_TO_CITY_URL)));
     }
 
 }
